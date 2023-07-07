@@ -1,0 +1,127 @@
+/* ALL THE GENERAL CODE */
+
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+- Line heights
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph default: 1.6
+Large: 1.8
+
+- Letter spacing
+-0.5px
+0.75px
+
+--- 02 COLORS
+
+- Primary: #219ebc
+
+- Shades: #1b6375
+
+- Accents:
+- Greys
+#555
+#333
+
+--- 05 SHADOWS
+
+0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+/* ***************BUTTONS**************** */
+/* **************************************** */
+.white-btn:link,
+.white-btn:visited {
+  padding: 1rem 3rem;
+  background-color: #fff;
+  border: 1px solid #219ebc;
+  border-radius: 5rem;
+  color: #219ebc;
+
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  margin-right: 2rem;
+
+  transition: all 0.3s;
+}
+
+.white-btn:hover,
+.white-btn:active {
+  background-color: #eee;
+}
+
+.color-btn:link,
+.color-btn:visited {
+  padding: 1rem 3rem;
+  background-color: #219ebc;
+  border-radius: 5rem;
+  color: #fff;
+
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-decoration: none;
+
+  transition: all 0.3s;
+}
+
+.color-btn:hover,
+.color-btn:active {
+  background-color: #1b6375;
+}
+
+/* ***************NavBar**************** */
+/* **************************************** */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 4rem;
+}
+
+.actions {
+  display: flex;
+  gap: 4rem;
+}
