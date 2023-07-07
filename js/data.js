@@ -10,6 +10,7 @@ const data = [
       "../media/airpods-max-skyblue.png",
       "../media/airpods-max-spacegray.png",
     ],
+    category: "HEADPHONE",
     quantity: 1,
   },
 ];
