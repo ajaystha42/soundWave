@@ -9,11 +9,14 @@ window.onload = (e) => {
       .slice(0, 4) // display first four items from the array
       .forEach((item) => {
         // iterate through the generated array
+        const randomNo = Math.floor(Math.random() * 2);
         const li = document.createElement("li");
-        li.innerHTML = `<img src=${item.images[0]} alt=${item.name}>
-        <p>${item.name}</p>
-        <p>$${item.price}</p>
-        <p>${item.availableQuantity}</p>`;
+        li.innerHTML = `<a href="./product-details.html?id=${item.id}"}>
+          <img src=${item.images[randomNo]} alt=${item.name}>
+          <p>${item.name}</p>
+          <p>$${item.price}</p>
+          <p>${item.availableQuantity}</p>
+        </a>`;
 
         list.appendChild(li);
       });
@@ -29,11 +32,14 @@ window.onload = (e) => {
     let selected = shuffled.slice(0, 4);
 
     selected.forEach((item) => {
+      const randomNo = Math.floor(Math.random() * 2);
       const li = document.createElement("li");
-      li.innerHTML = `<img src=${item.images[0]} alt=${item.name}>
-      <p>${item.name}</p>
-    <p>$${item.price}</p>
-    <p>${item.availableQuantity}</p>`;
+      li.innerHTML = `<a href="./product-details.html?id=${item.id}"}>
+        <img src=${item.images[randomNo]} alt=${item.name}>
+        <p>${item.name}</p>
+        <p>$${item.price}</p>
+        <p>${item.availableQuantity}</p>
+    </a>`;
 
       trendingList.appendChild(li);
     });
