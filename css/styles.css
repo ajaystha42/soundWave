@@ -1,3 +1,23 @@
 .main-container {
-  margin: 2rem 6rem;
+  max-width: 90%;
+  margin: 2rem 10rem;
+}
+
+/* ****************LIST***************** */
+/* ************************************* */
+.list {
+  list-style: none;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(5, minmax(24rem, 1fr));
+}
+
+.list li {
+  display: inline-block;
+  padding: 1.5rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.list img {
+  width: 100%;
 }

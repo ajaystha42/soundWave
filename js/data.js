@@ -1,4 +1,4 @@
-export default [
+const products = [
   {
     id: 1,
     name: "Airpods Max",
@@ -110,3 +110,5 @@ export default [
   },
   
 ];
+
+export default products;
