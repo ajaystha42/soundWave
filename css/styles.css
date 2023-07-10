@@ -20,4 +20,15 @@
 
 .list img {
   width: 100%;
+  object-fit: cover;
 }
+
+.list a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* .list img:hover,
+.list img:active {
+  transform: scale(1.2);
+} */
