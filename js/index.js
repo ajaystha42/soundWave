@@ -5,12 +5,15 @@ window.onload = (e) => {
   const createCardList = (className, category) => {
     const list = document.querySelector(className);
     products
-      .filter((item) => item.category === category)
+      .filter((item) => item.category === category) // display selected category
+      .slice(0, 4) // display first four items from the array
       .forEach((item) => {
+        // iterate through the generated array
         const li = document.createElement("li");
-        li.innerHTML = `<p>${item.name}</p>
-    <p>$${item.price}</p>
-    <p>${item.availableQuantity}</p>`;
+        li.innerHTML = `<img src=${item.images[0]} alt=${item.name}>
+        <p>${item.name}</p>
+        <p>$${item.price}</p>
+        <p>${item.availableQuantity}</p>`;
 
         list.appendChild(li);
       });
@@ -27,7 +30,8 @@ window.onload = (e) => {
 
     selected.forEach((item) => {
       const li = document.createElement("li");
-      li.innerHTML = `<p>${item.name}</p>
+      li.innerHTML = `<img src=${item.images[0]} alt=${item.name}>
+      <p>${item.name}</p>
     <p>$${item.price}</p>
     <p>${item.availableQuantity}</p>`;
 
