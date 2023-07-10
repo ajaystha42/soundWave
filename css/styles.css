@@ -5,9 +5,10 @@
 /* ****************LIST***************** */
 /* ************************************* */
 .list {
+  list-style: none;
   display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+  gap: 2rem;
+  grid-template-columns: repeat(5, minmax(24rem, 1fr));
 }
 
 .list li {
