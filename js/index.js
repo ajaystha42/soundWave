@@ -13,13 +13,13 @@ window.onload = (e) => {
   // );
 
   // create a list of <li> and send to <ul>
-  const list = document.querySelector(".list");
+  const headphoneList = document.querySelector(".headphone-list");
   data.forEach((item) => {
     const li = document.createElement("li");
     li.innerHTML = `<p>${item.name}</p>
     <p>$${item.price}</p>
     <p>${item.availableQuantity}</p>`;
 
-    list.appendChild(li);
+    headphoneList.appendChild(li);
   });
 };

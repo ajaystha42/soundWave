@@ -1,3 +1,17 @@
 .main-container {
   margin: 2rem 6rem;
 }
+
+/* ****************LIST***************** */
+/* ************************************* */
+.list {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+}
+
+.list li {
+  display: inline-block;
+  padding: 1.5rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
