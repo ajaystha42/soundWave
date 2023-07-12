@@ -1,6 +1,8 @@
 import products from "./data.js";
 
 // $(document).ready(function () {
+
+// getting url parameters (id) from url
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 
@@ -11,6 +13,7 @@ const product = products.find((product) => product.id === id);
 
 console.log(product.name);
 
+// display product details on the page
 $(".product-title").text(product.name);
 $(".product-desc").text(product.description);
 $(".product-price").text("$" + product.price);

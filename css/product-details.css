@@ -15,7 +15,7 @@
 
 .secondary-img-div {
   display: flex;
-  justify-content: space-around;
+  justify-content: start;
   align-items: center;
   gap: 2rem;
   /* margin-right: 20rem; */
