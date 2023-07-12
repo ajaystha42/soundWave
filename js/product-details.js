@@ -22,8 +22,42 @@ $(".main-img-div").prepend(
   `<img class="main-img" src="${product.images[0]}" />`
 );
 $(".secondary-img-div").prepend(
-  `<img class="sec-img" src="${product.images[1]}" />
-  <img class="sec-img" src="${product.images[2]}" />`
+  `<img id="img1" class="sec-img" src="${product.images[1]}" />
+  <img id="img2" class="sec-img" src="${product.images[2]}" />`
 );
+
+$("#img1").click(imgChange1);
+$("#img2").click(imgChange2);
+
+function imgChange1() {
+  console.log("HElooooo");
+  // first clear the main image div
+  $(".main-img-div").empty();
+  // then add the clicked image
+  $(".main-img-div").prepend(
+    `<img class="main-img" src="${product.images[1]}" />`
+  );
+
+  // clear the secondary image div
+  $(".secondary-img-div").empty();
+  // then add the remaining images
+  $(".secondary-img-div").prepend(
+    `<img id="img1" class="sec-img" src="${product.images[0]}" />
+    <img id="img2" class="sec-img" src="${product.images[2]}" />`
+  );
+}
+
+function imgChange2() {
+  $(".main-img-div").empty();
+  $(".main-img-div").prepend(
+    `<img class="main-img" src="${product.images[2]}" />`
+  );
+
+  $(".secondary-img-div").empty();
+  $(".secondary-img-div").prepend(
+    `<img id="img1" class="sec-img" src="${product.images[0]}" />
+      <img id="img2" class="sec-img" src="${product.images[1]}" />`
+  );
+}
 
 // });
