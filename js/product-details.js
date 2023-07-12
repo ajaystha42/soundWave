@@ -11,4 +11,8 @@ const product = products.find((product) => product.id === id);
 
 console.log(product.name);
 
+$(".product-title").text(product.name);
+$(".product-desc").text(product.description);
+$(".product-price").text("$" + product.price);
+
 // });
