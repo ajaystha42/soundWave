@@ -15,4 +15,12 @@ $(".product-title").text(product.name);
 $(".product-desc").text(product.description);
 $(".product-price").text("$" + product.price);
 
+$(".main-img-div").prepend(
+  `<img class="main-img" src="${product.images[0]}" />`
+);
+$(".secondary-img-div").prepend(
+  `<img class="sec-img" src="${product.images[1]}" />
+  <img class="sec-img" src="${product.images[2]}" />`
+);
+
 // });
