@@ -5,15 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/product-details.css" />
+
+    <!-- USING ION ICONS -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script type="module" src="../js/product-details.js"></script>
   </head>
   <body>
-    <h1></h1>
+    <header>
+      <h4>SoundWave LOGO</h4>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html">Categories</a></li>
+          <li><a href="index.html">About Us</a></li>
+          <li><a href="index.html">Contact Us</a></li>
+        </ul>
+
+        <div class="actions">
+          <div class="search-bar">
+            <input type="text" name="search" placeholder="Search Product..." />
+          </div>
+          <a class="cart-btn" href="#">
+            <span><ion-icon name="cart-outline"></ion-icon></span>Cart
+          </a>
+          <a class="account-btn" href="#">
+            <span><ion-icon name="person-outline"></ion-icon></span>Account
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main-container">
+      <div class="img-div"></div>
+      <div class="details-div">
+        <h1 class="product-title">Airpods-Max</h1>
+        <p class="product-desc">
+          AirPods Max combine high-fidelity audio with industry-leading Active
+          Noise Cancellation to deliver an unparalleled listening experience.
+          Each part of their custom-built driver works to produce sound with
+          ultra-low distortion across the audible range. From deep, rich bass to
+          accurate mids and crisp, clean highs, you’ll hear every note with a
+          new sense of clarity.
+        </p>
+
+        <hr />
+
+        <h2 class="product-price">$699.99</h2>
+        <p class="suggested-text">
+          Sugested payments with 6 months special financing
+        </p>
+
+        <hr />
+
+        <div class="btn-container">
+          <a href="#" class="color-btn">Buy Now</a>
+          <a href="#" class="white-btn">Add To Cart</a>
+        </div>
+
+        <div class="more-details-container">
+          <div class="details-box">
+            <ion-icon name="car-outline" class="details-icon"></ion-icon>
+            <div class="details-text">
+              <h4>Free Delivery</h4>
+              <p>Enter your postal code for delivery availability</p>
+            </div>
+          </div>
+
+          <div class="details-box">
+            <ion-icon name="clipboard-outline" class="details-icon"></ion-icon>
+            <div class="details-text">
+              <h4>Return delivery</h4>
+              <p>Free 30 days delivery returns</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
-  <script>
+  <!-- <script>
     $(document).ready(function () {
       const queryString = window.location.search;
       const urlParams = new URLSearchParams(queryString);
     });
-  </script>
+  </script> -->
 </html>
