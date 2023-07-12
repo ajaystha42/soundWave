@@ -1,0 +1,51 @@
+.main-container {
+  width: 70%;
+  margin: 3rem auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5rem;
+}
+
+.product-desc {
+  font-size: 1.4rem;
+  margin-bottom: 3rem;
+}
+
+.product-price {
+  margin-top: 3rem;
+  margin-bottom: 5px;
+}
+
+.suggested-text {
+  margin-bottom: 3rem;
+}
+
+.btn-container {
+  margin: 4rem 0;
+
+  display: flex;
+  gap: 2rem;
+}
+
+.more-details-container {
+  margin-top: 4rem;
+}
+
+.details-box {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 2rem;
+
+  padding: 1.5rem;
+  border: 1px solid #eee;
+}
+
+.details-icon {
+  font-size: 2.4rem;
+}
+
+.details-text p {
+  font-size: 1.2rem;
+}
