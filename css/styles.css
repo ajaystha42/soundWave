@@ -1,6 +1,10 @@
 .main-container {
-  max-width: 80%;
+  max-width: 70%;
   margin: 2rem auto;
+}
+
+.homepage-heading {
+  margin: 3rem 0;
 }
 
 /* ****************LIST***************** */
@@ -8,7 +12,7 @@
 .list {
   list-style: none;
   display: grid;
-  gap: 4rem;
+  gap: 3rem;
   grid-template-columns: repeat(4, minmax(24rem, 1fr));
 }
 
@@ -20,7 +24,8 @@
 
 .list img {
   width: 100%;
-  object-fit: cover;
+  height: 30rem;
+  object-fit: contain;
 }
 
 .list a {
