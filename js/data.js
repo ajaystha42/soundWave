@@ -184,7 +184,7 @@ const products = [
     availableQuantity: 10,
     description:
       "JBL Pro Sound delivers surprisingly big audio and punchy bass from Go 3’s ultra-compact size.",
-    images: ["../media/speaker/jbl3-blue-speaker.jpg","../media/speaker/jbl3-oceanblues-speaker.jpg"],
+    images: ["../media/speaker/jbl3-blue-speaker.jpg","../media/speaker/jbl3-oceanblue-speaker.jpg"],
     category: "Speaker",
     quantity: 1,
   },
