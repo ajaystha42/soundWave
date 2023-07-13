@@ -9,10 +9,10 @@ window.onload = (e) => {
       .slice(0, 4) // display first four items from the array
       .forEach((item) => {
         // iterate through the generated array
-        const randomNo = Math.floor(Math.random() * 2);
+        // const randomNo = Math.floor(Math.random() * 2);
         const li = document.createElement("li");
         li.innerHTML = `<a href="./html/product-details.html?id=${item.id}"}>
-          <img src=${item.images[randomNo]} alt=${item.name}>
+          <img src=${item.images[0]} alt=${item.name}>
           <p id="name">${item.name}</p>
           <p id="price">$${item.price}</p>
           <p>${item.availableQuantity}</p>

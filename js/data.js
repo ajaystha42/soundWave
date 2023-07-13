@@ -96,7 +96,7 @@ const products = [
       "Active Noise Cancellation (ANC) Technology: Whether you’re grooving to your favorite beats, watching a movie, or gaming, eliminate all distractions with Active Noise Cancellation that detects and nullifies unwanted ambient noise",
     images: [
       "./media/headphone/razer-green.jpg",
-      "./media/headphone/razer-greenpink.jpg",
+      "./media/headphone/razer-pink.jpg",
       "./media/headphone/razer-white.jpg",
     ],
     category: "HEADPHONE",
