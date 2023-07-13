@@ -17,6 +17,10 @@ if (product) {
   $(".product-desc").text(product.description);
   $(".product-price").text("$" + product.price);
 
+  $(".available-qty").text(
+    `Only ${product.availableQuantity} items left in stock`
+  );
+
   $(".main-img-div").prepend(
     `<img class="main-img" src="${product.images[0]}" />`
   );
