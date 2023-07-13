@@ -4,7 +4,33 @@
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 5rem;
+  column-gap: 10rem;
+}
+
+.main-img {
+  width: 100%;
+  padding: 1rem 6rem;
+  border: 1px solid #eee;
+}
+
+.secondary-img-div {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
+  /* margin-right: 20rem; */
+}
+
+.sec-img {
+  width: 15rem;
+  height: 15rem;
+  object-fit: contain;
+  padding: 1rem;
+  border: 1px solid #eee;
+}
+
+.product-title {
+  line-height: 1.3;
 }
 
 .product-desc {
