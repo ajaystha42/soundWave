@@ -135,9 +135,11 @@ header {
 
 .nav {
   display: flex;
+  width: 100%;
   justify-content: space-between;
+  margin-left: 5rem;
   align-items: center;
-  gap: 10rem;
+  gap: 5rem;
 }
 
 .nav-links {
@@ -201,39 +203,38 @@ header {
 
 /*------------Dropdown menu--------------------*/
 /*--------------------------------------------*/
-.dropdown-menu{
+.dropdown-menu {
   position: relative;
   display: inline;
   cursor: pointer;
 }
-.dropdown-content{
+.dropdown-content {
   background-color: white;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-  position:absolute;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  position: absolute;
   display: none;
   z-index: 2;
   padding: 2rem 0rem;
   width: 21rem;
   top: 5rem;
-    margin-left: -7rem;
+  margin-left: -7rem;
   border-radius: 1rem;
   -webkit-border-radius: 1rem;
   -moz-border-radius: 1rem;
   -ms-border-radius: 1rem;
   -o-border-radius: 1rem;
 }
-.dropdown-menu:hover .dropdown-content{
+.dropdown-menu:hover .dropdown-content {
   display: block;
-  
 }
-.content-wrapper{ 
+.content-wrapper {
   line-height: 3rem;
-  
 }
-.content-wrapper:hover{
+.content-wrapper:hover {
   background-color: #eee;
 }
-.individual-links{
+.individual-links {
   padding: 0 1.5rem;
   margin-left: 0rem !important;
   border-radius: 0rem !important;
@@ -242,6 +243,6 @@ header {
   -ms-border-radius: 0rem !important;
   -o-border-radius: 0rem !important;
 }
-.dropdown-content .content-wrapper:first-child{
+.dropdown-content .content-wrapper:first-child {
   font-weight: 600;
 }

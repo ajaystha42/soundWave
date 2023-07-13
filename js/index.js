@@ -11,10 +11,10 @@ window.onload = (e) => {
         // iterate through the generated array
         const randomNo = Math.floor(Math.random() * 2);
         const li = document.createElement("li");
-        li.innerHTML = `<a href="./product-details.html?id=${item.id}"}>
+        li.innerHTML = `<a href="./html/product-details.html?id=${item.id}"}>
           <img src=${item.images[randomNo]} alt=${item.name}>
-          <p>${item.name}</p>
-          <p>$${item.price}</p>
+          <p id="name">${item.name}</p>
+          <p id="price">$${item.price}</p>
           <p>${item.availableQuantity}</p>
         </a>`;
 
@@ -36,8 +36,8 @@ window.onload = (e) => {
       const li = document.createElement("li");
       li.innerHTML = `<a href="./html/product-details.html?id=${item.id}"}>
         <img src=${item.images[randomNo]} alt=${item.name}>
-        <p>${item.name}</p>
-        <p>$${item.price}</p>
+        <p id="name">${item.name}</p>
+        <p id="price">$${item.price}</p>
         <p>${item.availableQuantity}</p>
     </a>`;
 

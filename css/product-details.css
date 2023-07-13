@@ -47,8 +47,15 @@
   margin-bottom: 3rem;
 }
 
+.available-qty {
+  margin-top: 3rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ef233c;
+}
+
 .btn-container {
-  margin: 4rem 0;
+  margin: 2rem 0;
 
   display: flex;
   gap: 2rem;
