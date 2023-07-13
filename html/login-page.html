@@ -1,55 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SoundWave - Login Page</title>
     <link rel="stylesheet" href="../css/general.css" />
-    <link rel="stylesheet" href="../css/login-page.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="../css/login-page.css" />
+  </head>
+  <body>
     <div class="container">
-        
-        <div class="container-wrapper">
-            <div class="right-container">
-                <div class="login-container">
-                    <div class="login-header">
-                        <h4 class="header">SoundWave LOGO</h4>
+      <div class="container-wrapper">
+        <div class="right-container">
+          <div class="login-container">
+            <div class="login-header">
+              <h4 class="header">SoundWave LOGO</h4>
+            </div>
+            <div class="login-wrapper">
+              <div class="login-wrapper-header">
+                <h2>Welcome back !!!</h2>
+              </div>
+              <div class="wrapper-content">
+                <p>Good to see you again. Login to view your detail</p>
+                <div class="wrapper-content-form">
+                  <form
+                    id="loginForm"
+                    name="loginForm"
+                    action="./../php/login.php"
+                    method=""
+                  >
+                    <div class="user-box">
+                      <input type="text" name="" required="" />
+                      <label>Email</label>
                     </div>
-                    <div class="login-wrapper">
-                        <div class="login-wrapper-header">
-                            <h2>Welcome back !!!</h2>
-                        </div>
-                        <div class="wrapper-content">
-                            <p>Good to see you again. Login to view your detail</p>
-                            <div class="wrapper-content-form">
-                                <form>
-                                    <div class="user-box">
-                                        <input type="text" name="" required="">
-                                        <label>Email</label>
-                                      </div>
-                                      <div class="user-box">
-                                        <input type="password" name="" required="">
-                                        <label>Password</label>
-                                      </div>
-                                      <button class="login-button">Login</button>
-                                </form>
-                                <div class="sign-up-container">
-                                    <p>Don't have account?</p><a href="http://">Sign up</a>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="user-box">
+                      <input type="password" name="" required="" />
+                      <label>Password</label>
                     </div>
-
-                    this is just a content
+                    <button class="login-button">Login</button>
+                  </form>
+                  <div class="sign-up-container">
+                    <p>Don't have account?</p>
+                    <a href="http://">Sign up</a>
+                  </div>
                 </div>
+              </div>
             </div>
-            <div class="left-container">
-                <img  src="..//media/illustrator/login-illustrator.png" alt="illustrator" class="login-page-illustrator">
-                
-            </div>
+
+            this is just a content
+          </div>
         </div>
+        <div class="left-container">
+          <img
+            src="..//media/illustrator/login-illustrator.png"
+            alt="illustrator"
+            class="login-page-illustrator"
+          />
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
