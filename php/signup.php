@@ -4,7 +4,7 @@
 $servername = "localhost";
 $username = "soundwave";
 $password = "123";
-$dbname = "soundwavedb";
+$dbname = "soundwave_db";
 
 // Creating Database Connection
 $con = mysqli_connect($servername, $username, $password, $dbname);
@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // SQL Query
     $query = "INSERT INTO USERS (first_name, last_name, email, password, gender, contact, country, address) 
-            VALUES('$firstName', '$lastName', '$password', '$email', '$gender', '$contact', '$country', '$address')";
+            VALUES('$firstName', '$lastName', '$email', '$encrypted_password', '$gender', '$contact', '$country', '$address')";
 
     // Executing SQL Query
     if(mysqli_query($con, $query)) echo "Data inserted successfully!!";

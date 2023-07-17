@@ -21,34 +21,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = mysqli_real_escape_string($con, $_POST["email"]);
     $password = mysqli_real_escape_string($con, $_POST["password"]);
 
-
     // SQL Query
     $query = "SELECT * FROM USERS WHERE email = '$email'";
 
     // Executing SQL and fetching user's count
     $result = mysqli_query($con, $query);
-    echo $result;
 
     if (mysqli_num_rows($result) > 0) {
         $user = mysqli_fetch_assoc($result);
 
         // Verifying Password
         if (password_verify($password, $user["password"])) {
+            echo "Loggedin Successfully";
             // Start Session - Correct User Password
             // Handle session here
             session_start();
+
             $_SESSION["email"] = $email;
             $_SESSION["isValid"] = true;
+            
+            header("location: ./../index.html");
         }else echo "Invalid Passsword, Try Again.";
 
     }else echo "User doesn't exist";
     
-
-
-    // Executing SQL Query
-    if(mysqli_query($con, $query)) echo "Data inserted successfully!!";
-    else echo "Error Occured : " . $query . "<br>" . mysqli_error($con);
-
     // Closing Database Connection
     mysqli_close($con);
 }
