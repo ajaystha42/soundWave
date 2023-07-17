@@ -18,8 +18,8 @@ if (!$con) {
 // Login Submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Getting Value from Form
-    $email = mysqli_real_escape_string($conn, $_POST["email"]);
-    $password = mysqli_real_escape_string($conn, $_POST["password"]);
+    $email = mysqli_real_escape_string($con, $_POST["email"]);
+    $password = mysqli_real_escape_string($con, $_POST["password"]);
 
 
     // SQL Query
@@ -27,6 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Executing SQL and fetching user's count
     $result = mysqli_query($con, $query);
+    echo $result;
 
     if (mysqli_num_rows($result) > 0) {
         $user = mysqli_fetch_assoc($result);
@@ -46,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Executing SQL Query
     if(mysqli_query($con, $query)) echo "Data inserted successfully!!";
-    else echo "Error Occured : " . $query . "<br>" . mysqli_error($conn);
+    else echo "Error Occured : " . $query . "<br>" . mysqli_error($con);
 
     // Closing Database Connection
     mysqli_close($con);
