@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/login&signup-page.css" />
+  </head>
+  <body>
+    <header>
+      <h4>SoundWave LOGO</h4>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html">Categories</a></li>
+          <!-- <li><a href="index.html">About Us</a></li> -->
+          <li><a href="index.html">Contact Us</a></li>
+        </ul>
+
+        <div class="actions">
+          <div class="search-bar">
+            <input type="text" name="search" placeholder="Search Product..." />
+          </div>
+          <a class="cart-btn" href="#">
+            <span> <ion-icon name="cart-outline"></ion-icon> </span>Cart
+          </a>
+          <div class="dropdown-menu">
+            <a class="account-btn" href="#">
+              <span> <ion-icon name="person-outline"></ion-icon> </span
+              >Account</a
+            >
+            <div class="dropdown-content">
+              <div class="content-wrapper">
+                <a href="#" class="individual-links">Sign up</a>
+              </div>
+              <div class="content-wrapper">
+                <a href="./html/login-page.html" class="individual-links"
+                  >Log in</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="container-wrapper">
+        <div class="form-container">
+          <div class="sign-up-container">
+            <div class="sign-up-header">
+              <h2>Sign up</h2>
+            </div>
+
+            <div class="form-wrapper">
+              <form
+              id="userRegistrationForm"
+              action="../php/signup.php"
+              method="post">
+                
+              <div class="user-box-wrapper">
+                <div class="user-box">
+                  <input type="text" name="firstName" id="firstName" required />
+                  <label>firstname</label>
+                </div>
+                <div class="user-box">
+                  <input type="text" name="lastName" id="lastName" required />
+                  <label>Lastname</label>
+                </div>       
+                <div class="user-box">
+                  <input type="password" name="password" id="password" required />
+                  <label>Password</label>
+                </div>    
+                <div class="user-box">
+                  <input type="email" name="email" id="email" required />
+                  <label>email</label>
+                </div>  
+                <div class="user-box">
+                  <input type="text" name="gender" id="gender" required />
+                  <label>Gender</label>
+                </div>  
+                <div class="user-box">
+                  <input type="tel" name="contact" id="contact" required />
+                  <label>contact</label>
+                </div> 
+                <div class="user-box">
+                  <input type="text" name="country" id="country" required />
+                  <label>country</label>
+                </div> 
+                <div class="user-box">
+                  <input type="text" name="address" id="address" required />
+                  <label>address</label>
+                </div> 
+                <div class="user-box">
+                  <button class="login-button" type="submit" value="register">
+                    Register
+                  </button>
+                </div>                        
+              </div> 
+             
+            
+            </form>
+          </div>
+        </div>
+
+        <div class="image-container">
+          <img
+            src="..//media/illustrator/login-illustrator.png"
+            alt="illustrator"
+            class="login-page-illustrator"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

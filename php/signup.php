@@ -4,7 +4,7 @@
 $servername = "localhost";
 $username = "soundwave";
 $password = "123";
-$dbname = "soundwave_db";
+$dbname = "soundwavedb";
 
 // Creating Database Connection
 $con = mysqli_connect($servername, $username, $password, $dbname);
