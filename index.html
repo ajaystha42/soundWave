@@ -22,6 +22,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 
     <script type="module" src="./js/index.js"></script>
+    <script type="module" src="./js/common.js"></script>
   </head>
 
   <body>
@@ -46,7 +47,10 @@
             <input type="text" name="search" placeholder="Search Product..." />
           </div>
           <a class="cart-btn" href="#">
-            <span> <ion-icon name="cart-outline"></ion-icon> </span>Cart
+            <span>
+              <ion-icon name="cart-outline"></ion-icon>
+              <p id="cart-number"></p> </span
+            >Cart
           </a>
           <div class="dropdown-menu">
             <a class="account-btn" href="#">

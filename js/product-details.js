@@ -1,4 +1,5 @@
 import products from "./data.js";
+import { cartFunction } from "./cart.js";
 
 $(document).ready(function () {
   // getting url parameters (id) from url
@@ -25,7 +26,7 @@ $(document).ready(function () {
     );
     $(".secondary-img-div").prepend(
       `<img id="img1" class="sec-img" src=".${product.images[1]}" />
-  <img id="img2" class="sec-img" src=".${product.images[2]}" />`
+          <img id="img2" class="sec-img" src=".${product.images[2]}" />`
     );
 
     $("#img1").click(imgChange1);
@@ -44,7 +45,7 @@ $(document).ready(function () {
       // then add the remaining images
       $(".secondary-img-div").prepend(
         `<img id="img1" class="sec-img" src=".${product.images[0]}" />
-    <img id="img2" class="sec-img" src=".${product.images[2]}" />`
+        <img id="img2" class="sec-img" src=".${product.images[2]}" />`
       );
     }
 
@@ -57,8 +58,12 @@ $(document).ready(function () {
       $(".secondary-img-div").empty();
       $(".secondary-img-div").prepend(
         `<img id="img1" class="sec-img" src=".${product.images[0]}" />
-      <img id="img2" class="sec-img" src=".${product.images[1]}" />`
+            <img id="img2" class="sec-img" src=".${product.images[1]}" />`
       );
     }
+
+    $("#add-to-cart-btn").on("click", function () {
+      cartFunction("ADD", product.id);
+    });
   }
 });

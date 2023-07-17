@@ -39,6 +39,7 @@ const products = [
     images: [
       "./media/headphone/beats-black.jpg",
       "./media/headphone/beats-pink.jpg",
+      "./media/headphone/beats-pink.jpg",
     ],
     category: "HEADPHONE",
     quantity: 1,
@@ -51,6 +52,7 @@ const products = [
     description:
       "Powerful noise cancelling headphones - 11 levels of active noise cancelling let you enjoy music, podcasts, videos & calls without distractions",
     images: [
+      "./media/headphone/bose-black.jpg",
       "./media/headphone/bose-black.jpg",
       "./media/headphone/bose-black.jpg",
     ],
@@ -141,6 +143,7 @@ const products = [
     images: [
       "./media/earbud/edifier-black-earbud.jpg",
       "./media/earbud/edifier-blue-earbud.jpg",
+      "./media/earbud/edifier-blue-earbud.jpg",
     ],
     category: "EARPHONE",
     quantity: 1,
@@ -170,7 +173,7 @@ const products = [
     images: [
       "./media/earbud/samsung-black-earbud.jpg",
       "./media/earbud/samsung-mysticbronze-earbud.jpg",
-      "./media/earbud/jabra-black-earbud.jpg",
+      "./media/earbud/samsung-mysticbronze-earbud.jpg",
     ],
     category: "EARPHONE",
     quantity: 1,
@@ -200,6 +203,7 @@ const products = [
     images: [
       "./media/earbud/soundcore-black-earbud.jpg",
       "./media/earbud/soundcore-black-earbud.jpg",
+      "./media/earbud/soundcore-black-earbud.jpg",
     ],
     category: "EARPHONE",
     quantity: 1,
@@ -212,6 +216,7 @@ const products = [
     description:
       "Personalized Spatial Audio with dynamic head tracking places sound all around you",
     images: [
+      "./media/earbud/apple-white-earbud.jpg",
       "./media/earbud/apple-white-earbud.jpg",
       "./media/earbud/apple-white-earbud.jpg",
     ],
@@ -228,6 +233,7 @@ const products = [
     images: [
       "./media/speaker/jbl3-blue-speaker.jpg",
       "./media/speaker/jbl3-oceanblue-speaker.jpg",
+      "./media/speaker/jbl3-oceanblue-speaker.jpg",
     ],
     category: "SPEAKER",
     quantity: 1,
@@ -242,6 +248,7 @@ const products = [
     images: [
       "./media/speaker/jbl-blue-speaker.jpg",
       "./media/speaker/jbl-black-speaker.jpg",
+      "./media/speaker/jbl-black-speaker.jpg",
     ],
     category: "SPEAKER",
     quantity: 1,
@@ -255,6 +262,7 @@ const products = [
       "WATERPROOF speaker from the Inside out (Ipx7 rating), with soft, rugged exterior, resists dents, cracks and scratches",
     images: [
       "./media/speaker/bose-stoneblue-speaker.jpg",
+      "./media/speaker/bose-black-speaker.jpg",
       "./media/speaker/bose-black-speaker.jpg",
     ],
     category: "SPEAKER",
@@ -271,6 +279,7 @@ const products = [
     images: [
       "./media/speaker/anker-black-speaker.jpg",
       "./media/speaker/anker-blue-speaker.jpg",
+      "./media/speaker/anker-blue-speaker.jpg",
     ],
     category: "SPEAKER",
     quantity: 1,
@@ -283,6 +292,7 @@ const products = [
     description:
       "80W BASS WITH DUAL PAIRING,GREAT POWER BLUETOOTH SPEAKER. To achieve the incredible 80W, Zealot S57 speaker comes with an exclusive customised 2 woofers and two 25W full-range drivers and two 15W tweeters. Combine with DSP chip for top of the line bass stereo effect. Crazy and shocking. ",
     images: [
+      "./media/speaker/zealot-black-speaker.jpg",
       "./media/speaker/zealot-black-speaker.jpg",
       "./media/speaker/zealot-black-speaker.jpg",
     ],
@@ -299,6 +309,7 @@ const products = [
     images: [
       "./media/speaker/soulion-speaker.jpg",
       "./media/speaker/soulion-speaker.jpg",
+      "./media/speaker/soulion-speaker.jpg",
     ],
     category: "SPEAKER",
     quantity: 1,
@@ -313,6 +324,7 @@ const products = [
     images: [
       "./media/speaker/bugani-orange-speaker.jpg",
       "./media/speaker/bugani-black-speaker.jpg",
+      "./media/speaker/bugani-black-speaker.jpg",
     ],
     category: "SPEAKER",
     quantity: 1,
@@ -326,6 +338,7 @@ const products = [
       "IMPRESSIVE VOLUME AND BASS - A106Pro mini speaker is conveniently small but able to releasing crystal clear sound with impressive bass and room-filling loudness through a high-performance driver and a passive subwoofer",
     images: [
       "./media/speaker/ewa-black-speaker.jpg",
+      "./media/speaker/ewa-rosegold-speaker.jpg",
       "./media/speaker/ewa-rosegold-speaker.jpg",
     ],
     category: "SPEAKER",
