@@ -34,6 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Verifying Password
         if (password_verify($password, $user["password"])) {
             // Start Session - Correct User Password
+            // Handle session here
             session_start();
             $_SESSION["email"] = $email;
             $_SESSION["isValid"] = true;
