@@ -30,11 +30,11 @@ $(document).ready(function () {
     messages: {
       firstname: {
         required: "Please enter your first name",
-        minlength: "Your first name must be at least 2 characters long",
+        minlength: "Your first name must be at least 5 characters long",
       },
       lastname: {
         required: "Please enter your last name",
-        minlength: "Your last name must be at least 2 characters long",
+        minlength: "Your last name must be at least 5 characters long",
       },
       password: {
         required: "Please enter a password",
@@ -46,4 +46,9 @@ $(document).ready(function () {
       },
     },
   });
+});
+
+$("#country_selector").countrySelect({
+  defaultCountry: "us",
+  defaultStyling: "inside",
 });

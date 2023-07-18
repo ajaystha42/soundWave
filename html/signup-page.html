@@ -4,8 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
     <link rel="stylesheet" href="../css/general.css" />
     <link rel="stylesheet" href="../css/login&signup-page.css" />
+    <link rel="stylesheet" href="../plugin/country/css/countrySelect.css" />
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script src="../plugin/country/js/countrySelect.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="../js/signup.js"></script>
+    <script src="/path/to/cdn/jquery.min.js"></script>
   </head>
   <body>
     <header>
@@ -35,7 +48,7 @@
                 <a href="#" class="individual-links">Sign up</a>
               </div>
               <div class="content-wrapper">
-                <a href="./html/login-page.html" class="individual-links"
+                <a href="./../html/login-page.html" class="individual-links"
                   >Log in</a
                 >
               </div>
@@ -93,6 +106,9 @@
                   </div>
                   <div class="user-box">
                     <button class="login-button" type="submit">Register</button>
+                  </div>
+                  <div class="user-box">
+                    <input id="country_selector" type="text" />
                   </div>
                 </div>
               </form>
