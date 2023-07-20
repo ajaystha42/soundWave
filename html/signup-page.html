@@ -3,14 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SoundWave - Login Page</title>
+    <title>Document</title>
 
     <!-- -----------------------CSS links ------------------>
     <link rel="stylesheet" href="../css/general.css" />
     <link rel="stylesheet" href="../css/login&signup-page.css" />
+    <link rel="stylesheet" href="../plugin/country/css/countrySelect.css" />
 
     <!----------------------- signup js here -------------------->
-    <script src="../js/login.js"></script>
+    <script src="../js/signup.js"></script>
+
+    <!-- select country dropdown plugin -->
 
     <!-- USING ION ICONS -->
     <script
@@ -50,7 +53,7 @@
                 <a href="#" class="individual-links">Sign up</a>
               </div>
               <div class="content-wrapper">
-                <a href="./html/login-page.html" class="individual-links"
+                <a href="./../html/login-page.html" class="individual-links"
                   >Log in</a
                 >
               </div>
@@ -62,44 +65,57 @@
     <div class="container">
       <div class="container-wrapper">
         <div class="form-container">
-          <div class="login-container">
-            <div class="login-header">
-              <h4 class="header">SoundWave LOGO</h4>
+          <div class="sign-up-container">
+            <div class="sign-up-header">
+              <h2>Sign up</h2>
             </div>
-            <div class="login-wrapper">
-              <div class="login-wrapper-header">
-                <h1>Welcome back !!!</h1>
-              </div>
-              <div class="wrapper-content">
-                <h4>Good to see you again. Login to view your detail</h4>
-                <div class="wrapper-content-form">
-                  <form
-                    id="loginForm"
-                    name="loginForm"
-                    action="../php/login.php"
-                    method="post"
-                  >
-                    <div class="user-box">
-                      <input type="text" id="email" name="email" />
-                      <label>Email</label>
-                    </div>
-                    <div class="user-box">
-                      <input type="password" id="password" name="password" />
-                      <label>Password</label>
-                    </div>
-                    <div class="login-button">
-                      <input type="submit" value="login" />
-                    </div>
-                  </form>
-                  <div class="create-account">
-                    <h4>Don't have account?</h4>
-                    <a href="./signup-page.html">Sign up</a>
-                  </div>
+            <div class="wrapper-content-form">
+              <form
+                id="userRegistrationForm"
+                action="../php/signup.php"
+                method="POST"
+              >
+                <div class="user-box">
+                  <input type="text" name="firstname" id="firstname" />
+                  <label>firstname</label>
                 </div>
-              </div>
+                <div class="user-box">
+                  <input type="text" name="lastname" id="lastname" />
+                  <label>Lastname</label>
+                </div>
+                <div class="user-box">
+                  <input type="password" name="password" id="password" />
+                  <label>Password</label>
+                </div>
+                <div class="user-box">
+                  <input type="email" name="email" id="email" />
+                  <label>email</label>
+                </div>
+                <div class="user-box">
+                  <input type="text" name="gender" id="gender" />
+                  <label>Gender</label>
+                </div>
+                <div class="user-box">
+                  <input type="tel" name="contact" id="contact" />
+                  <label>contact</label>
+                </div>
+                <div class="user-box">
+                  <input type="text" name="country" id="country" />
+                  <label>country</label>
+                </div>
+                <div class="user-box">
+                  <input type="text" name="address" id="address" />
+                  <label>address</label>
+                </div>
+
+                <div class="user-box">
+                  <button class="login-button" type="submit">Register</button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
+
         <div class="image-container">
           <img
             src="..//media/illustrator/login-illustrator.png"
