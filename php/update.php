@@ -42,19 +42,6 @@ if ($_SERVER["REQUEST_METHOD"] == "PUT") {
    
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "DELETE") {
-    // Getting Value from Form
-      $email = mysqli_real_escape_string($con, $_POST["email"]);
-
-    // SQL Query
-    $query = "DELETE FROM USERS WHERE email = $email";
-
-
-    // Executing SQL Query
-    if(mysqli_query($con, $query)) echo "Data deleted successfully!!";
-    else echo "Error Occured : " . $query . "<br>" . mysqli_error($con);
-}
-
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
         // SQL Query
     $query = "SELECT * FROM USERS";
