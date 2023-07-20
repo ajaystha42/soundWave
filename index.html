@@ -23,6 +23,12 @@
 
     <script type="module" src="./js/index.js"></script>
     <!-- <script type="module" src="./js/common.js"></script> -->
+
+    <!-- Blue Imp Gallery PLUGIN -->
+    <link
+      rel="stylesheet"
+      href="./plugin/blueimp-gallery/css/blueimp-gallery.min.css"
+    />
   </head>
 
   <body>
@@ -75,6 +81,47 @@
     </header>
 
     <main class="main-container">
+      <!-- BLUE IMP GALLERY -->
+      <!-- The Gallery as lightbox dialog, should be a document body child element -->
+      <div
+        id="blueimp-gallery-carousel"
+        class="blueimp-gallery blueimp-gallery-contain blueimp-gallery-carousel"
+        aria-label="image carousel"
+      >
+        <div class="slides" aria-live="off"></div>
+        <h3 class="title"></h3>
+        <a
+          class="prev"
+          aria-controls="blueimp-gallery-carousel"
+          aria-label="previous slide"
+        ></a>
+        <a
+          class="next"
+          aria-controls="blueimp-gallery-carousel"
+          aria-label="next slide"
+        ></a>
+        <a
+          class="play-pause"
+          aria-controls="blueimp-gallery-carousel"
+          aria-label="play slideshow"
+          aria-pressed="true"
+          role="button"
+        ></a>
+        <ol class="indicator"></ol>
+      </div>
+
+      <div id="links">
+        <a href="./media/banner.jpg" title="Banana">
+          <!-- <img src="banner.jpg" alt="Banana" /> -->
+        </a>
+        <a href="./media/banner.jpg" title="Apple">
+          <!-- <img src="banner.jpg" alt="Apple" /> -->
+        </a>
+        <a href="./media/banner.jpg" title="Orange">
+          <!-- <img src="banner.jpg" alt="Orange" /> -->
+        </a>
+      </div>
+
       <h3 class="homepage-heading">Trending Products!</h3>
       <ul class="list trending-list"></ul>
 
@@ -87,5 +134,25 @@
       <h3>Our best sounding speakers!</h3>
       <ul class="list speaker-list"></ul>
     </main>
+
+    <script src="./plugin/blueimp-gallery/js/blueimp-gallery.min.js"></script>
+    <script>
+      document.getElementById("links").onclick = function (event) {
+        event = event || window.event;
+        var target = event.target || event.srcElement;
+        var link = target.src ? target.parentNode : target;
+        var options = { index: link, event: event };
+        var links = this.getElementsByTagName("a");
+        blueimp.Gallery(links, options);
+      };
+
+      blueimp.Gallery(
+        document.getElementById("links").getElementsByTagName("a"),
+        {
+          container: "#blueimp-gallery-carousel",
+          carousel: true,
+        }
+      );
+    </script>
   </body>
 </html>
