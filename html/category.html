@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Category</title>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <link rel="stylesheet" href="../css/general.css  " />
+    <link rel="stylesheet" href="../css/category.css" />
+  </head>
+  <body>
+    <header>
+      <h4>SoundWave LOGO</h4>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html">Categories</a></li>
+          <!-- <li><a href="index.html">About Us</a></li> -->
+          <li><a href="index.html">Contact Us</a></li>
+        </ul>
+
+        <div class="actions">
+          <div class="search-bar">
+            <input type="text" name="search" placeholder="Search Product..." />
+          </div>
+          <a class="cart-btn" href="#">
+            <span> <ion-icon name="cart-outline"></ion-icon> </span>Cart
+          </a>
+          <div class="dropdown-menu">
+            <a class="account-btn" href="#">
+              <span> <ion-icon name="person-outline"></ion-icon> </span
+              >Account</a
+            >
+            <div class="dropdown-content">
+              <div class="content-wrapper">
+                <a href="#" class="individual-links">Sign up</a>
+              </div>
+              <div class="content-wrapper">
+                <a href="./html/login-page.html" class="individual-links"
+                  >Log in</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="banner-image">
+        <h1>
+          Upto 50% off this summer
+          <br />
+          On your favourite headphone
+        </h1>
+      </div>
+      <div class="content-wrapper">
+        <div class="search">
+          <h3>Accordion use</h3>
+        </div>
+        <div class="category-content">
+          <h2>Trending product</h2>
+          <main class="main-container">
+            <div class="product-image-container">
+              <img src="../media/headphone/airpods-max-pink.png" alt="" />
+            </div>
+            <div class="product-body">
+              <h2 class="product-title">
+                <a href="#"> Airpods max pink</a>
+              </h2>
+              <ul>
+                <li>Headphone</li>
+              </ul>
+              <p>
+                "Personalized Spatial Audio with dynamic head tracking places
+                sound all around you.In addition to playing audio, the AirPods
+                contain a microphone that filters out background noise as well
+                as built-in accelerometers and optical sensors capable of
+                detecting taps and pinches
+              </p>
+            </div>
+            <div class="product-price">
+              <div class="price-offer">
+                <del><h3>$150</h3></del>
+                <h1>$120</h1>
+              </div>
+              <button type="button" class="cart-btn">
+                <i class="icon-cart-add mr-2"></i>
+                <p>Add to cart</p>
+              </button>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
