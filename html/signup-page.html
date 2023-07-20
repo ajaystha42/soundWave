@@ -5,20 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
+    <!-- -----------------------CSS links ------------------>
     <link rel="stylesheet" href="../css/general.css" />
     <link rel="stylesheet" href="../css/login&signup-page.css" />
     <link rel="stylesheet" href="../plugin/country/css/countrySelect.css" />
 
-    <script
-      src="https://code.jquery.com/jquery-2.2.4.min.js"
-      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-      crossorigin="anonymous"
-    ></script>
-    <script src="../plugin/country/js/countrySelect.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <!----------------------- signup js here -------------------->
     <script src="../js/signup.js"></script>
-    <script src="/path/to/cdn/jquery.min.js"></script>
+
+    <!-- select country dropdown plugin -->
+
+    <!-- USING ION ICONS -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </head>
   <body>
     <header>
@@ -64,52 +69,47 @@
             <div class="sign-up-header">
               <h2>Sign up</h2>
             </div>
-
-            <div class="form-wrapper">
+            <div class="wrapper-content-form">
               <form
                 id="userRegistrationForm"
-                action="./../php/signup.php"
+                action="../php/signup.php"
                 method="POST"
               >
-                <div class="user-box-wrapper">
-                  <div class="user-box">
-                    <input type="text" name="firstname" id="firstname" />
-                    <label>firstname</label>
-                  </div>
-                  <div class="user-box">
-                    <input type="text" name="lastname" id="lastname" />
-                    <label>Lastname</label>
-                  </div>
-                  <div class="user-box">
-                    <input type="password" name="password" id="password" />
-                    <label>Password</label>
-                  </div>
-                  <div class="user-box">
-                    <input type="email" name="email" id="email" />
-                    <label>email</label>
-                  </div>
-                  <div class="user-box">
-                    <input type="text" name="gender" id="gender" />
-                    <label>Gender</label>
-                  </div>
-                  <div class="user-box">
-                    <input type="tel" name="contact" id="contact" />
-                    <label>contact</label>
-                  </div>
-                  <div class="user-box">
-                    <input type="text" name="country" id="country" />
-                    <label>country</label>
-                  </div>
-                  <div class="user-box">
-                    <input type="text" name="address" id="address" />
-                    <label>address</label>
-                  </div>
-                  <div class="user-box">
-                    <button class="login-button" type="submit">Register</button>
-                  </div>
-                  <div class="user-box">
-                    <input id="country_selector" type="text" />
-                  </div>
+                <div class="user-box">
+                  <input type="text" name="firstname" id="firstname" />
+                  <label>firstname</label>
+                </div>
+                <div class="user-box">
+                  <input type="text" name="lastname" id="lastname" />
+                  <label>Lastname</label>
+                </div>
+                <div class="user-box">
+                  <input type="password" name="password" id="password" />
+                  <label>Password</label>
+                </div>
+                <div class="user-box">
+                  <input type="email" name="email" id="email" />
+                  <label>email</label>
+                </div>
+                <div class="user-box">
+                  <input type="text" name="gender" id="gender" />
+                  <label>Gender</label>
+                </div>
+                <div class="user-box">
+                  <input type="tel" name="contact" id="contact" />
+                  <label>contact</label>
+                </div>
+                <div class="user-box">
+                  <input type="text" name="country" id="country" />
+                  <label>country</label>
+                </div>
+                <div class="user-box">
+                  <input type="text" name="address" id="address" />
+                  <label>address</label>
+                </div>
+
+                <div class="user-box">
+                  <button class="login-button" type="submit">Register</button>
                 </div>
               </form>
             </div>

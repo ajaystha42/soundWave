@@ -47,8 +47,3 @@ $(document).ready(function () {
     },
   });
 });
-
-$("#country_selector").countrySelect({
-  defaultCountry: "us",
-  defaultStyling: "inside",
-});

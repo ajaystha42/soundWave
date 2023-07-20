@@ -4,8 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SoundWave - Login Page</title>
+
+    <!-- -----------------------CSS links ------------------>
     <link rel="stylesheet" href="../css/general.css" />
     <link rel="stylesheet" href="../css/login&signup-page.css" />
+
+    <!----------------------- signup js here -------------------->
+    <script src="../js/login.js"></script>
+
+    <!-- USING ION ICONS -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </head>
   <body>
     <header>
@@ -61,7 +76,7 @@
                   <form
                     id="loginForm"
                     name="loginForm"
-                    action="./signup-page.html"
+                    action="../php/login.php"
                     method="post"
                   >
                     <div class="user-box">
@@ -72,13 +87,13 @@
                       <input type="password" id="password" name="password" />
                       <label>Password</label>
                     </div>
-                    <button class="login-button" type="submit" value="login">
-                      Login
-                    </button>
+                    <div class="login-button">
+                      <input type="submit" value="login" />
+                    </div>
                   </form>
                   <div class="create-account">
                     <h4>Don't have account?</h4>
-                    <a href="./../signup-page.html">Sign up</a>
+                    <a href="./signup-page.html">Sign up</a>
                   </div>
                 </div>
               </div>
