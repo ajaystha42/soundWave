@@ -74,7 +74,8 @@
 .user-box label {
   position: absolute;
   left: 0;
-  top: -12px;
+  top: -20px;
+  font-size: 1.4rem;
 }
 .show {
   display: block;
