@@ -19,16 +19,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Getting Value from Form
     $email = mysqli_real_escape_string($con, $_POST["email"]);
     $password = mysqli_real_escape_string($con, $_POST["password"]);
-    
+
+
+    echo $email ;
+    echo $password;
 
     // SQL Query
     $query = "SELECT * FROM USERS WHERE email = '$email'";
 
+    echo $query;
     // Executing SQL and fetching user's count
     $result = mysqli_query($con, $query);
 
     if (mysqli_num_rows($result) > 0) {
         $user = mysqli_fetch_assoc($result);
+        echo $user;
+        // return;
         // Verifying Password
         if (password_verify($password, $user["password"])) {
             //set the email in the local storage if the password is verified.
