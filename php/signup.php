@@ -36,7 +36,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             VALUES('$firstName', '$lastName', '$email', '$encrypted_password', '$gender', '$contact', '$country', '$address')";
 
     // Executing SQL Query
-    if(mysqli_query($con, $query)) echo "Data inserted successfully!!";
+    if(mysqli_query($con, $query)){
+       echo "Data inserted successfully!!";
+
+       header("location: ../html/login-page.html");
+
+    }
     else echo "Error Occured : " . $query . "<br>" . mysqli_error($con);
 
     // Closing Database Connection
