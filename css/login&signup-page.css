@@ -4,7 +4,6 @@
 }
 .container-wrapper {
   display: flex;
-  height: 100%;
 }
 .image-container {
   position: relative;
@@ -31,7 +30,7 @@
 }
 .login-page-illustrator {
   position: absolute;
-  right: 29rem;
+  left: 18rem;
   bottom: 0;
   height: auto;
 }
@@ -68,6 +67,10 @@
   background: transparent;
 }
 
+.user-detail {
+  display: flex;
+  gap: 10rem;
+}
 .user-box label {
   position: absolute;
   left: 0;
@@ -80,9 +83,12 @@
   width: 100%;
   height: 4rem;
   border-radius: 0.5rem;
-  box-shadow: rgba(218, 218, 218, 0.3) 0px 1px 2px 0px,
-    rgba(204, 204, 204, 0.15) 0px 2px 6px 2px;
+  box-shadow: #219ebc 0px 1px 2px 0px,
+    #219ebc(204, 204, 204, 0.15) 0px 2px 6px 2px;
   cursor: pointer;
+  background-color: #219ebc;
+  color: white;
+  border-color: #219ebc;
 }
 .create-account {
   display: flex;
@@ -97,8 +103,8 @@
 }
 .sign-up-container {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  width: 70rem;
-  height: 75rem;
+  width: 65rem;
+  height: 80rem;
   border-radius: 1rem;
   padding: 4rem;
   -webkit-border-radius: 1rem;
@@ -110,6 +116,30 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+.user-box:nth-last-child(n-1) {
+  margin-bottom: 2rem;
+}
+.sign-up-button {
+  margin-top: 2rem;
+}
+.sign-up {
+  width: 30%;
+  height: 4rem;
+  border-radius: 0.5rem;
+  box-shadow: #219ebc 0px 1px 2px 0px,
+    #219ebc(204, 204, 204, 0.15) 0px 2px 6px 2px;
+  cursor: pointer;
+  background-color: #219ebc;
+  color: white;
+  border-color: #219ebc;
+}
+.sign-up-header h4 {
+  margin-top: -1rem;
+}
+
+.user-box #contact {
+  width: 26rem;
 }
 #firstname-error {
   font-size: 1.1rem;
