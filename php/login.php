@@ -1,4 +1,6 @@
 <?php
+// Start or resume the session
+session_start();
 
 // Database Configuration
 $servername = "localhost";
@@ -9,10 +11,9 @@ $dbname = "soundwave_db";
 // Creating Database Connection
 $con = mysqli_connect($servername, $username, $password, $dbname);
 
-
 // Connection Error
 if (!$con) {
-  die("Connection failed: " . mysqli_connect_error());
+    die("Connection failed: " . mysqli_connect_error());
 }
 
 // Login Submission
@@ -20,6 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Getting Value from Form
     $email = mysqli_real_escape_string($con, $_POST["email"]);
     $password = mysqli_real_escape_string($con, $_POST["password"]);
+    
 
     // SQL Query
     $query = "SELECT * FROM USERS WHERE email = '$email'";
@@ -32,21 +34,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Verifying Password
         if (password_verify($password, $user["password"])) {
-            echo "Loggedin Successfully";
+            echo "$email";
             // Start Session - Correct User Password
-            // Handle session here
-            session_start();
-
             $_SESSION["email"] = $email;
             $_SESSION["isValid"] = true;
-            
-            header("location: ./../index.html");
-        }else echo "Invalid Passsword, Try Again.";
 
-    }else echo "User doesn't exist";
+            if (isset($_SESSION["email"])) {
+                $email = $_SESSION["email"];
+                echo "<script>localStorage.setItem('email', '" . $email . "');</script>";
+            }
+
+            // echo "Favorite color is " . $_SESSION["email"] . ".<br>";
+
+            // Redirect to index.html after setting the session variables
+            header("Location: ./../index.html");
+            exit; // Add exit to ensure no further code execution after redirect
+        } else {
+            echo "Invalid Password, Try Again.";
+        }
+    } else {
+        echo "User doesn't exist";
+    }
+
     
-    // Closing Database Connection
-    mysqli_close($con);
 }
 
+// Closing Database Connection
+mysqli_close($con);
 ?>
