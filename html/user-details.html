@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="../css/general.css" />
     <link rel="stylesheet" href="../css/user-details.css" />
+    <link rel="stylesheet" href="../css/login&signup-page.css" />
 
     <!-- USING ION ICONS -->
     <script
@@ -64,6 +65,70 @@
         </div>
       </nav>
     </header>
+
+    <div class="form-container">
+      <div class="sign-up-container">
+        <form
+          id="userRegistrationForm"
+          action="../php/signup.php"
+          method="POST"
+        >
+          <div class="user-detail">
+            <div class="user-box">
+              <input type="text" name="firstname" id="firstname" />
+              <label>Firstname</label>
+            </div>
+            <div class="user-box">
+              <input type="text" name="lastname" id="lastname" />
+              <label>Lastname</label>
+            </div>
+          </div>
+          <div class="user-box">
+            <input type="text" name="address" id="address" />
+            <label>Address</label>
+          </div>
+          <div class="user-box">
+            <input type="email" name="email" id="email" />
+            <label>Email</label>
+          </div>
+          <div class="user-detail">
+            <div class="user-box">
+              <input type="password" name="password" id="password" />
+              <label>Password</label>
+            </div>
+            <div class="user-box">
+              <input type="text" name="country" id="datepicker" />
+              <label>DOB</label>
+            </div>
+          </div>
+          <div class="user-detail">
+            <div class="user-box">
+              <input type="tel" name="contact" id="contact" />
+              <label>Contact</label>
+            </div>
+            <div class="user-box">
+              <input type="text" name="gender" id="gender" />
+              <label>Gender</label>
+            </div>
+          </div>
+          <div class="user-detail">
+            <div class="user-box">
+              <input
+                type="text"
+                name="country_selector"
+                id="country_selector"
+              />
+              <label>country</label>
+            </div>
+          </div>
+
+          <div class="sign-up-button">
+            <button class="sign-up" type="submit">Register</button>
+            <!-- <button type="button" onclick="onSubmit()">Submit</button> -->
+          </div>
+        </form>
+      </div>
+    </div>
 
     <main></main>
   </body>
