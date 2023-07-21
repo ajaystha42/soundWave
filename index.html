@@ -111,13 +111,13 @@
       </div>
 
       <div id="links">
-        <a href="./media/banner.jpg" title="Banana">
+        <a href="./media/banner.jpg" title="Banner">
           <!-- <img src="banner.jpg" alt="Banana" /> -->
         </a>
-        <a href="./media/banner.jpg" title="Apple">
+        <a href="./media/banner.jpg" title="Banner">
           <!-- <img src="banner.jpg" alt="Apple" /> -->
         </a>
-        <a href="./media/banner.jpg" title="Orange">
+        <a href="./media/banner.jpg" title="Banner">
           <!-- <img src="banner.jpg" alt="Orange" /> -->
         </a>
       </div>
@@ -153,6 +153,14 @@
           carousel: true,
         }
       );
+    </script>
+
+    <script>
+      // display number of cart items in homepage navbar
+      cart = JSON.parse(localStorage.getItem("cart"));
+      cart.items.length != 0
+        ? (document.getElementById("cart-number").innerHTML = cart.items.length)
+        : document.getElementById("cart-number").remove();
     </script>
   </body>
 </html>
