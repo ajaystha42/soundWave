@@ -26,6 +26,9 @@ $(document).ready(function () {
         required: true,
         minlength: 40,
       },
+      dob: {
+        required: true,
+      },
     },
     messages: {
       firstname: {
