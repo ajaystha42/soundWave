@@ -1,6 +1,4 @@
 <?php
-// Start or resume the session
-session_start();
 
 // Database Configuration
 $servername = "localhost";
@@ -34,20 +32,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Verifying Password
         if (password_verify($password, $user["password"])) {
-            echo "$email";
-            // Start Session - Correct User Password
-            $_SESSION["email"] = $email;
-            $_SESSION["isValid"] = true;
-
-            if (isset($_SESSION["email"])) {
-                $email = $_SESSION["email"];
+            //set the email in the local storage if the password is verified.
                 echo "<script>localStorage.setItem('email', '" . $email . "');</script>";
-            }
 
-            // echo "Favorite color is " . $_SESSION["email"] . ".<br>";
-
-            // Redirect to index.html after setting the session variables
-            header("Location: ./../index.html");
+            // Redirect to index.html after setting the localStorage variable is set
+            echo "<script>window.location ='./../index.html'</script>";
+            
             exit; // Add exit to ensure no further code execution after redirect
         } else {
             echo "Invalid Password, Try Again.";
