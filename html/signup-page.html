@@ -39,16 +39,16 @@
 
     <!-- select country dropdown plugin -->
 
-    <!-- USING ION ICONS -->
     <script>
       $(function () {
         $("#datepicker").datepicker();
-        $("#country_selector").countrySelect();
+        // $("#country").countrySelect();
+        $("#country").countrySelect({
+          defaultCountry: "ca",
+          preferredCountries: ["ca", "gb", "us", "np"],
+          responsiveDropdown: true,
+        });
       });
-
-      function onSubmit() {
-        console.log($("#country_selector").val());
-      }
     </script>
     <style>
       .country-select .flag {
@@ -146,7 +146,7 @@
                     <label>Password</label>
                   </div>
                   <div class="user-box">
-                    <input type="text" name="country" id="datepicker" />
+                    <input type="text" name="dob" id="datepicker" />
                     <label>DOB</label>
                   </div>
                 </div>
@@ -162,11 +162,7 @@
                 </div>
                 <div class="user-detail">
                   <div class="user-box">
-                    <input
-                      type="text"
-                      name="country_selector"
-                      id="country_selector"
-                    />
+                    <input type="text" name="country" id="country" />
                     <label>country</label>
                   </div>
                 </div>

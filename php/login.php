@@ -29,11 +29,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (mysqli_num_rows($result) > 0) {
         $user = mysqli_fetch_assoc($result);
-
         // Verifying Password
         if (password_verify($password, $user["password"])) {
             //set the email in the local storage if the password is verified.
-                echo "<script>localStorage.setItem('email', '" . $email . "');</script>";
+                echo "<script>localStorage.setItem('user', '" . json_encode($user) . "');</script>";
 
             // Redirect to index.html after setting the localStorage variable is set
             echo "<script>window.location ='./../index.html'</script>";

@@ -26,15 +26,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $contact = mysqli_real_escape_string($con, $_POST["contact"]);
       $country = mysqli_real_escape_string($con, $_POST["country"]);
       $address = mysqli_real_escape_string($con, $_POST["address"]);
+      $dob = mysqli_real_escape_string($con, $_POST["dob"]);
 
-    // Encrypting Password
-    $encrypted_password = password_hash($password, PASSWORD_BCRYPT);
+      // Encrypting Password
+      $encrypted_password = password_hash($password, PASSWORD_BCRYPT);
 
 
     // SQL Query
-    $query = "INSERT INTO USERS (first_name, last_name, email, password, gender, contact, country, address) 
-            VALUES('$firstName', '$lastName', '$email', '$encrypted_password', '$gender', '$contact', '$country', '$address')";
+    $query = "INSERT INTO USERS (first_name, last_name, email, password, gender, contact, country, address, dob) 
+            VALUES('$firstName', '$lastName', '$email', '$encrypted_password', '$gender', '$contact', '$country', '$address', '$dob')";
 
+    echo $query;
     // Executing SQL Query
     if(mysqli_query($con, $query)){
        echo "Data inserted successfully!!";
