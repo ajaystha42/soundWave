@@ -23,9 +23,16 @@
 
     <script type="module" src="./js/index.js"></script>
     <!-- <script type="module" src="./js/common.js"></script> -->
+
+    <!-- Blue Imp Gallery PLUGIN -->
+    <link
+      rel="stylesheet"
+      href="./plugin/blueimp-gallery/css/blueimp-gallery.min.css"
+    />
   </head>
 
   <body>
+    
     <!-- <p>Group Members:</p>
     <p>Ajay Shrestha</p>
     <p>Gaurab Pokhrel</p>
@@ -39,7 +46,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="html/category.html">Categories</a></li>
           <!-- <li><a href="index.html">About Us</a></li> -->
-          <li><a href="index.html">Contact Us</a></li>
+          <li><a href="html/contact-us.html">Contact Us</a></li>
         </ul>
 
         <div class="actions">
@@ -75,17 +82,95 @@
     </header>
 
     <main class="main-container">
-      <h3 class="homepage-heading">Trending Products!</h3>
+      <a href="./html/user-details.html">USER DETAILS</a>
+      <!-- BLUE IMP GALLERY -->
+      <!-- The Gallery as lightbox dialog, should be a document body child element -->
+      <div
+        id="blueimp-gallery-carousel"
+        class="blueimp-gallery blueimp-gallery-contain blueimp-gallery-carousel"
+        aria-label="image carousel"
+      >
+        <div class="slides" aria-live="off"></div>
+        <h3 class="title"></h3>
+        <a
+          class="prev"
+          aria-controls="blueimp-gallery-carousel"
+          aria-label="previous slide"
+        ></a>
+        <a
+          class="next"
+          aria-controls="blueimp-gallery-carousel"
+          aria-label="next slide"
+        ></a>
+        <a
+          class="play-pause"
+          aria-controls="blueimp-gallery-carousel"
+          aria-label="play slideshow"
+          aria-pressed="true"
+          role="button"
+        ></a>
+        <ol class="indicator"></ol>
+      </div>
+
+      <div id="links">
+        <a href="./media/banner.jpg" title="Banner">
+          <!-- <img src="banner.jpg" alt="Banana" /> -->
+        </a>
+        <a href="./media/banner.jpg" title="Banner">
+          <!-- <img src="banner.jpg" alt="Apple" /> -->
+        </a>
+        <a href="./media/banner.jpg" title="Banner">
+          <!-- <img src="banner.jpg" alt="Orange" /> -->
+        </a>
+      </div>
+
+      <h2 class="homepage-heading">Trending Products!</h2>
       <ul class="list trending-list"></ul>
 
-      <h3 class="homepage-heading">Headphones for you!</h3>
+      <h2 class="homepage-heading">Headphones for you!</h2>
       <ul class="list headphone-list"></ul>
 
-      <h3 class="homepage-heading">Earphones for you!</h3>
+      <h2 class="homepage-heading">Earphones for you!</h2>
       <ul class="list earphone-list"></ul>
 
-      <h3>Our best sounding speakers!</h3>
+      <h2 class="homepage-heading">Our best sounding speakers!</h2>
       <ul class="list speaker-list"></ul>
     </main>
+    <h2 id="welcome-message"></h2>
+
+    <script src="./plugin/blueimp-gallery/js/blueimp-gallery.min.js"></script>
+    <script>
+      document.getElementById("links").onclick = function (event) {
+        event = event || window.event;
+        var target = event.target || event.srcElement;
+        var link = target.src ? target.parentNode : target;
+        var options = { index: link, event: event };
+        var links = this.getElementsByTagName("a");
+        blueimp.Gallery(links, options);
+      };
+
+      blueimp.Gallery(
+        document.getElementById("links").getElementsByTagName("a"),
+        {
+          container: "#blueimp-gallery-carousel",
+          carousel: true,
+        }
+      );
+    </script>
+
+    <script>
+      // display number of cart items in homepage navbar
+      cart = JSON.parse(localStorage.getItem("cart"));
+      cart.items.length != 0
+        ? (document.getElementById("cart-number").innerHTML = cart.items.length)
+        : document.getElementById("cart-number").remove();
+    </script>
   </body>
+   <script>
+            // Check if the local storage has a value for "email"
+            if (localStorage.getItem("email") != null) {
+                // If "email" value exists, update the welcome message
+                document.getElementById("welcome-message").innerHTML = "Welcome, " + localStorage.getItem('email') + "!";
+            }
+    </script>
 </html>

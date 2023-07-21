@@ -16,7 +16,7 @@ if (!$con) {
 }
 
 // Signup Submission
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "PUT") {
     // Getting Value from Form
       $firstName = mysqli_real_escape_string($con, $_POST["firstname"]);
       $lastName = mysqli_real_escape_string($con, $_POST["lastname"]);
@@ -32,20 +32,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     // SQL Query
-    $query = "INSERT INTO USERS (first_name, last_name, email, password, gender, contact, country, address) 
-            VALUES('$firstName', '$lastName', '$email', '$encrypted_password', '$gender', '$contact', '$country', '$address')";
+    $query = "UPDATE USERS SET firstName = '$firstName', lastName = '$lastName', password ='$password' gender ='$gender', 
+    contact ='$contact',country ='$country', address= '$address' WHERE email ='$email'";
 
     // Executing SQL Query
-    if(mysqli_query($con, $query)){
-       echo "Data inserted successfully!!";
-
-       header("location: ../html/login-page.html");
-
-    }
+    if(mysqli_query($con, $query)) echo "Data updated successfully!!";
     else echo "Error Occured : " . $query . "<br>" . mysqli_error($con);
 
-    // Closing Database Connection
-    mysqli_close($con);
+   
 }
+
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+        // SQL Query
+    $query = "SELECT * FROM USERS";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        echo "<h1>Users</h1>";
+        while ($row = $result->fetch_assoc()) {
+            echo "First Name: " . $row['first_name'] . ",Last Name: " . $row['last_name'] . ", Email: " . $row['email'] . ", Gender: " . $row['gender'] .", Contact: " . $row['contact'] .", Country: " . $row['country'] .", Address: " . $row['address'] . "<br>";
+        }
+    } else {
+        echo "No users found.";
+    }
+}
+
+
+ // Closing Database Connection
+ mysqli_close($con);
 
 ?>
