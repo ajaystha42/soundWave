@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       if(mysqli_query($con, $query)){
         echo "Data inserted successfully!!";
 
-        header("location: ../html/login-page.html");
+        header("location: ../html/login.html");
 
       }
       else echo "Error Occured : " . $query . "<br>" . mysqli_error($con);
