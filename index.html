@@ -29,6 +29,12 @@
       rel="stylesheet"
       href="./plugins/blueimp-gallery/css/blueimp-gallery.min.css"
     />
+    <script>
+      function logout() {
+        localStorage.removeItem("user");
+        location.reload();
+      }
+    </script>
   </head>
 
   <body>
@@ -76,6 +82,9 @@
                   class="individual-links"
                   >My Details</a
                 >
+              </div>
+              <div id="logout" class="content-wrapper" onclick="logout()">
+                <a class="individual-links" href="#">Logout</a>
               </div>
             </div>
           </div>
@@ -164,6 +173,7 @@
   <script>
     // Hiding User Details in Initial Load
     $("#userDetails").hide();
+    $("#logout").hide();
 
     // Cart in Home Page
     cart = JSON.parse(localStorage.getItem("cart"));
@@ -182,6 +192,7 @@
       $("#login").hide();
       $("#signup").hide();
       $("#userDetails").show();
+      $("#logout").show();
     }
   </script>
 </html>

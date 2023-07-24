@@ -17,6 +17,12 @@
 
     <link rel="stylesheet" href="../css/general.css  " />
     <link rel="stylesheet" href="../css/products.css" />
+    <script>
+      function logout() {
+        localStorage.removeItem("user");
+        location.reload();
+      }
+    </script>
   </head>
   <body>
     <header>
@@ -57,6 +63,9 @@
                   class="individual-links"
                   >My Details</a
                 >
+              </div>
+              <div id="logout" class="content-wrapper" onclick="logout()">
+                <a class="individual-links" href="#">Logout</a>
               </div>
             </div>
           </div>
@@ -113,6 +122,8 @@
   </body>
   <script>
     $("#userDetails").hide();
+    $("#logout").hide();
+
     // User Info in Home Page
     const data = localStorage.getItem("user");
     if (data) {
@@ -122,6 +133,7 @@
       $("#login").hide();
       $("#signup").hide();
       $("#userDetails").show();
+      $("#logout").show();
     }
   </script>
 </html>
