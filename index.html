@@ -59,18 +59,22 @@
           </a>
           <div class="dropdown-menu">
             <a class="account-btn" href="#">
-              <span> <ion-icon name="person-outline"></ion-icon> </span
-              >Account</a
+              <span> <ion-icon name="person-outline"></ion-icon> </span>
+              <p id="account">Account</p></a
             >
             <div class="dropdown-content">
-              <div class="content-wrapper">
-                <a href="html/signup.html" id="signup" class="individual-links"
-                  >Sign up</a
-                >
+              <div id="signup" class="content-wrapper">
+                <a href="html/signup.html" class="individual-links">Sign up</a>
+              </div>
+              <div id="login" class="content-wrapper">
+                <a href="html/login.html" class="individual-links">Log in</a>
               </div>
               <div class="content-wrapper">
-                <a href="html/login.html" id="login" class="individual-links"
-                  >Log in</a
+                <a
+                  href="html/userDetails.html"
+                  id="userDetails"
+                  class="individual-links"
+                  >My Details</a
                 >
               </div>
             </div>
@@ -134,7 +138,7 @@
       <h2 class="homepage-heading">OUR BEST SOUNDING SPEAKERS</h2>
       <ul class="list speaker-list"></ul>
     </main>
-    <h2 id="welcome-message"></h2>
+    <!-- <h2 id="welcome-message"></h2> -->
 
     <script src="./plugins/blueimp-gallery/js/blueimp-gallery.min.js"></script>
     <script>
@@ -156,29 +160,28 @@
         );
       }
     </script>
-
-    <script>
-      // display number of cart items in homepage navbar
-      cart = JSON.parse(localStorage.getItem("cart"));
-      if (cart) {
-        cart?.items?.length != 0
-          ? (document.getElementById("cart-number").innerHTML =
-              cart.items.length)
-          : document.getElementById("cart-number").remove();
-      }
-    </script>
   </body>
   <script>
+    // Hiding User Details in Initial Load
+    $("#userDetails").hide();
+
+    // Cart in Home Page
+    cart = JSON.parse(localStorage.getItem("cart"));
+    if (cart) {
+      cart.items.length != 0
+        ? (document.getElementById("cart-number").innerHTML = cart.items.length)
+        : document.getElementById("cart-number").remove();
+    }
+
+    // User Info in Home Page
     const data = localStorage.getItem("user");
     if (data) {
       const user = JSON.parse(data);
-      console.log({ user });
-      const signupEl = document.getElementById("signup");
-      signupEl.hidden = true;
+      const accountEl = document.getElementById("account");
+      accountEl.innerText = "Hey, " + user.first_name;
+      $("#login").hide();
+      $("#signup").hide();
+      $("#userDetails").show();
     }
-    // if (localStorage.getItem("email") != null) {
-    //   document.getElementById("welcome-message").innerHTML =
-    //     "Welcome, " + localStorage.getItem("email") + "!";
-    // }
   </script>
 </html>
