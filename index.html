@@ -92,10 +92,10 @@
       </nav>
     </header>
 
-    <main class="main-container">
-      <a href="./html/userDetails.html">USER DETAILS</a>
-      <!-- BLUE IMP GALLERY -->
-      <!-- The Gallery as lightbox dialog, should be a document body child element -->
+    <!-- <main class="main-container"> -->
+    <!-- BLUE IMP GALLERY -->
+    <!-- The Gallery as lightbox dialog, should be a document body child element -->
+    <div class="carousel">
       <div
         id="blueimp-gallery-carousel"
         class="blueimp-gallery blueimp-gallery-contain blueimp-gallery-carousel"
@@ -122,19 +122,20 @@
         ></a>
         <ol class="indicator"></ol>
       </div>
+    </div>
 
-      <div id="links">
-        <a href="./media/banner.jpg" title="Banner">
-          <!-- <img src="banner.jpg" alt="Banana" /> -->
-        </a>
-        <a href="./media/banner.jpg" title="Banner">
-          <!-- <img src="banner.jpg" alt="Apple" /> -->
-        </a>
-        <a href="./media/banner.jpg" title="Banner">
-          <!-- <img src="banner.jpg" alt="Orange" /> -->
-        </a>
-      </div>
-
+    <div id="links">
+      <a href="./media/banner.jpg" title="Banner">
+        <!-- <img src="banner.jpg" alt="Banana" /> -->
+      </a>
+      <a href="./media/banner.jpg" title="Banner">
+        <!-- <img src="banner.jpg" alt="Apple" /> -->
+      </a>
+      <a href="./media/banner.jpg" title="Banner">
+        <!-- <img src="banner.jpg" alt="Orange" /> -->
+      </a>
+    </div>
+    <main class="main-container">
       <h2 class="homepage-heading">TRENDING PRODUCTS</h2>
       <ul class="list trending-list"></ul>
 
@@ -178,11 +179,11 @@
     // Cart in Home Page
     cart = JSON.parse(localStorage.getItem("cart"));
     if (cart) {
-      cart.items.length != 0
-        ? (document.getElementById("cart-number").innerHTML = cart.items.length)
-        : document.getElementById("cart-number").remove();
+      cart.items.length != 0 &&
+        (document.getElementById("cart-number").innerHTML = cart.items.length);
+    } else {
+      document.getElementById("cart-number").remove();
     }
-
     // User Info in Home Page
     const data = localStorage.getItem("user");
     if (data) {
