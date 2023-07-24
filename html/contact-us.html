@@ -134,11 +134,11 @@
                 >
                   <div class="user-detail">
                     <div class="user-box">
-                      <input type="text" name="firstname" id="firstname" />
+                      <input type="text" name="firstname" id="firstname" required/>
                       <label>firstname</label>
                     </div>
                     <div class="user-box">
-                      <input type="text" name="lastname" id="lastname" />
+                      <input type="text" name="lastname" id="lastname" required/>
                       <label>Lastname</label>
                     </div>
                   </div>
@@ -156,7 +156,11 @@
                       <label>Contact</label>
                     </div>
                     <div class="user-box">
-                      <input type="text" name="gender" id="gender" />
+                      <select name ="gender" id="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="others">Others</option>
+                      </select>
                       <label>Gender</label>
                     </div>
                   </div>
