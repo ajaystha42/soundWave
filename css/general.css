@@ -274,3 +274,10 @@ header {
 .dropdown-content .content-wrapper:first-child {
   font-weight: 600;
 }
+
+.disabled,
+:disabled {
+  cursor: not-allowed;
+  background: #eee !important;
+  opacity: 1;
+}

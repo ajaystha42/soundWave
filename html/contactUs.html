@@ -23,6 +23,10 @@
     <script>
       function logout() {
         localStorage.removeItem("user");
+        // const productsFromStorage = localStorage.getItem("products");
+        // if (!productsFromStorage) {
+        //   localStorage.setItem("products", JSON.stringify(products));
+        // }
         location.reload();
       }
     </script>

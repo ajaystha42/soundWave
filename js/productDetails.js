@@ -8,8 +8,13 @@ $(document).ready(function () {
 
   const id = parseInt(urlParams.get("id"));
 
+  const productsFromStorage = localStorage.getItem("products");
+  let arr = [];
+  if (productsFromStorage) {
+    arr = [...JSON.parse(productsFromStorage)];
+  } else arr = [...products];
   // get the product based on id using array.find() method
-  const product = products.find((product) => product.id === id);
+  const product = arr.find((product) => product.id === id);
 
   if (product) {
     // display product details on the page using jquery
@@ -62,8 +67,13 @@ $(document).ready(function () {
       );
     }
 
-    $("#add-to-cart-btn").on("click", function () {
-      cartFunction("ADD", product.id);
-    });
+    if (product.availableQuantity <= 0) {
+      $("#add-to-cart-btn").prop("disabled", true).addClass("disabled");
+      $(".available-qty").text(`No items left in stock`);
+    } else {
+      $("#add-to-cart-btn").on("click", function () {
+        cartFunction("ADD", product.id);
+      });
+    }
   }
 });
