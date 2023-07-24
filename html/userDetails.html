@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SoundWave - Your Melody, Your Marketplace</title>
+
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/userDetails.css" />
+
+    <!-- USING ION ICONS -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script type="module" src="../js/userDetails.js"></script>
+    <script type="module" src="../js/common.js"></script>
+    <script>
+      function logout() {
+        localStorage.removeItem("user");
+        location.reload();
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <h4><a href="index.html">SoundWave LOGO</a></h4>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="./../index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contactUs.html">Contact Us</a></li>
+        </ul>
+
+        <div class="actions">
+          <div class="search-bar">
+            <input type="text" name="search" placeholder="Search Product..." />
+          </div>
+          <a class="cart-btn" href="#">
+            <span>
+              <ion-icon name="cart-outline"></ion-icon>
+              <p id="cart-number"></p> </span
+            >Cart
+          </a>
+          <div class="dropdown-menu">
+            <a class="account-btn" href="#">
+              <span> <ion-icon name="person-outline"></ion-icon> </span>
+              <p id="account">Account</p></a
+            >
+            <div class="dropdown-content">
+              <div id="signup" class="content-wrapper">
+                <a href="signup.html" class="individual-links">Sign up</a>
+              </div>
+              <div id="login" class="content-wrapper">
+                <a href="login.html" class="individual-links">Log in</a>
+              </div>
+              <div class="content-wrapper">
+                <a
+                  href="userDetails.html"
+                  id="userDetails"
+                  class="individual-links"
+                  >My Details</a
+                >
+              </div>
+              <div id="logout" class="content-wrapper" onclick="logout()">
+                <a class="individual-links" href="#">Logout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main></main>
+  </body>
+  <script>
+    $("#userDetails").hide();
+    $("#logout").hide();
+
+    // User Info in Home Page
+    const data = localStorage.getItem("user");
+    if (data) {
+      const user = JSON.parse(data);
+      const accountEl = document.getElementById("account");
+      accountEl.innerText = "Hey, " + user.first_name;
+      $("#login").hide();
+      $("#signup").hide();
+      $("#userDetails").show();
+      $("#logout").show();
+    }
+  </script>
+</html>

@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Category</title>
+    <title>SoundWave - Your Melody, Your Marketplace</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 
     <script
       type="module"
@@ -15,39 +16,68 @@
     ></script>
 
     <link rel="stylesheet" href="../css/general.css  " />
-    <link rel="stylesheet" href="../css/category.css" />
+    <link rel="stylesheet" href="../css/products.css" />
+    <script>
+      function logout() {
+        localStorage.removeItem("user");
+        location.reload();
+      }
+    </script>
   </head>
   <body>
     <header>
-      <h4>SoundWave LOGO</h4>
+      <h4><a href="index.html">SoundWave LOGO</a></h4>
       <nav class="nav">
         <ul class="nav-links">
+<<<<<<< HEAD:html/category.html
           <li><a href="index.html">Home</a></li>
           <li><a href="index.html">Products</a></li>
           <!-- <li><a href="index.html">About Us</a></li> -->
           <li><a href="index.html">Contact Us</a></li>
+=======
+          <li><a href="./../index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contactUs.html">Contact Us</a></li>
+>>>>>>> 9d41dc5247781f203af93f71998cd70c985638a7:html/products.html
         </ul>
 
         <div class="actions">
           <div class="search-bar">
             <input type="text" name="search" placeholder="Search Product..." />
           </div>
+<<<<<<< HEAD:html/category.html
           <a href="#">
             <span> <ion-icon name="cart-outline"></ion-icon> </span>Cart
+=======
+          <a class="cart-btn" href="#">
+            <span>
+              <ion-icon name="cart-outline"></ion-icon>
+              <p id="cart-number"></p> </span
+            >Cart
+>>>>>>> 9d41dc5247781f203af93f71998cd70c985638a7:html/products.html
           </a>
           <div class="dropdown-menu">
             <a class="account-btn" href="#">
-              <span> <ion-icon name="person-outline"></ion-icon> </span
-              >Account</a
+              <span> <ion-icon name="person-outline"></ion-icon> </span>
+              <p id="account">Account</p></a
             >
             <div class="dropdown-content">
-              <div class="content-wrapper">
-                <a href="#" class="individual-links">Sign up</a>
+              <div id="signup" class="content-wrapper">
+                <a href="signup.html" class="individual-links">Sign up</a>
+              </div>
+              <div id="login" class="content-wrapper">
+                <a href="login.html" class="individual-links">Log in</a>
               </div>
               <div class="content-wrapper">
-                <a href="./html/login-page.html" class="individual-links"
-                  >Log in</a
+                <a
+                  href="userDetails.html"
+                  id="userDetails"
+                  class="individual-links"
+                  >My Details</a
                 >
+              </div>
+              <div id="logout" class="content-wrapper" onclick="logout()">
+                <a class="individual-links" href="#">Logout</a>
               </div>
             </div>
           </div>
@@ -102,4 +132,20 @@
       </div>
     </div>
   </body>
+  <script>
+    $("#userDetails").hide();
+    $("#logout").hide();
+
+    // User Info in Home Page
+    const data = localStorage.getItem("user");
+    if (data) {
+      const user = JSON.parse(data);
+      const accountEl = document.getElementById("account");
+      accountEl.innerText = "Hey, " + user.first_name;
+      $("#login").hide();
+      $("#signup").hide();
+      $("#userDetails").show();
+      $("#logout").show();
+    }
+  </script>
 </html>
