@@ -151,6 +151,7 @@
                 <div class="user-detail">
                   <div class="user-box">
                     <input type="text" name="firstname" id="firstname" />
+                    <label class="FIRSTNAME"></label>
                     <label>FIRSTNAME</label>
                   </div>
                   <div class="user-box">
@@ -186,7 +187,12 @@
                     <label>CONTACT</label>
                   </div>
                   <div class="user-box">
-                    <input type="text" name="gender" id="gender" />
+                    <select id="gender" name="gender">
+                      <option value="man">Male</option>
+                      <option value="female">Female</option>
+                      <option value="Other">Other</option>
+                    </select>
+                    <!-- <input type="text" name="gender" id="gender" /> -->
                     <label>GENDER</label>
                   </div>
                 </div>
@@ -203,11 +209,10 @@
 
                 <div class="sign-up-button">
                   <button class="sign-up" type="submit">Register</button>
-                  <a href="login.html"
-                    ><button class="sign-up" type="button">
-                      Back to Login
-                    </button></a
-                  >
+                </div>
+                <div class="navigate-login">
+                  <h4>Already have a account?</h4>
+                  <a href="../html/login.html">Log in</a>
                 </div>
               </form>
             </div>
@@ -232,4 +237,16 @@
       $("#logout").show();
     }
   </script>
+  <style>
+    .ui-datepicker table {
+      font-size: 1.3em;
+    }
+    .ui-datepicker {
+      height: 22rem;
+      width: 23em;
+    }
+    .ui-datepicker-header {
+      font-size: 1.5rem;
+    }
+  </style>
 </html>
