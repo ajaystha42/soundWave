@@ -78,10 +78,24 @@
   outline: none;
   background: transparent;
 }
+.user-box select {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: black;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  background: transparent;
+}
 
 .user-detail {
   display: flex;
   gap: 10rem;
+}
+ui-datepicker {
+  height: 100rem;
 }
 
 .user-box label {
@@ -122,8 +136,8 @@
 
 .sign-up-container {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  width: 65rem;
-  height: 100rem;
+  width: 60rem;
+  height: 88rem;
   margin-bottom: 2rem;
   border-radius: 1rem;
   padding: 4rem;
@@ -144,11 +158,12 @@
 }
 
 .sign-up-button {
-  margin-top: 2rem;
+  margin-top: -2rem;
+  width: 100%;
 }
 
 .sign-up {
-  width: 30%;
+  width: 100%;
   height: 4rem;
   border-radius: 0.5rem;
   box-shadow: #219ebc 0px 1px 2px 0px,
@@ -158,13 +173,21 @@
   color: white;
   border-color: #219ebc;
 }
+.navigate-login {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.navigate-login a {
+  font-size: 1.3rem;
+  margin-left: 1rem;
+  color: #333;
+  text-decoration: none;
+}
 
 .sign-up-header h4 {
   margin-top: -1rem;
-}
-
-.user-box #contact {
-  width: 26rem;
 }
 
 #firstname-error {
@@ -209,7 +232,7 @@
   display: none !important;
 }
 label.error {
-  top: 2.2rem;
+  top: 4.1rem;
   color: red;
   font-size: 12px;
 }
