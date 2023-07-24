@@ -123,7 +123,8 @@
 .sign-up-container {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   width: 65rem;
-  height: 80rem;
+  height: 100rem;
+  margin-bottom: 2rem;
   border-radius: 1rem;
   padding: 4rem;
   -webkit-border-radius: 1rem;
@@ -139,7 +140,7 @@
 }
 
 .user-box:nth-last-child(n-1) {
-  margin-bottom: 2rem;
+  margin-bottom: 3.5rem;
 }
 
 .sign-up-button {
@@ -206,4 +207,9 @@
 
 .error-hidden {
   display: none !important;
+}
+label.error {
+  top: 2.2rem;
+  color: red;
+  font-size: 12px;
 }
