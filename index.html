@@ -27,7 +27,7 @@
     <!-- Blue Imp Gallery PLUGIN -->
     <link
       rel="stylesheet"
-      href="./plugin/blueimp-gallery/css/blueimp-gallery.min.css"
+      href="./plugins/blueimp-gallery/css/blueimp-gallery.min.css"
     />
   </head>
 
@@ -64,10 +64,14 @@
             >
             <div class="dropdown-content">
               <div class="content-wrapper">
-                <a href="html/signup.html" class="individual-links">Sign up</a>
+                <a href="html/signup.html" id="signup" class="individual-links"
+                  >Sign up</a
+                >
               </div>
               <div class="content-wrapper">
-                <a href="html/login.html" class="individual-links">Log in</a>
+                <a href="html/login.html" id="login" class="individual-links"
+                  >Log in</a
+                >
               </div>
             </div>
           </div>
@@ -132,7 +136,7 @@
     </main>
     <h2 id="welcome-message"></h2>
 
-    <script src="./plugin/blueimp-gallery/js/blueimp-gallery.min.js"></script>
+    <script src="./plugins/blueimp-gallery/js/blueimp-gallery.min.js"></script>
     <script>
       document.getElementById("links").onclick = function (event) {
         event = event || window.event;
@@ -140,32 +144,41 @@
         var link = target.src ? target.parentNode : target;
         var options = { index: link, event: event };
         var links = this.getElementsByTagName("a");
-        blueimp.Gallery(links, options);
+        if (blueimp) blueimp?.Gallery(links, options);
       };
-
-      blueimp.Gallery(
-        document.getElementById("links").getElementsByTagName("a"),
-        {
-          container: "#blueimp-gallery-carousel",
-          carousel: true,
-        }
-      );
+      if (blueimp) {
+        blueimp?.Gallery(
+          document.getElementById("links").getElementsByTagName("a"),
+          {
+            container: "#blueimp-gallery-carousel",
+            carousel: true,
+          }
+        );
+      }
     </script>
 
     <script>
       // display number of cart items in homepage navbar
       cart = JSON.parse(localStorage.getItem("cart"));
-      cart.items.length != 0
-        ? (document.getElementById("cart-number").innerHTML = cart.items.length)
-        : document.getElementById("cart-number").remove();
+      if (cart) {
+        cart?.items?.length != 0
+          ? (document.getElementById("cart-number").innerHTML =
+              cart.items.length)
+          : document.getElementById("cart-number").remove();
+      }
     </script>
   </body>
   <script>
-    // Check if the local storage has a value for "email"
-    if (localStorage.getItem("email") != null) {
-      // If "email" value exists, update the welcome message
-      document.getElementById("welcome-message").innerHTML =
-        "Welcome, " + localStorage.getItem("email") + "!";
+    const data = localStorage.getItem("user");
+    if (data) {
+      const user = JSON.parse(data);
+      console.log({ user });
+      const signupEl = document.getElementById("signup");
+      signupEl.hidden = true;
     }
+    // if (localStorage.getItem("email") != null) {
+    //   document.getElementById("welcome-message").innerHTML =
+    //     "Welcome, " + localStorage.getItem("email") + "!";
+    // }
   </script>
 </html>
