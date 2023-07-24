@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>SoundWave - Your Melody, Your Marketplace</title>
 
-    <link rel="stylesheet" href="./../plugin/flag/css/countrySelect.css" />
+    <link rel="stylesheet" href="./../plugins/flag/css/countrySelect.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="./../plugin/flag/js/countrySelect.min.js"></script>
+    <script src="./../plugins/flag/js/countrySelect.min.js"></script>
 
     <!-- -----------------------CSS links ------------------>
     <link
@@ -16,7 +16,7 @@
     />
 
     <link rel="stylesheet" href="../css/general.css" />
-    <link rel="stylesheet" href="../css/login&signup-page.css" />
+    <link rel="stylesheet" href="../css/login.css" />
 
     <!-- USING ION ICONS -->
     <script
@@ -52,19 +52,18 @@
     </script>
     <style>
       .country-select .flag {
-        background-image: url("./../plugin/flag/img/flags.png");
+        background-image: url("./../plugins/flag/img/flags.png");
       }
     </style>
   </head>
   <body>
     <header>
-      <h4>SoundWave LOGO</h4>
+      <h4><a href="./../index.html">SoundWave LOGO</a></h4>
       <nav class="nav">
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html">Categories</a></li>
-          <!-- <li><a href="index.html">About Us</a></li> -->
-          <li><a href="index.html">Contact Us</a></li>
+          <li><a href="./../index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contactUs.html">Contact Us</a></li>
         </ul>
 
         <div class="actions">
@@ -72,7 +71,10 @@
             <input type="text" name="search" placeholder="Search Product..." />
           </div>
           <a class="cart-btn" href="#">
-            <span> <ion-icon name="cart-outline"></ion-icon> </span>Cart
+            <span>
+              <ion-icon name="cart-outline"></ion-icon>
+              <p id="cart-number"></p> </span
+            >Cart
           </a>
           <div class="dropdown-menu">
             <a class="account-btn" href="#">
@@ -81,12 +83,10 @@
             >
             <div class="dropdown-content">
               <div class="content-wrapper">
-                <a href="#" class="individual-links">Sign up</a>
+                <a href="signup.html" class="individual-links">Sign up</a>
               </div>
               <div class="content-wrapper">
-                <a href="./../html/login-page.html" class="individual-links"
-                  >Log in</a
-                >
+                <a href="login.html" class="individual-links">Log in</a>
               </div>
             </div>
           </div>
@@ -125,25 +125,25 @@
                 <div class="user-detail">
                   <div class="user-box">
                     <input type="text" name="firstname" id="firstname" />
-                    <label>Firstname</label>
+                    <label>FIRSTNAME</label>
                   </div>
                   <div class="user-box">
                     <input type="text" name="lastname" id="lastname" />
-                    <label>Lastname</label>
+                    <label>LASTNAME</label>
                   </div>
                 </div>
                 <div class="user-box">
                   <input type="text" name="address" id="address" />
-                  <label>Address</label>
+                  <label>ADDRESS</label>
                 </div>
                 <div class="user-box">
                   <input type="email" name="email" id="email" />
-                  <label>Email</label>
+                  <label>EMAIL</label>
                 </div>
                 <div class="user-detail">
                   <div class="user-box">
                     <input type="password" name="password" id="password" />
-                    <label>Password</label>
+                    <label>PASSWORD</label>
                   </div>
                   <div class="user-box">
                     <input type="text" name="dob" id="datepicker" />
@@ -153,23 +153,27 @@
                 <div class="user-detail">
                   <div class="user-box">
                     <input type="tel" name="contact" id="contact" />
-                    <label>Contact</label>
+                    <label>CONTACT</label>
                   </div>
                   <div class="user-box">
                     <input type="text" name="gender" id="gender" />
-                    <label>Gender</label>
+                    <label>GENDER</label>
                   </div>
                 </div>
                 <div class="user-detail">
                   <div class="user-box">
                     <input type="text" name="country" id="country" />
-                    <label>country</label>
+                    <label>COUNTRY</label>
                   </div>
                 </div>
 
                 <div class="sign-up-button">
                   <button class="sign-up" type="submit">Register</button>
-                  <!-- <button type="button" onclick="onSubmit()">Submit</button> -->
+                  <a href="login.html"
+                    ><button class="sign-up" type="button">
+                      Back to Login
+                    </button></a
+                  >
                 </div>
               </form>
             </div>

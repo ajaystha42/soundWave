@@ -4,14 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./plugins/flag/css/countrySelect.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-    <link
-      rel="stylesheet"
-      href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
-    />
-    <link rel="stylesheet" href="/resources/demos/style.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="./plugins/flag/js/countrySelect.min.js"></script>
     <script>
       $(function () {
         $("#country_selector").countrySelect();
@@ -20,26 +16,11 @@
         console.log($("#country_selector").val());
       }
     </script>
-    <script>
-      $(function () {
-        var icons = {
-          header: "ui-icon-circle-arrow-e",
-          activeHeader: "ui-icon-circle-arrow-s",
-        };
-        $("#accordion").accordion({
-          icons: icons,
-        });
-        $("#toggle")
-          .button()
-          .on("click", function () {
-            if ($("#accordion").accordion("option", "icons")) {
-              $("#accordion").accordion("option", "icons", null);
-            } else {
-              $("#accordion").accordion("option", "icons", icons);
-            }
-          });
-      });
-    </script>
+    <style>
+      .country-select .flag {
+        background-image: url("./plugins/flag/img/flags.png");
+      }
+    </style>
   </head>
   <body>
     <div id="accordion">
