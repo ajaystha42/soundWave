@@ -10,7 +10,7 @@ window.onload = () => {
   $("lastname").value = user.last_name;
   $("address").value = user.address;
   $("email").value = user.email;
-  $("password").value = user.password;
+  // $("password").value = user.password;
   $("datepicker").value = user.dob;
   $("contact").value = user.contact;
   $("gender").value = user.gender;

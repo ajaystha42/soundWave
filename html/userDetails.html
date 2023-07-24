@@ -6,6 +6,7 @@
     <title>SoundWave - Your Melody, Your Marketplace</title>
 
     <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/login.css" />
     <link rel="stylesheet" href="../css/userDetails.css" />
 
     <!-- USING ION ICONS -->
@@ -19,7 +20,7 @@
     ></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <script type="module" src="../js/userDetails.js"></script>
+    <!-- <script type="module" src="../js/userDetails.js"></script> -->
     <script type="module" src="../js/common.js"></script>
     <script>
       function logout() {
@@ -81,7 +82,7 @@
       <div class="sign-up-container">
         <form
           id="userRegistrationForm"
-          action="../php/signup.php"
+          action="../php/update.php"
           method="POST"
         >
           <div class="user-detail">
@@ -99,16 +100,16 @@
             <label>Address</label>
           </div>
           <div class="user-box">
-            <input type="email" name="email" id="email" />
+            <input type="email" name="email" id="email" disabled />
             <label>Email</label>
           </div>
           <div class="user-detail">
-            <div class="user-box">
-              <input type="password" name="password" id="password" />
+            <!-- <div class="user-box">
+              <input type="password" name="password" id="password" disabled />
               <label>Password</label>
-            </div>
+            </div> -->
             <div class="user-box">
-              <input type="text" name="country" id="datepicker" />
+              <input type="text" name="country" id="datepicker" disabled />
               <label>DOB</label>
             </div>
           </div>
@@ -118,7 +119,7 @@
               <label>Contact</label>
             </div>
             <div class="user-box">
-              <input type="text" name="gender" id="gender" />
+              <input type="text" name="gender" id="gender" disabled />
               <label>Gender</label>
             </div>
           </div>
@@ -128,13 +129,14 @@
                 type="text"
                 name="country_selector"
                 id="country_selector"
+                disabled
               />
               <label>country</label>
             </div>
           </div>
 
           <div class="sign-up-button">
-            <button class="sign-up" type="submit">Register</button>
+            <button class="sign-up" type="submit">Update</button>
             <!-- <button type="button" onclick="onSubmit()">Submit</button> -->
           </div>
         </form>
@@ -159,4 +161,5 @@
       $("#logout").show();
     }
   </script>
+  <script type="module" src="../js/userDetails.js"></script>
 </html>
