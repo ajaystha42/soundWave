@@ -11,7 +11,7 @@ window.onload = (e) => {
         // iterate through the generated array
         // const randomNo = Math.floor(Math.random() * 2);
         const li = document.createElement("li");
-        li.innerHTML = `<a href="./html/product-details.html?id=${item.id}"}>
+        li.innerHTML = `<a href="./html/productDetails.html?id=${item.id}"}>
           <img src=${item.images[0]} alt=${item.name}>
           <p id="name">${item.name}</p>
           <p id="price">$${item.price}</p>
@@ -34,7 +34,7 @@ window.onload = (e) => {
     selected.forEach((item) => {
       const randomNo = Math.floor(Math.random() * 2);
       const li = document.createElement("li");
-      li.innerHTML = `<a href="./html/product-details.html?id=${item.id}"}>
+      li.innerHTML = `<a href="./html/productDetails.html?id=${item.id}"}>
         <img src=${item.images[randomNo]} alt=${item.name}>
         <p id="name">${item.name}</p>
         <p id="price">$${item.price}</p>
