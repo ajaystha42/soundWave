@@ -58,7 +58,18 @@
 .user-box input {
   width: 100%;
   padding: 10px 0;
-  font-size: 16px;
+  font-size: 1.6rem;
+  color: black;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  background: transparent;
+}
+.user-box select {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1.6rem;
   color: black;
   margin-bottom: 30px;
   border: none;
@@ -91,6 +102,7 @@
   color: white;
   border-color: #219ebc;
 }
+
 .create-account {
   display: flex;
   margin-top: 2rem;
@@ -139,9 +151,6 @@
   margin-top: -1rem;
 }
 
-.user-box #contact {
-  width: 26rem;
-}
 #firstname-error {
   font-size: 1.1rem;
   margin-top: 2.6rem;

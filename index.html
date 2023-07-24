@@ -32,7 +32,6 @@
   </head>
 
   <body>
-    
     <!-- <p>Group Members:</p>
     <p>Ajay Shrestha</p>
     <p>Gaurab Pokhrel</p>
@@ -44,7 +43,7 @@
       <nav class="nav">
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="html/category.html">Categories</a></li>
+          <li><a href="html/category.html">Products</a></li>
           <!-- <li><a href="index.html">About Us</a></li> -->
           <li><a href="html/contact-us.html">Contact Us</a></li>
         </ul>
@@ -166,11 +165,12 @@
         : document.getElementById("cart-number").remove();
     </script>
   </body>
-   <script>
-            // Check if the local storage has a value for "email"
-            if (localStorage.getItem("email") != null) {
-                // If "email" value exists, update the welcome message
-                document.getElementById("welcome-message").innerHTML = "Welcome, " + localStorage.getItem('email') + "!";
-            }
-    </script>
+  <script>
+    // Check if the local storage has a value for "email"
+    if (localStorage.getItem("email") != null) {
+      // If "email" value exists, update the welcome message
+      document.getElementById("welcome-message").innerHTML =
+        "Welcome, " + localStorage.getItem("email") + "!";
+    }
+  </script>
 </html>

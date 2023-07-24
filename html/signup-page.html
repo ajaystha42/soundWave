@@ -62,7 +62,7 @@
       <nav class="nav">
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="index.html">Categories</a></li>
+          <li><a href="index.html">Products</a></li>
           <!-- <li><a href="index.html">About Us</a></li> -->
           <li><a href="index.html">Contact Us</a></li>
         </ul>
@@ -133,12 +133,12 @@
                   </div>
                 </div>
                 <div class="user-box">
-                  <input type="text" name="address" id="address" />
-                  <label>Address</label>
-                </div>
-                <div class="user-box">
                   <input type="email" name="email" id="email" />
                   <label>Email</label>
+                </div>
+                <div class="user-box">
+                  <input type="text" name="address" id="address" />
+                  <label>Address</label>
                 </div>
                 <div class="user-detail">
                   <div class="user-box">
@@ -156,7 +156,12 @@
                     <label>Contact</label>
                   </div>
                   <div class="user-box">
-                    <input type="text" name="gender" id="gender" />
+                    <select name="gender" id="gender">
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                      <option value="Other">Other</option>
+                    </select>
+                    <!-- <input type="text" name="gender" id="gender" /> -->
                     <label>Gender</label>
                   </div>
                 </div>
