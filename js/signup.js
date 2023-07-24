@@ -3,15 +3,17 @@ $(document).ready(function () {
     rules: {
       firstname: {
         required: true,
-        minlength: 2,
       },
       lastname: {
         required: true,
-        minlength: 2,
       },
       password: {
         required: true,
-        minlength: 8,
+        minlength: 5,
+      },
+      confirmPassword: {
+        required: true,
+        equalTo: "#password",
       },
       email: {
         required: true,
@@ -22,9 +24,11 @@ $(document).ready(function () {
       country: {
         required: true,
       },
+      gender: {
+        required: true,
+      },
       address: {
         required: true,
-        minlength: 40,
       },
       dob: {
         required: true,
@@ -39,13 +43,32 @@ $(document).ready(function () {
         required: "Please enter your last name",
         minlength: "Your last name must be at least 5 characters long",
       },
+      address: {
+        required: "Please enter a address",
+      },
+      email: {
+        required: "Please enter your email",
+      },
       password: {
         required: "Please enter a password",
-        minlength: "Your password must be at least 8 characters long",
+        minlength: "Your password must be at least 5 characters long",
       },
       contact: {
         required: "Please enter your phone number",
         minlength: "Your phone number must be 10 digit",
+      },
+      gender: {
+        required: "Please select your gender",
+      },
+      country: {
+        required: "Please select your country",
+      },
+      confirmPassword: {
+        required: "Please confirm your password",
+        equalTo: "Your passwords do not match",
+      },
+      dob: {
+        required: "Please select your DOB",
       },
     },
   });

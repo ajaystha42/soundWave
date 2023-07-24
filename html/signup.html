@@ -4,10 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SoundWave - Your Melody, Your Marketplace</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script> -->
+    <script
+      type="text/javascript"
+      src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.7/jquery.validate.min.js"
+    ></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.min.js"></script> -->
 
     <link rel="stylesheet" href="./../plugins/flag/css/countrySelect.css" />
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 
     <script src="./../plugins/flag/js/countrySelect.min.js"></script>
 
@@ -37,7 +42,7 @@
       href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css"
     />
     <!----------------------- signup js here -------------------->
-    <script src="../js/signup.js"></script>
+    <script src="./../js/signup.js"></script>
 
     <!-- select country dropdown plugin -->
 
@@ -165,8 +170,12 @@
                     <label>PASSWORD</label>
                   </div>
                   <div class="user-box">
-                    <input type="text" name="dob" id="datepicker" />
-                    <label>DOB</label>
+                    <input
+                      type="password"
+                      name="confirmPassword"
+                      id="confirmPassword"
+                    />
+                    <label>RE-TYPE PASSWORD</label>
                   </div>
                 </div>
                 <div class="user-detail">
@@ -183,6 +192,10 @@
                   <div class="user-box">
                     <input type="text" name="country" id="country" />
                     <label>COUNTRY</label>
+                  </div>
+                  <div class="user-box">
+                    <input type="text" name="dob" id="datepicker" />
+                    <label>DOB</label>
                   </div>
                 </div>
 
