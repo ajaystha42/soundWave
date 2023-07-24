@@ -179,8 +179,9 @@
 }
 
 #password-error {
+  display: inline-block;
   font-size: 1.1rem;
-  margin-top: 2.6rem;
+  margin-top: 1rem;
   color: red;
 }
 
@@ -197,8 +198,9 @@
 }
 
 #email-error {
+  display: inline-block;
   font-size: 1.1rem;
-  margin-top: 2.6rem;
+  margin-top: 1rem;
   color: red;
 }
 
