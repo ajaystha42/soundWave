@@ -4,11 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SoundWave - Your Melody, Your Marketplace</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
     <link rel="stylesheet" href="../css/general.css" />
   </head>
   <body>
     <header>
-      <h4><a href="./../index.html">SoundWave LOGO</a></h4>
+      <h4><a href="index.html">SoundWave LOGO</a></h4>
       <nav class="nav">
         <ul class="nav-links">
           <li><a href="./../index.html">Home</a></li>
@@ -28,15 +30,23 @@
           </a>
           <div class="dropdown-menu">
             <a class="account-btn" href="#">
-              <span> <ion-icon name="person-outline"></ion-icon> </span
-              >Account</a
+              <span> <ion-icon name="person-outline"></ion-icon> </span>
+              <p id="account">Account</p></a
             >
             <div class="dropdown-content">
-              <div class="content-wrapper">
+              <div id="signup" class="content-wrapper">
                 <a href="signup.html" class="individual-links">Sign up</a>
               </div>
-              <div class="content-wrapper">
+              <div id="login" class="content-wrapper">
                 <a href="login.html" class="individual-links">Log in</a>
+              </div>
+              <div class="content-wrapper">
+                <a
+                  href="userDetails.html"
+                  id="userDetails"
+                  class="individual-links"
+                  >My Details</a
+                >
               </div>
             </div>
           </div>
@@ -44,4 +54,17 @@
       </nav>
     </header>
   </body>
+  <script>
+    $("#userDetails").hide();
+    // User Info in Home Page
+    const data = localStorage.getItem("user");
+    if (data) {
+      const user = JSON.parse(data);
+      const accountEl = document.getElementById("account");
+      accountEl.innerText = "Hey, " + user.first_name;
+      $("#login").hide();
+      $("#signup").hide();
+      $("#userDetails").show();
+    }
+  </script>
 </html>
