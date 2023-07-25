@@ -10,6 +10,8 @@
       type="text/javascript"
       src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.7/jquery.validate.min.js"
     ></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.min.js"></script> -->
 
     <link rel="stylesheet" href="./../plugins/flag/css/countrySelect.css" />
@@ -123,7 +125,7 @@
       <div class="container-wrapper">
         <div class="image-container">
           <img
-            src="..//media/illustrator/login.png"
+            src="./../media/illustrator/login.png"
             alt="illustrator"
             class="login-page-illustrator"
           />
@@ -145,18 +147,40 @@
             <div class="wrapper-content-form">
               <form
                 id="userRegistrationForm"
+                name="userRegistrationForm"
                 action="../php/signup.php"
                 method="POST"
               >
                 <div class="user-detail">
                   <div class="user-box">
-                    <input type="text" name="firstname" id="firstname" />
+                    <input
+                      type="text"
+                      name="firstname"
+                      id="firstname"
+                      required
+                    />
                     <label class="FIRSTNAME"></label>
                     <label>FIRSTNAME</label>
                   </div>
                   <div class="user-box">
-                    <input type="text" name="lastname" id="lastname" />
+                    <input type="text" name="lastname" id="lastname" required />
                     <label>LASTNAME</label>
+                  </div>
+                </div>
+                <div class="user-detail">
+                  <div class="user-box">
+                    <input type="tel" name="contact" id="contact" />
+                    <label>CONTACT</label>
+                    <span id="contact-error">Please enter your Details</span>
+                  </div>
+                  <div class="user-box">
+                    <select id="gender" name="gender">
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                      <option value="Other">Other</option>
+                    </select>
+                    <!-- <input type="text" name="gender" id="gender" /> -->
+                    <label>GENDER</label>
                   </div>
                 </div>
                 <div class="user-box">
@@ -181,21 +205,7 @@
                     <label>RE-TYPE PASSWORD</label>
                   </div>
                 </div>
-                <div class="user-detail">
-                  <div class="user-box">
-                    <input type="tel" name="contact" id="contact" />
-                    <label>CONTACT</label>
-                  </div>
-                  <div class="user-box">
-                    <select id="gender" name="gender">
-                      <option value="man">Male</option>
-                      <option value="female">Female</option>
-                      <option value="Other">Other</option>
-                    </select>
-                    <!-- <input type="text" name="gender" id="gender" /> -->
-                    <label>GENDER</label>
-                  </div>
-                </div>
+
                 <div class="user-detail">
                   <div class="user-box">
                     <input type="text" name="country" id="country" />
@@ -208,11 +218,16 @@
                 </div>
 
                 <div class="sign-up-button">
-                  <button class="sign-up" type="submit">Register</button>
+                  <input
+                    class="sign-up"
+                    type="submit"
+                    value="Register"
+                    onclick="return validateForm();"
+                  />
                 </div>
                 <div class="navigate-login">
                   <h4>Already have a account?</h4>
-                  <a href="../html/login.html">Log in</a>
+                  <a href="login.html">Log in</a>
                 </div>
               </form>
             </div>
@@ -224,6 +239,31 @@
   <script>
     $("#userDetails").hide();
     $("#logout").hide();
+    $("#contact-error").hide();
+
+    function validateForm() {
+      const contactPattern = "^[0-9]*$";
+
+      let result = true;
+      const firstname = document.getElementById("firstname").value;
+      const lastname = document.getElementById("lastname").value;
+      let contact = document.getElementById("contact").value;
+      const contactError = document.getElementById("contact-error");
+
+      if (firstname !== "" && lastname != "") {
+        if (!contact.match(contactPattern)) {
+          $("#contact-error").show();
+
+          contactError.textContent = "Only Number Allowed";
+          result = false;
+        } else if (contact == "") {
+          contactError.textContent = "Please enter your Details";
+          result = false;
+          $("#contact-error").show();
+        } else $("#contact-error").hide();
+      }
+      return result;
+    }
 
     // User Info in Home Page
     const data = localStorage.getItem("user");

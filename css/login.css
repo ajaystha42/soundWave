@@ -78,6 +78,7 @@
   outline: none;
   background: transparent;
 }
+
 .user-box select {
   width: 100%;
   padding: 10px 0;
@@ -94,6 +95,7 @@
   display: flex;
   gap: 10rem;
 }
+
 ui-datepicker {
   height: 100rem;
 }
@@ -173,12 +175,14 @@ ui-datepicker {
   color: white;
   border-color: #219ebc;
 }
+
 .navigate-login {
   display: flex;
   width: 100%;
   justify-content: center;
   margin-top: 1rem;
 }
+
 .navigate-login a {
   font-size: 1.3rem;
   margin-left: 1rem;
@@ -228,9 +232,9 @@ ui-datepicker {
   color: red;
 }
 
-.error-hidden {
+/* .error-hidden {
   display: none !important;
-}
+} */
 label.error {
   top: 4.1rem;
   color: red;

@@ -281,3 +281,7 @@ header {
   background: #eee !important;
   opacity: 1;
 }
+
+.error-hidden {
+  display: none !important;
+}
