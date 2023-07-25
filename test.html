@@ -10,15 +10,13 @@
     <script src="./plugins/flag/js/countrySelect.min.js"></script>
     <script>
       $(function () {
-        $("#country_selector").countrySelect();
+        $(document).tooltip();
       });
-      function onSubmit() {
-        console.log($("#country_selector").val());
-      }
     </script>
     <style>
-      .country-select .flag {
-        background-image: url("./plugins/flag/img/flags.png");
+      label {
+        display: inline-block;
+        width: 5em;
       }
     </style>
   </head>
@@ -26,7 +24,7 @@
     <div id="accordion">
       <h3>Section 1</h3>
       <div>
-        <p>
+        <p title="That's what this widget is">
           Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam.
           Integer ut neque. Vivamus nisi metus, molestie vel, gravida in,
           condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi.
