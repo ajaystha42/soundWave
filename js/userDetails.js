@@ -26,6 +26,21 @@ $(document).ready(function () {
   $("#contact").val(user.contact);
   $("#gender").val(user.gender);
   $("#country_selector").val(user.country);
+
+  let current_effect = "bounce";
+  $("#loader-waitme").click(function () {
+    run_waitMe(current_effect);
+  });
+
+  function run_waitMe(effect) {
+    $("#loader-waitme").waitMe({
+      effect: "bounce",
+      text: "",
+      bg: "rgba(255,255,255,0.7)",
+      color: "#000",
+      waitTime: 500,
+    });
+  }
 });
 
 // function $(id) {

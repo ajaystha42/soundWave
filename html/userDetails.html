@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="../css/login.css" />
     <link rel="stylesheet" href="../css/userDetails.css" />
 
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="../plugins/waitMe/css/waitMe.css"
+    />
+
     <!-- USING ION ICONS -->
     <script
       type="module"
@@ -20,6 +26,8 @@
     ></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="../plugins/waitMe/js/waitMe.js"></script>
+
     <!-- <script type="module" src="../js/userDetails.js"></script> -->
     <script>
       function logout() {
@@ -137,7 +145,9 @@
           </div>
 
           <div class="sign-up-button">
-            <button class="sign-up" type="submit">Update</button>
+            <button id="loader-waitme" class="sign-up" type="submit">
+              Update
+            </button>
             <!-- <button type="button" onclick="onSubmit()">Submit</button> -->
           </div>
         </form>
