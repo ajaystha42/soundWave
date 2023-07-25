@@ -77,6 +77,8 @@
       </nav>
     </header>
 
+    <span class="loader"></span>
+
     <div class="form-container">
       <div class="sign-up-container">
         <form
@@ -161,5 +163,16 @@
     }
   </script>
   <script type="module" src="../js/userDetails.js"></script>
-  <script type="module" src="../js/common.js"></script>
+
+  <!-- <script type="module" src="../js/common.js"></script> -->
+  <script>
+    // Cart in Home Page
+    let cart = JSON.parse(localStorage.getItem("cart"));
+    if (cart) {
+      cart.items.length != 0 &&
+        (document.getElementById("cart-number").innerHTML = cart.items.length);
+    } else {
+      document.getElementById("cart-number").remove();
+    }
+  </script>
 </html>
