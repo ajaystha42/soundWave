@@ -2,6 +2,31 @@
   margin-top: 3rem;
 }
 
+.sign-up-container {
+  width: 35% !important;
+}
+
+.loader {
+  width: 4rem;
+  height: 4rem;
+  display: inline-block;
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  animation: 1s infinite spin;
+  border-radius: 50%;
+  border-top: 5px solid #219ebc;
+  border-bottom: 5px solid #219ebc;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 /* :disabled {
   cursor: not-allowed;
