@@ -22,6 +22,12 @@ window.onload = (e) => {
       });
   };
 
+  //tooltip
+
+  $(function () {
+    $(document).tooltip();
+  });
+
   // Generate trending products
   const generateTrendingList = () => {
     const trendingList = document.querySelector(".trending-list");
@@ -36,7 +42,7 @@ window.onload = (e) => {
       const li = document.createElement("li");
       li.innerHTML = `<a href="./html/productDetails.html?id=${item.id}"}>
         <img src=${item.images[randomNo]} alt=${item.name}>
-        <p id="name">${item.name}</p>
+        <p>${item.name}</p>
         <p id="price">$${item.price}</p>
         <p>${item.availableQuantity}</p>
     </a>`;
