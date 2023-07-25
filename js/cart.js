@@ -21,9 +21,14 @@ if (localStorage.getItem("cart") != null) {
 }
 
 export const cartFunction = (action, payload) => {
-  console.log("ID IS ", payload);
   if (action === "ADD") {
-    const item = products.find((product) => product.id === payload);
+    const productsFromStorage = localStorage.getItem("products");
+    let arr = [];
+    if (productsFromStorage) {
+      arr = [...JSON.parse(productsFromStorage)];
+    } else arr = [...products];
+    const item = arr.find((product) => product.id === payload);
+    const itemIndex = arr.findIndex((product) => product.id === payload);
     cart.items = [...cart.items, item];
 
     cart.quantity = cart.items.length;
@@ -34,7 +39,10 @@ export const cartFunction = (action, payload) => {
     });
     cart.price = new_price.toFixed(2);
 
-    console.log(cart);
+    // Updating all products
+    arr[itemIndex].availableQuantity -= 1;
+    localStorage.setItem("products", JSON.stringify(arr));
+
     saveCart(cart);
     location.reload();
   }

@@ -13,6 +13,8 @@
     <!----------------------- signup js here -------------------->
     <script src="../js/login.js"></script>
 
+    <script type="module" src="../js/common.js"></script>
+
     <!-- USING ION ICONS -->
     <script
       type="module"
@@ -27,6 +29,20 @@
         localStorage.removeItem("user");
         location.reload();
       }
+
+      // function validateForm() {
+      //   let result = true;
+      //   let email = document.getElementById("email").value;
+      //   let password = document.getElementById("password").value;
+      //   const emailError = document.getElementById("email-error");
+      //   const passwordError = document.getElementById("password-error");
+      //   if (email === "" || password === "") {
+      //     if (emailError) emailError?.classList.remove("error-hidden");
+      //     if (passwordError) passwordError?.classList.remove("error-hidden");
+      //     result = false;
+      //   }
+      //   return result;
+      // }
     </script>
   </head>
   <body>
@@ -107,13 +123,21 @@
                     <div class="user-box">
                       <input type="text" id="email" name="email" />
                       <label>EMAIL</label>
+                      <span id="email-error">Email is required</span>
                     </div>
                     <div class="user-box">
                       <input type="password" id="password" name="password" />
                       <label>PASSWORD</label>
+                      <span id="password-error">Password is required</span>
                     </div>
                     <div class="login-button">
-                      <input type="submit" value="Login" />
+                      <!-- <input type="submit" value="Login" /> -->
+                      <input
+                        type="submit"
+                        name="submit"
+                        value="Login"
+                        onclick="return validateForm();"
+                      />
                     </div>
                   </form>
                   <div class="create-account">
@@ -131,8 +155,12 @@
   <script>
     $("#userDetails").hide();
     $("#logout").hide();
+    const emailError = document.getElementById("email-error");
+    const passwordError = document.getElementById("password-error");
+    if (emailError) emailError?.classList.add("error-hidden");
+    if (passwordError) passwordError?.classList.add("error-hidden");
 
-    // User Info in Home Page
+    // User Info in Home Pagel
     const data = localStorage.getItem("user");
     if (data) {
       const user = JSON.parse(data);

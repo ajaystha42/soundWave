@@ -82,3 +82,9 @@
 .details-text p {
   font-size: 1.2rem;
 }
+
+/* :disabled {
+  cursor: not-allowed;
+  background: #eee !important;
+  opacity: 1;
+} */

@@ -83,14 +83,14 @@
 .price-offer del {
   margin-bottom: -2rem;
 }
-.cart-btn {
+/* .cart-btn {
   width: 23rem;
   height: 5rem;
   border-radius: 0.5rem;
   border-color: wheat;
   cursor: pointer;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
+} */
 .cart-btn p {
   font-size: 12pt;
 }

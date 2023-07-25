@@ -2,21 +2,25 @@
   width: 100%;
   height: 100%;
 }
+
 .container-wrapper {
   display: flex;
 }
+
 .image-container {
   position: relative;
   width: 40%;
   height: 90vh;
   background-color: #ffede1;
 }
+
 .form-container {
   width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .login-container {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   width: 70rem;
@@ -28,34 +32,53 @@
   -ms-border-radius: 1rem;
   -o-border-radius: 1rem;
 }
+
 .login-page-illustrator {
   position: absolute;
   left: 18rem;
   bottom: 0;
   height: auto;
 }
+
 .header {
   margin-bottom: 4rem;
 }
+
 .login-wrapper {
   display: grid;
   justify-content: center;
 }
+
 .login-wrapper-header {
   display: grid;
   justify-content: center;
 }
+
 .login-wrapper-header h1 {
   margin: 2rem 0 0 0 !important;
 }
+
 .wrapper-content-form {
   margin-top: 6rem;
 }
+
 .user-box {
   position: relative;
   width: 100%;
 }
+
 .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: black;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  background: transparent;
+}
+.user-box select {
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
@@ -71,14 +94,21 @@
   display: flex;
   gap: 10rem;
 }
+ui-datepicker {
+  height: 100rem;
+}
+
 .user-box label {
   position: absolute;
   left: 0;
-  top: -12px;
+  top: -20px;
+  font-size: 1.4rem;
 }
+
 .show {
   display: block;
 }
+
 .login-button input {
   width: 100%;
   height: 4rem;
@@ -90,21 +120,25 @@
   color: white;
   border-color: #219ebc;
 }
+
 .create-account {
   display: flex;
   margin-top: 2rem;
   justify-content: center;
 }
+
 .create-account a {
   text-decoration: none;
   font-size: 1.3rem;
   color: #333;
   margin-left: 0.8rem;
 }
+
 .sign-up-container {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  width: 65rem;
-  height: 80rem;
+  width: 60rem;
+  height: 88rem;
+  margin-bottom: 2rem;
   border-radius: 1rem;
   padding: 4rem;
   -webkit-border-radius: 1rem;
@@ -112,19 +146,24 @@
   -ms-border-radius: 1rem;
   -o-border-radius: 1rem;
 }
+
 .user-box-wrapper {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 .user-box:nth-last-child(n-1) {
-  margin-bottom: 2rem;
+  margin-bottom: 3.5rem;
 }
+
 .sign-up-button {
-  margin-top: 2rem;
+  margin-top: -2rem;
+  width: 100%;
 }
+
 .sign-up {
-  width: 30%;
+  width: 100%;
   height: 4rem;
   border-radius: 0.5rem;
   box-shadow: #219ebc 0px 1px 2px 0px,
@@ -134,35 +173,66 @@
   color: white;
   border-color: #219ebc;
 }
+.navigate-login {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.navigate-login a {
+  font-size: 1.3rem;
+  margin-left: 1rem;
+  color: #333;
+  text-decoration: none;
+}
+
 .sign-up-header h4 {
   margin-top: -1rem;
 }
 
-.user-box #contact {
-  width: 26rem;
-}
 #firstname-error {
   font-size: 1.1rem;
   margin-top: 2.6rem;
   color: red;
 }
+
 #lastname-error {
   font-size: 1.1rem;
   margin-top: 2.6rem;
   color: red;
 }
+
 #password-error {
+  display: inline-block;
   font-size: 1.1rem;
-  margin-top: 2.6rem;
+  margin-top: 1rem;
   color: red;
 }
+
 #contact-error {
   font-size: 1.1rem;
   margin-top: 2.6rem;
   color: red;
 }
+
 #address-error {
   font-size: 1.1rem;
   margin-top: 2.6rem;
   color: red;
+}
+
+#email-error {
+  display: inline-block;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  color: red;
+}
+
+.error-hidden {
+  display: none !important;
+}
+label.error {
+  top: 4.1rem;
+  color: red;
+  font-size: 12px;
 }

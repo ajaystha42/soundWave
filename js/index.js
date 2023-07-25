@@ -49,4 +49,9 @@ window.onload = (e) => {
   createCardList(".headphone-list", "HEADPHONE");
   createCardList(".earphone-list", "EARPHONE");
   createCardList(".speaker-list", "SPEAKER");
+
+  const productsFromStorage = localStorage.getItem("products");
+  if (!productsFromStorage) {
+    localStorage.setItem("products", JSON.stringify(products));
+  }
 };

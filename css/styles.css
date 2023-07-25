@@ -55,3 +55,9 @@
   font-size: 1.2rem;
   font-weight: 700;
 }
+
+/* adjust carousel height */
+.carousel {
+  height: 70rem;
+  overflow: hidden;
+}
