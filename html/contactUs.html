@@ -12,7 +12,10 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Quintessential&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
 
     <!-- <link rel="stylesheet" href="./../plugin/flag/css/countrySelect.css" /> -->
     <script type="module" src="../js/common.js"></script>
@@ -65,7 +68,11 @@
   </head>
   <body>
     <header>
-      <h4><a href="index.html">SoundWave LOGO</a></h4>
+      <h4>
+        <a href="index.html"
+          ><img class="logo" src="../media/logo.png" alt="SoundWave"
+        /></a>
+      </h4>
       <nav class="nav">
         <ul class="nav-links">
           <li><a href="./../index.html">Home</a></li>
@@ -121,37 +128,53 @@
       </label>
       <div class="contact-us-container" style="margin-top: -5%">
         <!-- <div class="hero-text-modify"> -->
-          <div class="wrapper-content-form">
-              <form
-                id="userRegistrationForm"
-                method="POST"
-                onsubmit="contactus(event)"
-              >
-              <div class="user-detail">
-                <div class="user-box">
-                  <input pattern="[a-zA-Z]+" oninvalid="setCustomValidity('Please enter alphabet only.')" oninput="setCustomValidity('')" type="text" name="firstname" id="firstname" required/>
-                  <label>Firstname</label>
-                </div>
-                <div class="user-box">
-                  <input pattern="[a-zA-Z]+" oninvalid="setCustomValidity('Please enter alphabet.')" oninput="setCustomValidity('')" type="text" name="lastname" id="lastname" required/>
-                  <label>Lastname</label>
-                </div>
+        <div class="wrapper-content-form">
+          <form
+            id="userRegistrationForm"
+            method="POST"
+            onsubmit="contactus(event)"
+          >
+            <div class="user-detail">
+              <div class="user-box">
+                <input
+                  pattern="[a-zA-Z]+"
+                  oninvalid="setCustomValidity('Please enter alphabet only.')"
+                  oninput="setCustomValidity('')"
+                  type="text"
+                  name="firstname"
+                  id="firstname"
+                  required
+                />
+                <label>Firstname</label>
               </div>
-                <div class="user-box">
-                  <input type="text" name="address" id="address" required/>
-                  <label>Address</label>
-                </div>
-                <div class="user-box">
-                  <input type="email" name="email" id="email" required/>
-                  <label>Email</label>
-                </div>               
-
-                <div class="sign-up-button">
-                  <button class="sign-up" type="submit">Submit</button>
-                  <!-- <button type="button" onclick="onSubmit()">Submit</button> -->
-                </div>
-              </form>
+              <div class="user-box">
+                <input
+                  pattern="[a-zA-Z]+"
+                  oninvalid="setCustomValidity('Please enter alphabet.')"
+                  oninput="setCustomValidity('')"
+                  type="text"
+                  name="lastname"
+                  id="lastname"
+                  required
+                />
+                <label>Lastname</label>
+              </div>
             </div>
+            <div class="user-box">
+              <input type="text" name="address" id="address" required />
+              <label>Address</label>
+            </div>
+            <div class="user-box">
+              <input type="email" name="email" id="email" required />
+              <label>Email</label>
+            </div>
+
+            <div class="sign-up-button">
+              <button class="sign-up" type="submit">Submit</button>
+              <!-- <button type="button" onclick="onSubmit()">Submit</button> -->
+            </div>
+          </form>
+        </div>
         <!-- </div> -->
         <div class="map">
           <iframe
@@ -202,7 +225,6 @@
         </div>
       </div>
     </main>
-
   </body>
   <script>
     $("#userDetails").hide();
@@ -222,7 +244,7 @@
     function showSuccessModal() {
       $("#successModal").css("display", "block");
     }
-  
+
     // Function to close the success modal
     function closeSuccessModal() {
       $("#successModal").css("display", "none");
@@ -231,15 +253,15 @@
 
     // Function to handle the form submission
     function contactus(event) {
-      event.preventDefault(); 
+      event.preventDefault();
       showSuccessModal();
     }
-  
+
     // Close the modal when the close button is clicked
     $(".close").click(function () {
       closeSuccessModal();
     });
-  
+
     // Close the modal when the user clicks outside of the modal
     $(window).click(function (event) {
       if (event.target == $("#successModal")[0]) {
@@ -247,5 +269,4 @@
       }
     });
   </script>
-  
 </html>
