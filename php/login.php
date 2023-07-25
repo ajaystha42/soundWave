@@ -21,9 +21,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = mysqli_real_escape_string($con, $_POST["password"]);
 
 
-    echo $email ;
-    echo $password;
-
     // SQL Query
     $query = "SELECT * FROM USERS WHERE email = '$email'";
 
@@ -33,7 +30,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (mysqli_num_rows($result) > 0) {
         $user = mysqli_fetch_assoc($result);
-        echo $user;
         // return;
         // Verifying Password
         if (password_verify($password, $user["password"])) {
