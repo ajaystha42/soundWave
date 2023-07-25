@@ -241,7 +241,7 @@
   }
   
   /* CSS for Modal */
-.modal {
+/* .modal {
   display: none;
   position: fixed;
   z-index: 1;
@@ -272,4 +272,7 @@
   color: black;
   text-decoration: none;
   cursor: pointer;
+} */
+#successDialog p {
+  font-size: 16px; /* Adjust the font size as needed */
 }
