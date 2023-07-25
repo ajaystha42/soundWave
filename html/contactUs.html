@@ -65,6 +65,17 @@
         location.reload();
       }
     </script>
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+
+    <!-- jQuery -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script> -->
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   </head>
   <body>
     <header>
@@ -129,11 +140,7 @@
       <div class="contact-us-container" style="margin-top: -5%">
         <!-- <div class="hero-text-modify"> -->
         <div class="wrapper-content-form">
-          <form
-            id="userRegistrationForm"
-            method="POST"
-            onsubmit="contactus(event)"
-          >
+          <form id="userRegistrationForm" method="POST">
             <div class="user-detail">
               <div class="user-box">
                 <input
@@ -176,7 +183,7 @@
           </form>
         </div>
         <!-- </div> -->
-        <div class="map">
+        <!-- <div class="map">
           <iframe
             id="map-details"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92303.75952721154!2d-79.57536310716809!3d43.70031341744172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d3bca1a3f78f%3A0x815365ed6c3b957e!2sLambton%20College%20In%20Toronto!5e0!3m2!1sen!2sca!4v1680115966338!5m2!1sen!2sca"
@@ -186,6 +193,8 @@
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
+        -->
+        <div id="map" style="height: 400px; z-index: 1"></div>
       </div>
 
       <div class="contact_details_container">
@@ -224,9 +233,50 @@
           <p>Thank you for contacting us. We will get back to you soon.</p>
         </div>
       </div>
+      -->
+      <div id="successDialog" title="Form Submitted Successfully">
+        <p style="font-size: 20px">Thank you for submitting the form!</p>
+      </div>
     </main>
   </body>
   <script>
+    $.widget("custom.successDialog", {
+      options: {
+        title: "Form Submitted Successfully",
+        message: "Thank you for contacting us. We will get back to you soon.",
+      },
+      _create: function () {
+        this.element.dialog({
+          autoOpen: false,
+          modal: true,
+          title: this.options.title,
+          buttons: {
+            Close: function () {
+              $(this).dialog("close");
+            },
+          },
+          close: function () {
+            location.reload();
+          },
+        });
+      },
+      open: function () {
+        this.element.dialog("open");
+      },
+    });
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      // Initialize the success dialog widget
+      $("#successDialog").successDialog();
+
+      $("#userRegistrationForm").on("submit", function (event) {
+        event.preventDefault(); // Prevent default form submission
+        // Show the success dialog when the form is submitted
+        $("#successDialog").successDialog("open");
+      });
+    });
     $("#userDetails").hide();
     $("#logout").hide();
     // User Info in Home Page
@@ -245,28 +295,51 @@
       $("#successModal").css("display", "block");
     }
 
-    // Function to close the success modal
-    function closeSuccessModal() {
-      $("#successModal").css("display", "none");
-      location.reload();
-    }
+    // // Function to show the success modal
+    // function showSuccessModal() {
+    //   $("#successModal").css("display", "block");
+    // }
 
-    // Function to handle the form submission
-    function contactus(event) {
-      event.preventDefault();
-      showSuccessModal();
-    }
+    // // Function to close the success modal
+    // function closeSuccessModal() {
+    //   $("#successModal").css("display", "none");
+    //   location.reload();
+    // }
 
-    // Close the modal when the close button is clicked
-    $(".close").click(function () {
-      closeSuccessModal();
-    });
+    // // Function to handle the form submission
+    // function contactus(event) {
+    //   event.preventDefault();
+    //   showSuccessModal();
+    // }
 
-    // Close the modal when the user clicks outside of the modal
-    $(window).click(function (event) {
-      if (event.target == $("#successModal")[0]) {
-        closeSuccessModal();
-      }
+    // // Close the modal when the close button is clicked
+    // $(".close").click(function () {
+    //   closeSuccessModal();
+    // });
+
+    // // Close the modal when the user clicks outside of the modal
+    // $(window).click(function (event) {
+    //   if (event.target == $("#successModal")[0]) {
+    //     closeSuccessModal();
+    //   }
+    // });
+  </script>
+  <script>
+    $(document).ready(function () {
+      var latitude = 43.77344;
+      var longitude = -79.33574;
+      var zoomLevel = 17;
+      var map = L.map("map").setView([latitude, longitude], zoomLevel);
+
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution:
+          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      }).addTo(map);
+
+      L.marker([latitude, longitude])
+        .addTo(map)
+        .bindPopup("This is your location.")
+        .openPopup();
     });
   </script>
 </html>
