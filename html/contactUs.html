@@ -140,7 +140,11 @@
       <div class="contact-us-container" style="margin-top: -5%">
         <!-- <div class="hero-text-modify"> -->
         <div class="wrapper-content-form">
-          <form id="userRegistrationForm" method="POST">
+          <form
+            id="userRegistrationForm"
+            method="POST"
+            onsubmit="contactus(event)"
+          >
             <div class="user-detail">
               <div class="user-box">
                 <input
@@ -295,51 +299,28 @@
       $("#successModal").css("display", "block");
     }
 
-    // // Function to show the success modal
-    // function showSuccessModal() {
-    //   $("#successModal").css("display", "block");
-    // }
+    // Function to close the success modal
+    function closeSuccessModal() {
+      $("#successModal").css("display", "none");
+      location.reload();
+    }
 
-    // // Function to close the success modal
-    // function closeSuccessModal() {
-    //   $("#successModal").css("display", "none");
-    //   location.reload();
-    // }
+    // Function to handle the form submission
+    function contactus(event) {
+      event.preventDefault();
+      showSuccessModal();
+    }
 
-    // // Function to handle the form submission
-    // function contactus(event) {
-    //   event.preventDefault();
-    //   showSuccessModal();
-    // }
+    // Close the modal when the close button is clicked
+    $(".close").click(function () {
+      closeSuccessModal();
+    });
 
-    // // Close the modal when the close button is clicked
-    // $(".close").click(function () {
-    //   closeSuccessModal();
-    // });
-
-    // // Close the modal when the user clicks outside of the modal
-    // $(window).click(function (event) {
-    //   if (event.target == $("#successModal")[0]) {
-    //     closeSuccessModal();
-    //   }
-    // });
-  </script>
-  <script>
-    $(document).ready(function () {
-      var latitude = 43.77344;
-      var longitude = -79.33574;
-      var zoomLevel = 17;
-      var map = L.map("map").setView([latitude, longitude], zoomLevel);
-
-      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        attribution:
-          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-      }).addTo(map);
-
-      L.marker([latitude, longitude])
-        .addTo(map)
-        .bindPopup("This is your location.")
-        .openPopup();
+    // Close the modal when the user clicks outside of the modal
+    $(window).click(function (event) {
+      if (event.target == $("#successModal")[0]) {
+        closeSuccessModal();
+      }
     });
   </script>
 </html>
