@@ -32,7 +32,9 @@
     <script>
       function logout() {
         localStorage.removeItem("user");
-        location.reload();
+        window.location.href = "./../index.html";
+
+        // location.reload();
       }
     </script>
   </head>
@@ -169,7 +171,7 @@
     if (data) {
       const user = JSON.parse(data);
       const accountEl = document.getElementById("account");
-      accountEl.innerText = "Hey, " + user.first_name;
+      accountEl.innerText = "Welcome, " + user.first_name;
       $("#login").hide();
       $("#signup").hide();
       $("#userDetails").show();
