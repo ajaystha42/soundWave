@@ -284,6 +284,7 @@ header {
   font-weight: 600;
 }
 
+input:read-only,
 .disabled,
 :disabled {
   cursor: not-allowed;
