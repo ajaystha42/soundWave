@@ -32,13 +32,19 @@
     <script>
       function logout() {
         localStorage.removeItem("user");
-        location.reload();
+        window.location.href = "./../index.html";
+
+        // location.reload();
       }
     </script>
   </head>
   <body>
     <header>
-      <h4><a href="index.html">SoundWave LOGO</a></h4>
+      <h4>
+        <a href="index.html"
+          ><img class="logo" src="../media/logo.png" alt="SoundWave"
+        /></a>
+      </h4>
       <nav class="nav">
         <ul class="nav-links">
           <li><a href="./../index.html">Home</a></li>
@@ -91,7 +97,7 @@
       <div class="sign-up-container">
         <form
           id="userRegistrationForm"
-          action="../php/update.php"
+          action="./../php/update.php"
           method="POST"
         >
           <div class="user-detail">
@@ -109,7 +115,7 @@
             <label>Address</label>
           </div>
           <div class="user-box">
-            <input type="email" name="email" id="email" disabled />
+            <input type="email" name="email" id="email" readonly />
             <label>Email</label>
           </div>
           <div class="user-detail">
@@ -165,7 +171,7 @@
     if (data) {
       const user = JSON.parse(data);
       const accountEl = document.getElementById("account");
-      accountEl.innerText = "Hey, " + user.first_name;
+      accountEl.innerText = "Welcome, " + user.first_name;
       $("#login").hide();
       $("#signup").hide();
       $("#userDetails").show();

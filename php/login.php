@@ -24,7 +24,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // SQL Query
     $query = "SELECT * FROM USERS WHERE email = '$email'";
 
-    echo $query;
     // Executing SQL and fetching user's count
     $result = mysqli_query($con, $query);
 

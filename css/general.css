@@ -135,6 +135,15 @@ header {
   border-bottom: 2px solid #eee;
 }
 
+.logo-link {
+  padding: 0;
+  margin: 0;
+}
+
+.logo {
+  width: 6rem;
+}
+
 .nav {
   display: flex;
   width: 100%;
@@ -275,9 +284,14 @@ header {
   font-weight: 600;
 }
 
+/* input:read-only, */
 .disabled,
 :disabled {
   cursor: not-allowed;
   background: #eee !important;
   opacity: 1;
+}
+
+.error-hidden {
+  display: none !important;
 }

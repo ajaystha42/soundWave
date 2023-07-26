@@ -12,7 +12,10 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Quintessential&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
 
     <!-- <link rel="stylesheet" href="./../plugin/flag/css/countrySelect.css" /> -->
     <script type="module" src="../js/common.js"></script>
@@ -59,22 +62,29 @@
         // if (!productsFromStorage) {
         //   localStorage.setItem("products", JSON.stringify(products));
         // }
+
         location.reload();
       }
     </script>
     <!-- Leaflet CSS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
 
-<!-- jQuery -->
-<!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script> -->
+    <!-- jQuery -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script> -->
 
-<!-- Leaflet JavaScript -->
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   </head>
   <body>
     <header>
-      <h4><a href="index.html">SoundWave LOGO</a></h4>
+      <h4>
+        <a href="index.html"
+          ><img class="logo" src="../media/logo.png" alt="SoundWave"
+        /></a>
+      </h4>
       <nav class="nav">
         <ul class="nav-links">
           <li><a href="./../index.html">Home</a></li>
@@ -130,36 +140,53 @@
       </label>
       <div class="contact-us-container" style="margin-top: -5%">
         <!-- <div class="hero-text-modify"> -->
-          <div class="wrapper-content-form">
-              <form
-                id="userRegistrationForm"
-                method="POST"
-              >
-              <div class="user-detail">
-                <div class="user-box">
-                  <input pattern="[a-zA-Z]+" oninvalid="setCustomValidity('Please enter alphabet only.')" oninput="setCustomValidity('')" type="text" name="firstname" id="firstname" required/>
-                  <label>Firstname</label>
-                </div>
-                <div class="user-box">
-                  <input pattern="[a-zA-Z]+" oninvalid="setCustomValidity('Please enter alphabet.')" oninput="setCustomValidity('')" type="text" name="lastname" id="lastname" required/>
-                  <label>Lastname</label>
-                </div>
+        <div class="wrapper-content-form">
+          <form
+            id="userRegistrationForm"
+            method="POST"
+            onsubmit="contactus(event)"
+          >
+            <div class="user-detail">
+              <div class="user-box">
+                <input
+                  pattern="[a-zA-Z]+"
+                  oninvalid="setCustomValidity('Please enter alphabet only.')"
+                  oninput="setCustomValidity('')"
+                  type="text"
+                  name="firstname"
+                  id="firstname"
+                  required
+                />
+                <label>Firstname</label>
               </div>
-                <div class="user-box">
-                  <input type="text" name="address" id="address" required/>
-                  <label>Address</label>
-                </div>
-                <div class="user-box">
-                  <input type="email" name="email" id="email" required/>
-                  <label>Email</label>
-                </div>               
-
-                <div class="sign-up-button">
-                  <button class="sign-up" type="submit">Submit</button>
-                  <!-- <button type="button" onclick="onSubmit()">Submit</button> -->
-                </div>
-              </form>
+              <div class="user-box">
+                <input
+                  pattern="[a-zA-Z]+"
+                  oninvalid="setCustomValidity('Please enter alphabet.')"
+                  oninput="setCustomValidity('')"
+                  type="text"
+                  name="lastname"
+                  id="lastname"
+                  required
+                />
+                <label>Lastname</label>
+              </div>
             </div>
+            <div class="user-box">
+              <input type="text" name="address" id="address" required />
+              <label>Address</label>
+            </div>
+            <div class="user-box">
+              <input type="email" name="email" id="email" required />
+              <label>Email</label>
+            </div>
+
+            <div class="sign-up-button">
+              <button class="sign-up" type="submit">Submit</button>
+              <!-- <button type="button" onclick="onSubmit()">Submit</button> -->
+            </div>
+          </form>
+        </div>
         <!-- </div> -->
         <!-- <div class="map">
           <iframe
@@ -170,9 +197,9 @@
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
-        </div> -->
-        <div id="map" style="height: 400px; z-index: 1;"></div>
-
+        </div>
+        -->
+        <div id="map" style="height: 400px; z-index: 1"></div>
       </div>
 
       <div class="contact_details_container">
@@ -204,18 +231,18 @@
         </div>
       </div>
       <!-- Modal Pop-up -->
-      <!-- <div class="modal" id="successModal">
+      <div class="modal" id="successModal">
         <div class="modal-content">
           <span class="close">&times;</span>
           <h2>Form Submitted Successfully!</h2>
           <p>Thank you for contacting us. We will get back to you soon.</p>
         </div>
-      </div> -->
+      </div>
+      -->
       <div id="successDialog" title="Form Submitted Successfully">
-        <p style="font-size: 20px;">Thank you for submitting the form!</p>
+        <p style="font-size: 20px">Thank you for submitting the form!</p>
       </div>
     </main>
-
   </body>
   <script>
     $.widget("custom.successDialog", {
@@ -233,9 +260,9 @@
               $(this).dialog("close");
             },
           },
-          close: function(){
+          close: function () {
             location.reload();
-          }
+          },
         });
       },
       open: function () {
@@ -243,18 +270,18 @@
       },
     });
   </script>
-  
-  <script>
-     $(document).ready(function () {
-    // Initialize the success dialog widget
-    $("#successDialog").successDialog();
 
-    $("#userRegistrationForm").on("submit", function (event) {
-      event.preventDefault(); // Prevent default form submission
-      // Show the success dialog when the form is submitted
-      $("#successDialog").successDialog("open");
+  <script>
+    $(document).ready(function () {
+      // Initialize the success dialog widget
+      $("#successDialog").successDialog();
+
+      $("#userRegistrationForm").on("submit", function (event) {
+        event.preventDefault(); // Prevent default form submission
+        // Show the success dialog when the form is submitted
+        $("#successDialog").successDialog("open");
+      });
     });
-  });
     $("#userDetails").hide();
     $("#logout").hide();
     // User Info in Home Page
@@ -262,58 +289,39 @@
     if (data) {
       const user = JSON.parse(data);
       const accountEl = document.getElementById("account");
-      accountEl.innerText = "Hey, " + user.first_name;
+      accountEl.innerText = "Welcome, " + user.first_name;
       $("#login").hide();
       $("#signup").hide();
       $("#userDetails").show();
       $("#logout").show();
     }
+    // Function to show the success modal
+    function showSuccessModal() {
+      $("#successModal").css("display", "block");
+    }
 
-    // // Function to show the success modal
-    // function showSuccessModal() {
-    //   $("#successModal").css("display", "block");
-    // }
-  
-    // // Function to close the success modal
-    // function closeSuccessModal() {
-    //   $("#successModal").css("display", "none");
-    //   location.reload();
-    // }
+    // Function to close the success modal
+    function closeSuccessModal() {
+      $("#successModal").css("display", "none");
+      location.reload();
+    }
 
-    // // Function to handle the form submission
-    // function contactus(event) {
-    //   event.preventDefault(); 
-    //   showSuccessModal();
-    // }
-  
-    // // Close the modal when the close button is clicked
-    // $(".close").click(function () {
-    //   closeSuccessModal();
-    // });
-  
-    // // Close the modal when the user clicks outside of the modal
-    // $(window).click(function (event) {
-    //   if (event.target == $("#successModal")[0]) {
-    //     closeSuccessModal();
-    //   }
-    // });
+    // Function to handle the form submission
+    function contactus(event) {
+      event.preventDefault();
+      showSuccessModal();
+    }
+
+    // Close the modal when the close button is clicked
+    $(".close").click(function () {
+      closeSuccessModal();
+    });
+
+    // Close the modal when the user clicks outside of the modal
+    $(window).click(function (event) {
+      if (event.target == $("#successModal")[0]) {
+        closeSuccessModal();
+      }
+    });
   </script>
-  <script>
-  $(document).ready(function () {
-     var latitude = 43.77344; 
-    var longitude = -79.33574; 
-    var zoomLevel = 17; 
-    var map = L.map('map').setView([latitude, longitude], zoomLevel); 
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
-
-    L.marker([latitude, longitude]).addTo(map)
-      .bindPopup("This is your location.")
-      .openPopup();
-  });
-</script>
-
-  
 </html>

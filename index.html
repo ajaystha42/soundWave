@@ -45,7 +45,9 @@
     <p>Sakar Karki</p> -->
 
     <header>
-      <h4><a href="index.html">SoundWave LOGO</a></h4>
+      <a class="logo-link" href="index.html">
+        <img class="logo" src="./media/logo.png" alt="SoundWave" />
+      </a>
       <nav class="nav">
         <ul class="nav-links">
           <li><a href="index.html" title="Home">Home</a></li>
@@ -191,7 +193,7 @@
     if (data) {
       const user = JSON.parse(data);
       const accountEl = document.getElementById("account");
-      accountEl.innerText = "Hey, " + user.first_name;
+      accountEl.innerText = "Welcome, " + user.first_name;
       $("#login").hide();
       $("#signup").hide();
       $("#userDetails").show();
