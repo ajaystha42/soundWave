@@ -2,6 +2,7 @@ const products = [
   {
     id: 1,
     name: "Airpods Max",
+    oldprice: 100,
     price: 700,
     availableQuantity: 20,
     description:
