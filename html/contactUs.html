@@ -231,14 +231,13 @@
         </div>
       </div>
       <!-- Modal Pop-up -->
-      <div class="modal" id="successModal">
+      <!-- <div class="modal" id="successModal">
         <div class="modal-content">
           <span class="close">&times;</span>
           <h2>Form Submitted Successfully!</h2>
           <p>Thank you for contacting us. We will get back to you soon.</p>
         </div>
-      </div>
-      -->
+      </div> -->
       <div id="successDialog" title="Form Submitted Successfully">
         <p style="font-size: 20px">Thank you for submitting the form!</p>
       </div>
@@ -295,33 +294,33 @@
       $("#userDetails").show();
       $("#logout").show();
     }
-    // Function to show the success modal
-    function showSuccessModal() {
-      $("#successModal").css("display", "block");
-    }
+    // // Function to show the success modal
+    // function showSuccessModal() {
+    //   $("#successModal").css("display", "block");
+    // }
 
-    // Function to close the success modal
-    function closeSuccessModal() {
-      $("#successModal").css("display", "none");
-      location.reload();
-    }
+    // // Function to close the success modal
+    // function closeSuccessModal() {
+    //   $("#successModal").css("display", "none");
+    //   location.reload();
+    // }
 
-    // Function to handle the form submission
-    function contactus(event) {
-      event.preventDefault();
-      showSuccessModal();
-    }
+    // // Function to handle the form submission
+    // function contactus(event) {
+    //   event.preventDefault();
+    //   showSuccessModal();
+    // }
 
-    // Close the modal when the close button is clicked
-    $(".close").click(function () {
-      closeSuccessModal();
-    });
+    // // Close the modal when the close button is clicked
+    // $(".close").click(function () {
+    //   closeSuccessModal();
+    // });
 
-    // Close the modal when the user clicks outside of the modal
-    $(window).click(function (event) {
-      if (event.target == $("#successModal")[0]) {
-        closeSuccessModal();
-      }
-    });
+    // // Close the modal when the user clicks outside of the modal
+    // $(window).click(function (event) {
+    //   if (event.target == $("#successModal")[0]) {
+    //     closeSuccessModal();
+    //   }
+    // });
   </script>
 </html>
