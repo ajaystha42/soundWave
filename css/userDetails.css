@@ -6,6 +6,10 @@
   width: 35% !important;
 }
 
+.loader-div {
+  position: relative;
+}
+
 .loader {
   width: 4rem;
   height: 4rem;
