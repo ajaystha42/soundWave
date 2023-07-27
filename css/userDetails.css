@@ -2,6 +2,10 @@
   margin-top: 3rem;
 }
 
+.div-height {
+  height: 95rem;
+}
+
 .sign-up-container {
   width: 35% !important;
 }
@@ -15,8 +19,8 @@
   height: 4rem;
   display: inline-block;
   position: absolute;
-  right: 50%;
-  top: 50%;
+  right: 50vw;
+  top: 40vh;
   animation: 1s infinite spin;
   border-radius: 50%;
   border-top: 5px solid #219ebc;
