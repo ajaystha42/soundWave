@@ -9,6 +9,7 @@
 .contact-us-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  column-gap: 10rem;
   padding: 0 5vw;
 }
 
