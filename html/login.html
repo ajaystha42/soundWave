@@ -119,7 +119,11 @@
           <div class="login-container">
             <div class="login-header">
               <h4 class="header">
-                <img class="login-logo" src="../media/logo.png" alt="SoundWave" />
+                <img
+                  class="login-logo"
+                  src="../media/logo.png"
+                  alt="SoundWave"
+                />
               </h4>
             </div>
             <div class="login-wrapper">
@@ -139,6 +143,7 @@
                       <input type="email" id="email" name="email" required />
                       <label>EMAIL</label>
                       <span id="email-error">Email is required</span>
+                      <span id="login-error"></span>
                     </div>
                     <div class="user-box">
                       <input
@@ -149,6 +154,7 @@
                       />
                       <label>PASSWORD</label>
                       <span id="passwordError" class="error"></span><br />
+                      <span id="login-password-error"></span>
 
                       <!-- <span id="password-error">Password is required</span> -->
                     </div>
@@ -253,6 +259,24 @@
   </body>
   <script>
     $(document).ready(function () {
+      const error = localStorage.getItem("error");
+      const pwerror = localStorage.getItem("passworderror");
+      const email = localStorage.getItem("email");
+      if (error) {
+        document.getElementById("login-error").innerHTML = error;
+
+      }
+      if (pwerror) {
+        document.getElementById("login-password-error").innerHTML = pwerror;
+
+      }
+      if (email) {
+        document.getElementById("email").value = email;
+
+      }
+      localStorage.removeItem("error");
+      localStorage.removeItem("passworderror");
+      localStorage.removeItem("email");
       $("#loginForm").validate({
         rules: {
           password: {

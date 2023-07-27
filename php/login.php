@@ -40,10 +40,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             
             exit; // Add exit to ensure no further code execution after redirect
         } else {
-            echo "Invalid Password, Try Again.";
+            echo "<script>localStorage.setItem('email', '" . $email . "');</script>";
+            echo "<script>localStorage.setItem('passworderror', '" . 'Password is incorrect' . "');</script>";
+            echo "<script>window.location ='../html/login.html'</script>";
         }
     } else {
-        echo "User doesn't exist!";
+        // echo "User doesn't exist!";
+        echo "<script>localStorage.setItem('error', '" . 'User doesnot exist' . "');</script>";
+        echo "<script>window.location ='../html/login.html'</script>";
+        // header("location: ../html/login.html");
     }
 
     
