@@ -77,6 +77,7 @@
 
     <!-- Leaflet JavaScript -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="../js/contactUs.js"></script>
   </head>
   <body>
     <header>
@@ -150,7 +151,6 @@
                   type="text"
                   name="firstname"
                   id="firstname"
-                  required
                 />
                 <label>Firstname</label>
               </div>
@@ -168,14 +168,13 @@
               </div>
             </div>
             <div class="user-box">
-              <input type="text" name="address" id="address" required />
-              <label>Address</label>
-            </div>
-            <div class="user-box">
               <input type="email" name="email" id="email" required />
               <label>Email</label>
             </div>
-
+            <div class="user-box">
+              <textarea name="subject" id="subject"></textarea>
+              <label>Message</label>
+            </div>
             <div class="sign-up-button">
               <button class="sign-up" type="submit">Submit</button>
               <!-- <button type="button" onclick="onSubmit()">Submit</button> -->
