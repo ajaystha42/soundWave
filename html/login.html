@@ -274,8 +274,9 @@
         document.getElementById("email").value = email;
 
       }
-      // if (!(localStorage.getItem("error") === null)) {
-      // }
+      localStorage.removeItem("error");
+      localStorage.removeItem("passworderror");
+      localStorage.removeItem("email");
       $("#loginForm").validate({
         rules: {
           password: {
