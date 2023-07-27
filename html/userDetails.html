@@ -28,6 +28,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="../plugins/waitMe/js/waitMe.js"></script>
 
+    <script
+      type="text/javascript"
+      src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.7/jquery.validate.min.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+
     <!-- <script type="module" src="../js/userDetails.js"></script> -->
     <script>
       function logout() {
@@ -91,7 +97,9 @@
       </nav>
     </header>
 
-    <span class="loader"></span>
+    <div class="loader-div">
+      <span class="loader"></span>
+    </div>
 
     <div class="form-container">
       <div class="sign-up-container">
@@ -132,6 +140,9 @@
             <div class="user-box">
               <input type="tel" name="contact" id="contact" />
               <label>Contact</label>
+              <p class="error error-hidden" id="contact-error">
+                Invalid contact number
+              </p>
             </div>
             <div class="user-box">
               <input type="text" name="gender" id="gender" disabled />
@@ -151,16 +162,96 @@
           </div>
 
           <div class="sign-up-button">
-            <button id="loader-waitme" class="sign-up" type="submit">
-              Update
-            </button>
+            <input
+              id="loader-waitme"
+              class="sign-up"
+              type="submit"
+              onclick="return validateform();"
+            />
+            <!-- Update
+            </input> -->
             <!-- <button type="button" onclick="onSubmit()">Submit</button> -->
           </div>
         </form>
       </div>
     </div>
 
-    <main></main>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-div">
+          <img
+            src="../media/logo.png"
+            alt="LOGO"
+            style="width: 8rem; margin-top: -3rem; margin-bottom: 1rem"
+          />
+          <ul class="social-icons">
+            <li>
+              <a href="https://instagram.com/" target="_blank">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="https://facebook.com/" target="_blank">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/" target="_blank">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+          </ul>
+          <p>Copyright © 2023 by SoundWave, Inc. All rights reserved.</p>
+        </div>
+
+        <div class="footer-div">
+          <h2>CONTACT US</h2>
+          <ul>
+            <li>265 Yorkland Blvd #400, North York, ON M2J 1S5</li>
+            <li><a href="tel:+11234567890"> +1 (123)-456-7980</a></li>
+            <li>
+              <a href="mailto:info@soundwave.ca"> info@soundwave.ca</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-div">
+          <h2>APPS</h2>
+          <ul>
+            <!-- <li><a hrf="#"> Create Account</a></li>
+            <li><a hrefe="#"> Sign In</a></li> -->
+            <li>
+              <a href="https://www.apple.com/ca/app-store/" target="_blank">
+                IOS App</a
+              >
+            </li>
+            <li>
+              <a href="https://play.google.com/" target="_blank">
+                Android App</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-div">
+          <h2>COMPANY</h2>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./products.html">Products</a></li>
+            <li><a href="./contactUs.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-div">
+          <h2>RESOURCES</h2>
+          <ul>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Privacy & Terms</a></li>
+            <li><a href="#">Copyright</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </body>
   <script>
     $("#userDetails").hide();
@@ -189,6 +280,24 @@
         (document.getElementById("cart-number").innerHTML = cart.items.length);
     } else {
       document.getElementById("cart-number").remove();
+    }
+  </script>
+
+  <!-- Validate form using javascript -->
+  <script>
+    function validateform() {
+      // document.getElementById("contact-error").classList.add("error-hidden");
+      const contactRegex =
+        /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+
+      const contact = document.getElementById("contact").value;
+
+      const isValid = contactRegex.test(contact);
+      !isValid &&
+        document
+          .getElementById("contact-error")
+          .classList.remove("error-hidden");
+      return isValid;
     }
   </script>
 </html>

@@ -1,4 +1,30 @@
 $(document).ready(function () {
+  $("#userRegistrationForm").validate({
+    rules: {
+      firstname: {
+        required: true,
+      },
+      lastname: {
+        required: true,
+      },
+      contact: {
+        required: true,
+      },
+    },
+
+    messages: {
+      firstname: {
+        required: "Please enter your firstname",
+      },
+      lastname: {
+        required: "Please enter your last name",
+      },
+      contact: {
+        required: "Please enter your contact",
+      },
+    },
+  });
+
   // first hide the container and show loader
   $(".form-container").hide();
   $(".loader").fadeOut();
