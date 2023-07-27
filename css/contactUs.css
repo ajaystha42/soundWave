@@ -9,6 +9,7 @@
 .contact-us-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  column-gap: 10rem;
   padding: 0 5vw;
 }
 
@@ -315,6 +316,7 @@ input[type="submit"]:hover {
 .contact-us-content {
   column-count: 3;
   margin-top: 10rem;
+  margin-bottom: 5rem;
   justify-content: center;
   display: grid;
   grid-auto-flow: column;
