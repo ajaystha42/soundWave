@@ -42,7 +42,8 @@
   height: 30rem;
 }
 .product-image-container img {
-  width: 280px;
+  width: 218px;
+  margin: 2rem;
 }
 .product-title a {
   text-decoration: none;
@@ -66,7 +67,7 @@
 }
 .product-body p {
   font-size: 12pt;
-  width: 80%;
+  width: 100%;
 }
 .product-price {
   padding-right: 3rem;
@@ -93,4 +94,16 @@
 } */
 .cart-btn p {
   font-size: 12pt;
+}
+#headphone-list {
+  list-style: none;
+  text-decoration: none;
+}
+#speaker-list {
+  list-style: none;
+  text-decoration: none;
+}
+#earphone-list {
+  list-style: none;
+  text-decoration: none;
 }
