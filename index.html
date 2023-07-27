@@ -32,6 +32,7 @@
     <script>
       function logout() {
         localStorage.removeItem("user");
+
         location.reload();
       }
     </script>
@@ -256,6 +257,9 @@
     // Hiding User Details in Initial Load
     $("#userDetails").hide();
     $("#logout").hide();
+    localStorage.removeItem("error");
+    localStorage.removeItem("passworderror");
+    localStorage.removeItem("email");
 
     // Cart in Home Page
     let cart = JSON.parse(localStorage.getItem("cart"));
