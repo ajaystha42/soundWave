@@ -42,6 +42,7 @@
     ></script>
 
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
 
     <link
       rel="stylesheet"
@@ -77,6 +78,7 @@
 
     <!-- Leaflet JavaScript -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="../js/contactUs.js"></script>
   </head>
   <body>
     <header>
@@ -132,20 +134,14 @@
     </header>
 
     <main>
-      <label class="main-heading-modify">
-        <b class="main-header">Contact Us</b>
-        <b class="sub-header"
-          >Feel free to message us any time. We are at your service 24/7</b
-        >
-      </label>
-      <div class="contact-us-container" style="margin-top: -5%">
-        <!-- <div class="hero-text-modify"> -->
+      <div class="contact-us-container" style="margin-top: 5%">
         <div class="wrapper-content-form">
           <form
             id="userRegistrationForm"
             method="POST"
-            onsubmit="contactus(event)"
           >
+            <h2>Contact us</h2>
+
             <div class="user-detail">
               <div class="user-box">
                 <input
@@ -173,14 +169,13 @@
               </div>
             </div>
             <div class="user-box">
-              <input type="text" name="address" id="address" required />
-              <label>Address</label>
-            </div>
-            <div class="user-box">
               <input type="email" name="email" id="email" required />
               <label>Email</label>
             </div>
-
+            <div class="user-box">
+              <textarea name="subject" id="subject"></textarea>
+              <label>Message</label>
+            </div>
             <div class="sign-up-button">
               <button class="sign-up" type="submit">Submit</button>
               <!-- <button type="button" onclick="onSubmit()">Submit</button> -->
@@ -199,10 +194,54 @@
           ></iframe>
         </div>
         -->
-        <div id="map" style="height: 400px; z-index: 1"></div>
+        <div id="map"></div>
       </div>
 
-      <div class="contact_details_container">
+      <div class="contact-us-content">
+        <div class="contact-wrapper">
+          <div class="icon-section">
+            <ion-icon name="location-sharp"></ion-icon>
+          </div>
+          <div class="resource-section">
+            <div class="contact-header">
+              <h3>Address:</h3>
+            </div>
+            <div class="content">
+              <a href="#"><h4>Yorkland Blvd, North York</h4></a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-wrapper">
+          <div class="icon-section">
+            <ion-icon name="call-sharp"></ion-icon>
+          </div>
+          <div class="resource-section">
+            <div class="contact-header">
+              <h3>Phone:</h3>
+            </div>
+            <div class="content">
+              <a href="tel:+4733378901"><h4>info@soundwave.com</h4></a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-wrapper">
+          <div class="icon-section">
+            <ion-icon name="mail-unread-sharp"></ion-icon>
+          </div>
+          <div class="resource-section">
+            <div class="contact-header">
+              <h3>Email:</h3>
+            </div>
+            <div class="content">
+              <a href="mailto:webmaster@example.com"
+                ><h4>info@soundwave.com</h4></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="contact_details_container">
         <div class="contact_details">
           <i class="fas fa-map-marker-alt"></i>
           <span>Address</span>
@@ -229,18 +268,23 @@
             >info@soundwave.ca</a
           >
         </div>
-      </div>
+      </div> -->
       <!-- Modal Pop-up -->
-      <div class="modal" id="successModal">
+      <!-- <div class="modal" id="successModal">
         <div class="modal-content">
           <span class="close">&times;</span>
           <h2>Form Submitted Successfully!</h2>
           <p>Thank you for contacting us. We will get back to you soon.</p>
         </div>
-      </div>
-      -->
-      <div id="successDialog" title="Form Submitted Successfully">
-        <p style="font-size: 20px">Thank you for submitting the form!</p>
+      </div> -->
+      <!-- <div id="successDialog" title="Form Submitted Successfully">
+        <p style="font-size: 20px">Thank you for submitting the form!</p> -->
+
+      <div id="successDialog" title="Thankyou for reaching us">
+        <p>
+          The form has been submitted succesfully and we will be in touch with
+          you as soon as possible!
+        </p>
       </div>
     </main>
 
@@ -324,8 +368,9 @@
   <script>
     $.widget("custom.successDialog", {
       options: {
-        title: "Form Submitted Successfully",
-        message: "Thank you for contacting us. We will get back to you soon.",
+        title: "Thankyou for reaching us",
+        message:
+          "The form has been submitted succesfully and we will be in touch with you as soon as possible",
       },
       _create: function () {
         this.element.dialog({
@@ -372,33 +417,51 @@
       $("#userDetails").show();
       $("#logout").show();
     }
-    // Function to show the success modal
-    function showSuccessModal() {
-      $("#successModal").css("display", "block");
-    }
+    // // Function to show the success modal
+    // function showSuccessModal() {
+    //   $("#successModal").css("display", "block");
+    // }
 
-    // Function to close the success modal
-    function closeSuccessModal() {
-      $("#successModal").css("display", "none");
-      location.reload();
-    }
+    // // Function to close the success modal
+    // function closeSuccessModal() {
+    //   $("#successModal").css("display", "none");
+    //   location.reload();
+    // }
 
-    // Function to handle the form submission
-    function contactus(event) {
-      event.preventDefault();
-      showSuccessModal();
-    }
+    // // Function to handle the form submission
+    // function contactus(event) {
+    //   event.preventDefault();
+    //   showSuccessModal();
+    // }
 
-    // Close the modal when the close button is clicked
-    $(".close").click(function () {
-      closeSuccessModal();
-    });
+    // // Close the modal when the close button is clicked
+    // $(".close").click(function () {
+    //   closeSuccessModal();
+    // });
 
-    // Close the modal when the user clicks outside of the modal
-    $(window).click(function (event) {
-      if (event.target == $("#successModal")[0]) {
-        closeSuccessModal();
-      }
+    // // Close the modal when the user clicks outside of the modal
+    // $(window).click(function (event) {
+    //   if (event.target == $("#successModal")[0]) {
+    //     closeSuccessModal();
+    //   }
+    // });
+  </script>
+  <script>
+    $(document).ready(function () {
+      var latitude = 43.77344;
+      var longitude = -79.33574;
+      var zoomLevel = 17;
+      var map = L.map("map").setView([latitude, longitude], zoomLevel);
+
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution:
+          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      }).addTo(map);
+
+      L.marker([latitude, longitude])
+        .addTo(map)
+        .bindPopup("This is your location.")
+        .openPopup();
     });
   </script>
 </html>
