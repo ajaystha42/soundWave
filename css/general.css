@@ -292,6 +292,10 @@ header {
   opacity: 1;
 }
 
+.error {
+  color: red;
+}
+
 .error-hidden {
   display: none !important;
 }
