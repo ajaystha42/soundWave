@@ -238,6 +238,20 @@ ui-datepicker {
   color: red;
 }
 
+#login-error {
+  display: inline-block;
+  font-size: 1.1rem;
+  color: red;
+}
+
+#login-password-error {
+  display: inline-block;
+  font-size: 1.1rem;
+  color: red;
+}
+
+
+
 /* .error-hidden {
   display: none !important;
 } */
