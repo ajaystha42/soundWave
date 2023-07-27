@@ -316,6 +316,7 @@ input[type="submit"]:hover {
 .contact-us-content {
   column-count: 3;
   margin-top: 10rem;
+  margin-bottom: 5rem;
   justify-content: center;
   display: grid;
   grid-auto-flow: column;
