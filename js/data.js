@@ -86,8 +86,6 @@ const products = [
       "Active Noise Cancellation (ANC) Technology: Whether you’re grooving to your favorite beats, watching a movie, or gaming, eliminate all distractions with Active Noise Cancellation that detects and nullifies unwanted ambient noise",
     images: [
       "./media/headphone/razer-green.jpg",
-      "./media/headphone/razer-pink.jpg",
-      "./media/headphone/razer-white.jpg",
     ],
     category: "HEADPHONE",
     quantity: 1,
@@ -101,8 +99,6 @@ const products = [
       "Take noise cancelling to the next level with Sony’s Integrated Processor V1, so you can fully immerse yourself in the music.",
     images: [
       "./media/headphone/sony-black.jpg",
-      "./media/headphone/sony-blue.jpg",
-      "./media/headphone/sony-silver.jpg",
     ],
     category: "HEADPHONE",
     quantity: 1,
