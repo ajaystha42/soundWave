@@ -28,16 +28,12 @@ window.onload = (e) => {
         </div>
         <div class="product-price">
           <div class="price-offer">
-            <del><h3>$150</h3></del>
+            <del><h3>${item.oldPrice}</h3></del>
             <h1>$${item.price}</h1>
           </div>
           <div class="sign-up-button">
-          <a href="./productDetails.html?id=${item.id}">
-            <button class="cart-button" type="Add-to-cart">
-            Add to cart
-            </button>
-            </a>
-          </div>
+             <a href = "./productDetails.html?id=${item.id}"> <button class="sign-up" type="submit">Add to</button></a>         
+          </div>          
         </div>
       </main>`;
 
