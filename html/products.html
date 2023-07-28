@@ -8,7 +8,7 @@
     <script src="../themes/tab/js/jquery.js"></script>
     <link rel="stylesheet" href="../themes/tab/css/jquery-ui.css" />
     <link rel="stylesheet" href="../css/general.css  " />
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/login.css" />
     <link rel="stylesheet" href="../css/products.css" />
     <script src="../themes/tab/js/jquery-ui.js"></script>
     <script>
@@ -49,21 +49,43 @@
             >
             <div class="dropdown-content">
               <div id="signup" class="content-wrapper">
-                <a href="signup.html" class="individual-links">Sign up</a>
+                <a href="signup.html" class="individual-links">
+                  <ion-icon
+                    id="user-outline"
+                    name="person-add-outline"
+                  ></ion-icon>
+                  Sign up</a
+                >
               </div>
               <div id="login" class="content-wrapper">
-                <a href="login.html" class="individual-links">Log in</a>
+                <a href="login.html" class="individual-links">
+                  <ion-icon id="login-outline" name="log-in-outline"></ion-icon
+                  >Log in</a
+                >
               </div>
               <div class="content-wrapper">
                 <a
                   href="userDetails.html"
                   id="userDetails"
                   class="individual-links"
-                  >My Details</a
+                >
+                  <ion-icon
+                    id="user-outline"
+                    name="person-circle-outline"
+                  ></ion-icon>
+                  My Details</a
                 >
               </div>
               <div id="logout" class="content-wrapper" onclick="logout()">
-                <a class="individual-links" href="#">Logout</a>
+                <a class="individual-links" href="#">
+                  <span
+                    ><ion-icon
+                      id="logout-outline"
+                      name="log-out-outline"
+                    ></ion-icon
+                  ></span>
+                  Logout
+                </a>
               </div>
             </div>
           </div>
@@ -79,22 +101,21 @@
         </h1>
       </div>
       <div class="content-wrapper">
-        
         <div class="category-content">
-          <div class="category-header">  
+          <div class="category-header">
             <div class="category-title">
-
-              <h1>Products</h1>            
-            </div>         
+              <h1>Products</h1>
+            </div>
             <div class="category-search">
               <div class="user-box">
-                
                 <input type="email" name="email" id="email" required />
-                <label class="search-label"><ion-icon name="search"></ion-icon>Search Product</label>
+                <label class="search-label"
+                  ><ion-icon name="search"></ion-icon>Search Product</label
+                >
               </div>
             </div>
           </div>
-          
+
           <div id="tabs">
             <ul>
               <li><a href="#tabs-1">Heaphone</a></li>
@@ -190,14 +211,13 @@
         </div>
       </div>
     </footer>
-  </body>
-  <script>
-    localStorage.removeItem("error");
-    localStorage.removeItem("passworderror");
-    localStorage.removeItem("email");
-    $("#userDetails").hide();
-    $("#logout").hide();
-  
+    <script>
+      localStorage.removeItem("error");
+      localStorage.removeItem("passworderror");
+      localStorage.removeItem("email");
+      $("#userDetails").hide();
+      $("#logout").hide();
+
       $("#tabs").tabs();
 
       // Hover states on the static widgets
