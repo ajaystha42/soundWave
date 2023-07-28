@@ -90,6 +90,9 @@
   justify-items: center;
   margin-bottom: 3rem;
 }
+.ui-tabs{
+  max-width: 70%;
+}
 .price-offer del {
   margin-bottom: -2rem;
 }
