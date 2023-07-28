@@ -14,8 +14,8 @@ window.onload = (e) => {
         li.innerHTML = `<a href="./html/productDetails.html?id=${item.id}"}>
           <img src=${item.images[0]} alt=${item.name}>
           <p id="name">${item.name}</p>
-          <p id="price">$${item.price}</p>
-          <p>${item.availableQuantity}</p>
+          <p id="price">Price: $${item.price}</p>
+          <p>Available: ${item.availableQuantity}</p>
         </a>`;
 
         list.appendChild(li);
@@ -43,8 +43,8 @@ window.onload = (e) => {
       li.innerHTML = `<a href="./html/productDetails.html?id=${item.id}"}>
         <img src=${item.images[randomNo]} alt=${item.name}>
         <p>${item.name}</p>
-        <p id="price">$${item.price}</p>
-        <p>${item.availableQuantity}</p>
+        <p id="price">Price: $${item.price}</p>
+        <p>Available: ${item.availableQuantity}</p>
     </a>`;
 
       trendingList.appendChild(li);
