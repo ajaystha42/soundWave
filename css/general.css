@@ -316,6 +316,10 @@ footer {
   column-gap: 8rem;
 }
 
+.logo-center {
+  text-align: center;
+}
+
 .footer-div h2 {
   font-size: 2rem;
   font-weight: 600;
