@@ -31,9 +31,11 @@
   width: 30%;
 }
 .category-content {
-  background-color: whitesmoke;
-  width: 70%;
+  background-color: whitesmoke; 
   padding: 3rem;
+}
+.sign-up{
+  font-size: 1.6rem !important;
 }
 .main-container {
   display: flex;
@@ -41,9 +43,13 @@
   padding: 0rem 2rem;
   height: 30rem;
 }
-.product-image-container img {
-  width: 218px;
+.product-image-container{
+  height: 24rem;
+}
+.product-image-container img { 
   margin: 2rem;
+  width: 25rem;
+  height: 100%;
 }
 .product-title a {
   text-decoration: none;
@@ -51,6 +57,7 @@
 }
 .product-body {
   padding: 2rem;
+  width: 100%;
 }
 .product-body ul {
   list-style: none;
@@ -71,6 +78,8 @@
 }
 .product-price {
   padding-right: 3rem;
+  display: grid;
+  align-content: center;
 }
 .product-price h1 {
   font-size: 40pt;
@@ -107,3 +116,49 @@
   list-style: none;
   text-decoration: none;
 }
+.category-header{
+   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  
+}
+.category-title h2 {
+  margin: 0;
+}
+
+.category-search {
+  
+  display: flex;
+  justify-content: flex-end;
+}
+
+.user-box {
+  display: flex;
+  align-items: center;
+ margin-top: 2rem;
+  padding: 5px;
+  margin-bottom: 0px !important;
+  width: 40rem;
+}
+
+.user-box input{
+  padding: 10px 0;
+    font-size: 16px;
+    color: black;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    background: transparent;
+}
+.user-box label{
+  font-size: 2.2rem;
+}
+.search-label{
+  display: inline-flex; 
+  align-items: center;
+}
+.search-label ion-icon {
+  margin-right: 1.2rem;}
+
