@@ -43,9 +43,9 @@ window.onload = (e) => {
             <h1>$${item.price}</h1>
           </div>
           <div class="sign-up-button">
-             <a href = "./productDetails.html?id=${
-               item.id
-             }"> <button class="sign-up" type="submit">Add To Cart</button></a>         
+             <a href = "./productDetails.html?id=${item.id}">
+              <button class="sign-up" type="submit">Add To Cart</button>
+            </a>         
           </div>          
         </div>
       </main>`;

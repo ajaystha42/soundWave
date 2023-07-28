@@ -1,6 +1,6 @@
 .main-container {
   width: 70%;
-  margin: 3rem auto;
+  margin: 10rem auto;
 
   display: grid;
   grid-template-columns: 1fr 1fr;

@@ -18,12 +18,17 @@ window.onload = (e) => {
         const li = document.createElement("li");
         li.innerHTML = `<a href="./html/productDetails.html?id=${item.id}"}>
           <img src=${item.images[0]} alt=${item.name}>
-          <p id="name">${item.name}</p>
-          <p id="price">Price: $${item.price}</p>
+          <br/> <br/>
+          <p id="price">$${
+            item.price
+          } <span id='old-price'>Was:&nbsp;&nbsp;<s> $${
+          item.oldPrice
+        }</s></span></p>
+        <p id="name">${item.name}</p>
           ${
             item.availableQuantity === 0
-              ? "<p>Out of Stock</p"
-              : `<p>Available: ${item.availableQuantity}</p`
+              ? "<p id='available'>Out of Stock</p"
+              : `<p id='available'>Available: ${item.availableQuantity}</p`
           }>
         </a>`;
 
@@ -51,12 +56,17 @@ window.onload = (e) => {
       const li = document.createElement("li");
       li.innerHTML = `<a href="./html/productDetails.html?id=${item.id}"}>
         <img src=${item.images[0]} alt=${item.name}>
-        <p>${item.name}</p>
-        <p id="price">Price: $${item.price}</p>
+        <br/> <br/>
+        <p id="price">$${
+          item.price
+        } <span id='old-price'>Was:&nbsp;&nbsp;<s> $${
+        item.oldPrice
+      }</s></span></p>
+      <p id="name">${item.name}</p>
         ${
           item.availableQuantity === 0
-            ? "<p>Out of Stock</p"
-            : `<p>Available: ${item.availableQuantity}</p`
+            ? "<p id='available'>Out of Stock</p"
+            : `<p id='available'>Available: ${item.availableQuantity}</p`
         }>
     </a>`;
 
