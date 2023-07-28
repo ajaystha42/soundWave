@@ -2,6 +2,7 @@ const products = [
   {
     id: 1,
     name: "Airpods Max",
+    oldPrice:800,
     price: 700,
     availableQuantity: 20,
     description:
@@ -17,6 +18,7 @@ const products = [
   {
     id: 2,
     name: "Soundcore by Anker Life Q30",
+    oldPrice:200,
     price: 109.99,
     availableQuantity: 15,
     description:
@@ -32,6 +34,7 @@ const products = [
   {
     id: 3,
     name: "Beats Solo3 ",
+    oldPrice:400,
     price: 249.95,
     availableQuantity: 17,
     description:
@@ -47,6 +50,7 @@ const products = [
   {
     id: 4,
     name: "Bose Noise Cancelling Wireless Bluetooth Headphones",
+    oldPrice:490,
     price: 479,
     availableQuantity: 13,
     description:
@@ -62,6 +66,7 @@ const products = [
   {
     id: 5,
     name: "JBL Tune 510BT Wireless On-Ear Bluetooth Headphones",
+    oldPrice:80,
     price: 69.98,
     availableQuantity: 10,
     description:
@@ -77,6 +82,7 @@ const products = [
   {
     id: 6,
     name: "Logitech Zone Vibe 100 Lightweight Wireless Over Ear Headphones",
+    oldPrice:200,
     price: 129,
     availableQuantity: 15,
     description:
@@ -92,6 +98,7 @@ const products = [
   {
     id: 7,
     name: "Razer Opus X Wireless Low Latency Headset",
+    oldPrice:100,
     price: 91.38,
     availableQuantity: 12,
     description:
@@ -107,6 +114,7 @@ const products = [
   {
     id: 8,
     name: "Sony WH-CH720N Noise Cancelling Wireless Headphones",
+    oldPrice:260,
     price: 248.1,
     availableQuantity: 8,
     description:
@@ -122,6 +130,7 @@ const products = [
   {
     id: 9,
     name: "Beats Studio Earbuds",
+    oldPrice:150,
     price: 138,
     availableQuantity: 9,
     description: "Custom acoustic platform delivers powerful, balanced sound",
@@ -136,6 +145,7 @@ const products = [
   {
     id: 10,
     name: "Edifier X2 True Earbuds",
+    oldPrice:30,
     price: 24,
     availableQuantity: 10,
     description:
@@ -151,6 +161,7 @@ const products = [
   {
     id: 11,
     name: "Jabra Elite 4 Active in-Ear Bluetooth Earbuds",
+    oldPrice:30,
     price: 24,
     availableQuantity: 10,
     description:
@@ -166,6 +177,7 @@ const products = [
   {
     id: 12,
     name: "Samsung Galaxy Buds",
+    oldPrice:100,
     price: 97.72,
     availableQuantity: 8,
     description:
@@ -181,6 +193,7 @@ const products = [
   {
     id: 13,
     name: "JBL Tune 130NC",
+    oldPrice:72,
     price: 69.98,
     availableQuantity: 8,
     description:
@@ -196,6 +209,7 @@ const products = [
   {
     id: 14,
     name: "Soundcore A40 Auto-Adjustable Active Noise Cancelling Wireless Earbuds",
+    oldPrice:90,
     price: 79.99,
     availableQuantity: 9,
     description:
@@ -211,6 +225,7 @@ const products = [
   {
     id: 15,
     name: "Apple AirPods (3rd Generation)",
+    oldPrice:210,
     price: 199.99,
     availableQuantity: 5,
     description:
@@ -226,6 +241,7 @@ const products = [
   {
     id: 16,
     name: "JBL Go 3 Eco: Portable Speaker",
+    oldPrice:74,
     price: 69.98,
     availableQuantity: 10,
     description:
@@ -241,6 +257,7 @@ const products = [
   {
     id: 17,
     name: "JBL Charge 4 Portable Waterproof Wireless Bluetooth Speaker",
+    oldPrice:150,
     price: 129.5,
     availableQuantity: 8,
     description:
@@ -256,6 +273,7 @@ const products = [
   {
     id: 18,
     name: "Bose SoundLink Micro Bluetooth Speaker",
+    oldPrice:160,
     price: 149.5,
     availableQuantity: 5,
     description:
@@ -272,6 +290,7 @@ const products = [
   {
     id: 19,
     name: "Anker Soundcore Bluetooth Speaker",
+    oldPrice:65,
     price: 34,
     availableQuantity: 10,
     description:
@@ -287,6 +306,7 @@ const products = [
   {
     id: 20,
     name: "ZEALOT 80W Bluetooth Speaker Wireless",
+    oldPrice:105,
     price: 93,
     availableQuantity: 10,
     description:
@@ -302,6 +322,7 @@ const products = [
   {
     id: 21,
     name: "SOULION R40 Computer Speakers",
+    oldPrice:50,
     price: 36,
     availableQuantity: 5,
     description:
@@ -317,6 +338,7 @@ const products = [
   {
     id: 22,
     name: "BUGANI Bluetooth Speakers",
+    oldPrice:100,
     price: 85,
     availableQuantity: 5,
     description:
@@ -332,6 +354,7 @@ const products = [
   {
     id: 23,
     name: "EWA A106 Mini Bluetooth Speaker",
+    oldPrice:60,
     price: 30,
     availableQuantity: 5,
     description:
