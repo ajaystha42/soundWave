@@ -8,8 +8,6 @@ const products = [
       "AirPods Max combine high-fidelity audio with industry-leading Active Noise Cancellation to deliver an unparalleled listening experience. Each part of their custom-built driver works to produce sound with ultra-low distortion across the audible range. From deep, rich bass to accurate mids and crisp, clean highs, you’ll hear every note with a new sense of clarity.",
     images: [
       "./media/headphone/airpods-max-pink.png",
-      "./media/headphone/airpods-max-skyblue.png",
-      "./media/headphone/airpods-max-spacegray.png",
     ],
     category: "HEADPHONE",
     quantity: 1,
@@ -23,8 +21,6 @@ const products = [
       "Hybrid Active Noise Cancelling Headphones with Multiple Modes, Hi-Res Sound, Custom EQ via App, 40H Playtime, Comfortable Fit, Bluetooth Headphones, Connect to 2 Devices.",
     images: [
       "./media/headphone/anker-black.jpg",
-      "./media/headphone/anker-blue.jpg",
-      "./media/headphone/anker-pink.jpg",
     ],
     category: "HEADPHONE",
     quantity: 1,
@@ -38,8 +34,6 @@ const products = [
       "Wireless On-Ear Headphones - Apple W1 Headphone Chip, Class 1 Bluetooth, 40 Hours of Listening Time, Built-in Microphone - Black (Latest Model).",
     images: [
       "./media/headphone/beats-black.jpg",
-      "./media/headphone/beats-pink.jpg",
-      "./media/headphone/beats-pink.jpg",
     ],
     category: "HEADPHONE",
     quantity: 1,
@@ -52,8 +46,6 @@ const products = [
     description:
       "Powerful noise cancelling headphones - 11 levels of active noise cancelling let you enjoy music, podcasts, videos & calls without distractions",
     images: [
-      "./media/headphone/bose-black.jpg",
-      "./media/headphone/bose-black.jpg",
       "./media/headphone/bose-black.jpg",
     ],
     category: "HEADPHONE",
@@ -68,8 +60,6 @@ const products = [
       "The Tune 510BT wireless headphones feature renowned JBL Pure Bass sound, which can be found in the most famous venues all around the world.",
     images: [
       "./media/headphone/jbl-black.jpg",
-      "./media/headphone/jbl-blue.jpg",
-      "./media/headphone/jbl-white.jpg",
     ],
     category: "HEADPHONE",
     quantity: 1,
@@ -83,8 +73,6 @@ const products = [
       "Work. Play. Vibe: Made for the way you work and play, Zone Vibe 100 over ear wireless headphones are professional enough for the office, casual enough for home, and available in three modern colors",
     images: [
       "./media/headphone/logitech-black.jpg",
-      "./media/headphone/logitech-rose.jpg",
-      "./media/headphone/logitech-white.jpg",
     ],
     category: "HEADPHONE",
     quantity: 1,
