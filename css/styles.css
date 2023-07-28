@@ -1,6 +1,7 @@
 .main-container {
   max-width: 70%;
-  margin: 2rem auto;
+  margin: 10rem auto;
+  /* margin-bottom: 10rem; */
 }
 
 .homepage-heading {
@@ -21,7 +22,8 @@
 .list li {
   display: inline-block;
   padding: 1.5rem;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .list img {
@@ -42,7 +44,7 @@
 }
 
 #name {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   line-height: 2;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -51,9 +53,19 @@
 }
 
 #price {
-  line-height: 2;
-  font-size: 1.2rem;
+  line-height: 1;
+  font-size: 2rem;
   font-weight: 700;
+}
+
+#old-price {
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: #777;
+}
+
+#available {
+  font-size: 1.3rem;
 }
 
 /* adjust carousel height */

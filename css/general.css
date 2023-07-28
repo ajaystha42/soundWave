@@ -332,6 +332,10 @@ footer {
   gap: 1.5rem;
 }
 
+.social-icons {
+  justify-content: space-around;
+}
+
 .footer-div p {
   margin-top: 3rem;
   font-size: 1.2rem;
