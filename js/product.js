@@ -1,10 +1,15 @@
 import products from "../js/data.js";
 
 window.onload = (e) => {
+  var productsFromStorage = localStorage.getItem("products");
+  let arr = [];
+  if (productsFromStorage) {
+    arr = [...JSON.parse(productsFromStorage)];
+  } else arr = [...products];
   // create a list of <li> and send to <ul>
   const createCardList = (id, category) => {
     const list = document.getElementById(id);
-    products
+    arr
       .filter((item) => item.category === category) // display selected category
 
       .forEach((item) => {
@@ -13,14 +18,20 @@ window.onload = (e) => {
         const li = document.createElement("li");
         li.innerHTML = ` <main class="main-container">
         <div class="product-image-container">
-          <img src=".${item.images[0]}" alt="" />
+          <a href="./productDetails.html?id=${item.id}" ><img 
+          src=".${item.images[0]}" 
+        alt=${item.name} /></a>
         </div>
         <div class="product-body">
           <h2 class="product-title">
             <a href="./productDetails.html?id=${item.id}" >${item.name}</a>
           </h2>
           <ul>
-            <li>Headphone</li>
+            <li> ${
+              item.availableQuantity === 0
+                ? "<p><strong>Out of Stock</strong></p"
+                : `<p><strong>Available Quantity </strong>: ${item.availableQuantity}</p`
+            }></li>
           </ul>
           <p>
             ${item.description}
@@ -28,11 +39,13 @@ window.onload = (e) => {
         </div>
         <div class="product-price">
           <div class="price-offer">
-            <del><h3>${item.oldPrice}</h3></del>
+            <del><h3>$${item.oldPrice}</h3></del>
             <h1>$${item.price}</h1>
           </div>
           <div class="sign-up-button">
-             <a href = "./productDetails.html?id=${item.id}"> <button class="sign-up" type="submit">Add to</button></a>         
+             <a href = "./productDetails.html?id=${
+               item.id
+             }"> <button class="sign-up" type="submit">Add To Cart</button></a>         
           </div>          
         </div>
       </main>`;

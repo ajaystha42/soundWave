@@ -2,9 +2,14 @@ import products from "./data.js";
 
 window.onload = (e) => {
   // create a list of <li> and send to <ul>
+  var productsFromStorage = localStorage.getItem("products");
+  let arr = [];
+  if (productsFromStorage) {
+    arr = [...JSON.parse(productsFromStorage)];
+  } else arr = [...products];
   const createCardList = (className, category) => {
     const list = document.querySelector(className);
-    products
+    arr
       .filter((item) => item.category === category) // display selected category
       .slice(0, 4) // display first four items from the array
       .forEach((item) => {
@@ -14,8 +19,12 @@ window.onload = (e) => {
         li.innerHTML = `<a href="./html/productDetails.html?id=${item.id}"}>
           <img src=${item.images[0]} alt=${item.name}>
           <p id="name">${item.name}</p>
-          <p id="price">$${item.price}</p>
-          <p>${item.availableQuantity}</p>
+          <p id="price">Price: $${item.price}</p>
+          ${
+            item.availableQuantity === 0
+              ? "<p>Out of Stock</p"
+              : `<p>Available: ${item.availableQuantity}</p`
+          }>
         </a>`;
 
         list.appendChild(li);
@@ -32,7 +41,7 @@ window.onload = (e) => {
   const generateTrendingList = () => {
     const trendingList = document.querySelector(".trending-list");
 
-    const trendingProducts = [...products];
+    const trendingProducts = [...arr];
     // Shuffle the array
     const shuffled = trendingProducts.sort(() => 0.5 - Math.random());
     let selected = shuffled.slice(0, 4);
@@ -43,8 +52,12 @@ window.onload = (e) => {
       li.innerHTML = `<a href="./html/productDetails.html?id=${item.id}"}>
         <img src=${item.images[randomNo]} alt=${item.name}>
         <p>${item.name}</p>
-        <p id="price">$${item.price}</p>
-        <p>${item.availableQuantity}</p>
+        <p id="price">Price: $${item.price}</p>
+        ${
+          item.availableQuantity === 0
+            ? "<p>Out of Stock</p"
+            : `<p>Available: ${item.availableQuantity}</p`
+        }>
     </a>`;
 
       trendingList.appendChild(li);
@@ -56,7 +69,7 @@ window.onload = (e) => {
   createCardList(".earphone-list", "EARPHONE");
   createCardList(".speaker-list", "SPEAKER");
 
-  const productsFromStorage = localStorage.getItem("products");
+  // const productsFromStorage = localStorage.getItem("products");
   if (!productsFromStorage) {
     localStorage.setItem("products", JSON.stringify(products));
   }
