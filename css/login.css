@@ -24,8 +24,8 @@
   display: flex;
   justify-content: center;
 }
-.login-logo{
-width: 14rem;
+.login-logo {
+  width: 14rem;
 }
 .login-container {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -145,14 +145,28 @@ ui-datepicker {
 .sign-up-container {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   width: 60rem;
-  height: 88rem;
+  /* height: 88rem; */
   margin-bottom: 2rem;
+  margin-top: 2rem;
   border-radius: 1rem;
   padding: 4rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
   -webkit-border-radius: 1rem;
   -moz-border-radius: 1rem;
   -ms-border-radius: 1rem;
   -o-border-radius: 1rem;
+}
+
+.logo-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.page-logo {
+  width: 10rem;
+  /* margin-bottom: 1rem; */
 }
 
 .user-box-wrapper {
@@ -194,6 +208,10 @@ ui-datepicker {
   margin-left: 1rem;
   color: #333;
   text-decoration: none;
+}
+
+.sign-up-header {
+  text-align: center;
 }
 
 .sign-up-header h4 {
@@ -249,8 +267,6 @@ ui-datepicker {
   font-size: 1.1rem;
   color: red;
 }
-
-
 
 /* .error-hidden {
   display: none !important;

@@ -27,6 +27,11 @@
   border-bottom: 5px solid #219ebc;
 }
 
+.details-page-logo {
+  width: 10rem;
+  margin-bottom: 5rem;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
