@@ -360,3 +360,15 @@ footer {
 .footer-div a:active {
   color: #bbb;
 }
+
+#logout-outline {
+  margin-top: 10px !important;
+}
+
+#user-outline {
+  font-size: 20px;
+}
+
+#login-outline {
+  font-size: 25px;
+}
