@@ -34,6 +34,7 @@ $(document).ready(function () {
 
   // wait for the loader to fade out and display the container with animation
   const timeout = setTimeout(() => {
+    $(".div-height").hide();
     $(".form-container").show();
     $(".form-container").animate({
       left: "2px",
