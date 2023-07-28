@@ -325,7 +325,7 @@ input[type="submit"]:hover {
 }
 .content-wrapper {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   background-color: white;
 }
 .icon-section {

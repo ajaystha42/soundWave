@@ -231,28 +231,29 @@
       );
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    
+
     <script
-    type="module"
-    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
     ></script>
     <script
-    nomodule
-    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
-    
+
     <script>
       $("#userDetails").hide();
       $("#logout").hide();
 
-    // Cart in Home Page
-    let cart = JSON.parse(localStorage.getItem("cart"));
-    if (cart) {
-      cart.items.length != 0 &&
-        (document.getElementById("cart-number").innerHTML = cart.items.length);
-    } else {
-      document.getElementById("cart-number").remove();
-    }
+      // Cart in Home Page
+      let cart = JSON.parse(localStorage.getItem("cart"));
+      if (cart) {
+        cart.items.length != 0 &&
+          (document.getElementById("cart-number").innerHTML =
+            cart.items.length);
+      } else {
+        document.getElementById("cart-number").remove();
+      }
 
       // User Info in Home Page
       const data = localStorage.getItem("user");
