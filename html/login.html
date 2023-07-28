@@ -264,15 +264,12 @@
       const email = localStorage.getItem("email");
       if (error) {
         document.getElementById("login-error").innerHTML = error;
-
       }
       if (pwerror) {
         document.getElementById("login-password-error").innerHTML = pwerror;
-
       }
       if (email) {
         document.getElementById("email").value = email;
-
       }
       localStorage.removeItem("error");
       localStorage.removeItem("passworderror");

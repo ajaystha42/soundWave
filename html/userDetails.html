@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="../css/login.css" />
     <link rel="stylesheet" href="../css/userDetails.css" />
 
+    <!-- jquery ui css -->
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+
     <link
       type="text/css"
       rel="stylesheet"
@@ -26,6 +32,9 @@
     ></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <!-- Jquery ui -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
     <script src="../plugins/waitMe/js/waitMe.js"></script>
 
     <script
@@ -123,7 +132,14 @@
             <label>Address</label>
           </div>
           <div class="user-box">
-            <input type="email" name="email" id="email" readonly />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="input-read-only"
+              readonly
+              title="Contact Admin to change your email"
+            />
             <label>Email</label>
           </div>
           <div class="user-detail">
@@ -132,7 +148,13 @@
               <label>Password</label>
             </div> -->
             <div class="user-box">
-              <input type="text" name="country" id="datepicker" disabled />
+              <input
+                type="text"
+                name="country"
+                id="datepicker"
+                disabled
+                title="Contact Admin to change your DOB"
+              />
               <label>DOB</label>
             </div>
           </div>
@@ -145,7 +167,13 @@
               </p>
             </div>
             <div class="user-box">
-              <input type="text" name="gender" id="gender" disabled />
+              <input
+                type="text"
+                name="gender"
+                id="gender"
+                disabled
+                title="Contact Admin to change your Gender"
+              />
               <label>Gender</label>
             </div>
           </div>
@@ -156,20 +184,21 @@
                 name="country_selector"
                 id="country_selector"
                 disabled
+                title="Contact Admin to change your Country"
               />
-              <label>country</label>
+              <label>COUNTRY</label>
             </div>
           </div>
 
           <div class="sign-up-button">
-            <input
+            <button
               id="loader-waitme"
               class="sign-up"
               type="submit"
               onclick="return validateform();"
-            />
-            <!-- Update
-            </input> -->
+            >
+              Update
+            </button>
             <!-- <button type="button" onclick="onSubmit()">Submit</button> -->
           </div>
         </form>
@@ -302,5 +331,10 @@
           .classList.remove("error-hidden");
       return isValid;
     }
+
+    //tooltip jquery
+    $(function () {
+      $(document).tooltip();
+    });
   </script>
 </html>
