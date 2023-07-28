@@ -47,10 +47,10 @@ window.onload = (e) => {
     let selected = shuffled.slice(0, 4);
 
     selected.forEach((item) => {
-      const randomNo = Math.floor(Math.random() * 2);
+      // const randomNo = Math.floor(Math.random() * 2);
       const li = document.createElement("li");
       li.innerHTML = `<a href="./html/productDetails.html?id=${item.id}"}>
-        <img src=${item.images[randomNo]} alt=${item.name}>
+        <img src=${item.images[0]} alt=${item.name}>
         <p>${item.name}</p>
         <p id="price">Price: $${item.price}</p>
         ${
