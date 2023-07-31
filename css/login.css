@@ -10,7 +10,7 @@
 .image-container {
   position: relative;
   width: 40%;
-  height: 90vh;
+  height: 111vh;
   background-color: #ffede1;
 }
 
@@ -30,7 +30,7 @@
 .login-container {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   width: 70rem;
-  height: 70rem;
+
   border-radius: 1rem;
   padding: 4rem;
   -webkit-border-radius: 1rem;
@@ -144,7 +144,7 @@ ui-datepicker {
 
 .sign-up-container {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  width: 60rem;
+  width: 70rem;
   /* height: 88rem; */
   margin-bottom: 2rem;
   margin-top: 2rem;
@@ -275,4 +275,44 @@ label.error {
   top: 4.1rem;
   color: red;
   font-size: 12px;
+}
+/* larger desktop image upto mac 1900px */
+
+@media only screen and (min-width: 1400px) and (max-width: 1900px) {
+  .login-page-illustrator {
+    left: -2rem !important;
+  }
+}
+
+@media only screen and (max-width: 1850px) {
+  .login-page-illustrator {
+    left: 16remm !important;
+  }
+}
+
+/* small screen till laptop resolution 1400px  */
+
+@media only screen and (max-width: 1399px) {
+  .login-page-illustrator {
+    left: -5rem !important;
+  }
+  .login-container {
+  }
+}
+
+/*smaller screen or tablet view*/
+@media only screen and (max-width: 1299px) {
+  .image-container {
+    display: none;
+  }
+  .form-container {
+    width: 100%;
+    margin: 5rem;
+  }
+  .header {
+    margin-bottom: 0rem !important;
+  }
+  .sign-up-container {
+    width: 75rem;
+  }
 }
