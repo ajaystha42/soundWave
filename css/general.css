@@ -418,6 +418,7 @@ footer {
   .nav {
     display: none;
     position: absolute;
+    padding-top: 5rem;
     top: 10rem;
     left: 0;
     background-color: #fff;
