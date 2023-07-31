@@ -232,6 +232,12 @@ header {
   padding: 2px;
 }
 
+.nav-menu-btn {
+  display: none;
+  font-size: 3.4rem;
+  cursor: pointer;
+}
+
 /*------------Dropdown menu--------------------*/
 /*--------------------------------------------*/
 .dropdown-menu {
@@ -379,4 +385,69 @@ footer {
 
 #login-outline {
   font-size: 25px;
+}
+
+.show {
+  display: block !important;
+}
+
+.hidden {
+  display: none;
+}
+
+/* SMALLER DESKTOPS OR TABLET IN LANDSCAPE */
+@media only screen and (max-width: 1500px) {
+  html {
+    font-size: 50% !important;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .footer-container {
+    padding: 10rem 15%;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 2rem;
+  }
+}
+
+/* TABLETS */
+@media only screen and (max-width: 785px) {
+  .nav-menu-btn {
+    display: block;
+  }
+  .nav {
+    display: none;
+    position: absolute;
+    top: 10rem;
+    left: 0;
+    background-color: #fff;
+    margin: 0;
+
+    flex-direction: column;
+    /* width: 100%; */
+    z-index: 99;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  .actions {
+    padding: 2rem 0;
+    padding-top: 4rem;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+/* MOBILE PHONES */
+@media only screen and (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2rem;
+  }
 }

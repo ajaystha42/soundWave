@@ -56,4 +56,8 @@ window.onload = (e) => {
   createCardList("headphone-list", "HEADPHONE");
   createCardList("earphone-list", "EARPHONE");
   createCardList("speaker-list", "SPEAKER");
+
+  document.querySelector(".nav-menu-btn").addEventListener("click", () => {
+    document.querySelector(".nav").classList.toggle("show");
+  });
 };

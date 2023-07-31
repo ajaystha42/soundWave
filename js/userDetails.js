@@ -68,6 +68,10 @@ $(document).ready(function () {
       waitTime: 500,
     });
   }
+
+  document.querySelector(".nav-menu-btn").addEventListener("click", () => {
+    document.querySelector(".nav").classList.toggle("show");
+  });
 });
 
 // function $(id) {
