@@ -85,6 +85,10 @@ $(document).ready(function () {
     },
     "The password must contain at least one digit, one lowercase letter, one uppercase letter, and be at least 8 characters long"
   );
+
+  document.querySelector(".nav-menu-btn").addEventListener("click", () => {
+    document.querySelector(".nav").classList.toggle("show");
+  });
 });
 
 // function validateForm() {

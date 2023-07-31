@@ -83,4 +83,8 @@ window.onload = (e) => {
   if (!productsFromStorage) {
     localStorage.setItem("products", JSON.stringify(products));
   }
+
+  document.querySelector(".nav-menu-btn").addEventListener("click", () => {
+    document.querySelector(".nav").classList.toggle("show");
+  });
 };
