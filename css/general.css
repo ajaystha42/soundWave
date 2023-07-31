@@ -452,3 +452,12 @@ footer {
     row-gap: 2rem;
   }
 }
+
+@media only screen and (max-width: 550px) {
+  .sign-up-container {
+    width: 50rem;
+  }
+  .user-detail {
+    display: block;
+  }
+}

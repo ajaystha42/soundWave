@@ -222,6 +222,7 @@ input[type="submit"]:hover {
   font-size: 16px; /* Adjust the font size as needed */
 }
 .contact-wrapper {
+  gap: 2rem;
   display: flex;
   justify-content: center;
   background-color: white;
