@@ -18,9 +18,11 @@ window.onload = (e) => {
         const li = document.createElement("li");
         li.innerHTML = ` <main class="main-container">
         <div class="product-image-container">
-          <a href="./productDetails.html?id=${item.id}" ><img 
-          src=".${item.images[0]}" 
-        alt=${item.name} /></a>
+          <a href="./productDetails.html?id=${item.id}" >
+            <img class='product-img' src=".${item.images[0]}" alt=${
+          item.name
+        } />
+          </a>
         </div>
         <div class="product-body">
           <h2 class="product-title">
@@ -29,7 +31,7 @@ window.onload = (e) => {
           <ul>
             <li> ${
               item.availableQuantity === 0
-                ? "<p><strong>Out of Stock</strong></p"
+                ? "<p class='out-of-stock'><strong>Out of Stock</strong></p"
                 : `<p><strong>Available Quantity </strong>: ${item.availableQuantity}</p`
             }></li>
           </ul>
