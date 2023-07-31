@@ -222,6 +222,7 @@
                 <div class="user-box">
                   <input type="email" name="email" id="email" />
                   <label>EMAIL</label>
+                  <span id="email-error"></span>
                 </div>
                 <div class="user-detail">
                   <div class="user-box">
@@ -352,7 +353,11 @@
     $("#userDetails").hide();
     $("#logout").hide();
     $("#contact-error").hide();
+    const userError = localStorage.getItem("userError");
 
+    if (userError) {
+        document.getElementById("email-error").innerHTML = userError;
+      }
     function validateForm() {
       const contactPattern = "^[0-9]*$";
 

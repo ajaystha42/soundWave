@@ -31,12 +31,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       // Encrypting Password
       $encrypted_password = password_hash($password, PASSWORD_BCRYPT);
 
+      $emailQuery = "SELECT * FROM USERS WHERE email = '$email'";
+      $result = mysqli_query($con, $emailQuery);
+
+    if (mysqli_num_rows($result) > 0) {
+        echo"User already exist";
+        echo "<script>localStorage.setItem('userError', '" . 'User already exist' . "');</script>";
+        echo "<script>window.location ='../html/signup.html'</script>";
+    }
 
     // SQL Query
       $query = "INSERT INTO USERS (first_name, last_name, email, password, gender, contact, country, address, dob) 
             VALUES('$firstName', '$lastName', '$email', '$encrypted_password', '$gender', '$contact', '$country', '$address', '$dob')";
 
-      echo $query;
       // Executing SQL Query
       if(mysqli_query($con, $query)){
         echo "Data inserted successfully!!";
@@ -44,8 +51,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("location: ../html/login.html");
 
       }
-      else echo "Error Occured : " . $query . "<br>" . mysqli_error($con);
-
+      else{
+      echo "Error Occured : " . $query . "<br>" . mysqli_error($con);
+      }
       // Closing Database Connection
       mysqli_close($con);
 }
