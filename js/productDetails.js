@@ -29,10 +29,10 @@ $(document).ready(function () {
     $(".main-img-div").prepend(
       `<img class="main-img" src=".${product.images[0]}" />`
     );
-    // $(".secondary-img-div").prepend(
-    //   `<img id="img1" class="sec-img" src=".${product.images[1]}" />
-    //       <img id="img2" class="sec-img" src=".${product.images[2]}" />`
-    // );
+    $(".secondary-img-div").prepend(
+      `<img id="img1" class="sec-img" src=".${product.images[0]}" />
+          <img id="img2" class="sec-img" src=".${product.images[0]}" />`
+    );
 
     // $("#img1").click(imgChange1);
     // $("#img2").click(imgChange2);
