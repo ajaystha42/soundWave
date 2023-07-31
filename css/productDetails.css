@@ -88,3 +88,19 @@
   background: #eee !important;
   opacity: 1;
 } */
+
+@media only screen and (max-width: 1000px) {
+  .main-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .btn-container {
+    flex-direction: column;
+    max-width: 20rem;
+  }
+  .white-btn {
+    width: 100%;
+  }
+}
