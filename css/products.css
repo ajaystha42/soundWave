@@ -65,7 +65,7 @@
 }
 
 .product-image-container img {
-  margin: 2rem;
+  padding: 2rem;
   width: 25rem;
   height: 100%;
 }
