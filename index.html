@@ -68,14 +68,25 @@
 
         <div class="actions">
           <div class="search-bar">
-            <input type="text" name="search" placeholder="Search Product..." />
+            <input
+              type="text"
+              name="search"
+              placeholder="Search Product..."
+              title="Search"
+            />
           </div>
-          <a class="cart-btn" href="#" title="Cart">
-            <span>
-              <ion-icon name="cart-outline"></ion-icon>
-              <p id="cart-number"></p> </span
-            >Cart
-          </a>
+          <div class="clear-cart-dropdown">
+            <a class="cart-btn" href="#">
+              <span>
+                <ion-icon name="cart-outline"></ion-icon>
+                <p id="cart-number"></p> </span
+              >Cart
+            </a>
+
+            <button class="clear-cart-btn">
+              <ion-icon name="trash-outline"></ion-icon>&nbsp; Clear Cart
+            </button>
+          </div>
           <div class="dropdown-menu">
             <a class="account-btn" href="#">
               <span> <ion-icon name="person-outline"></ion-icon> </span>

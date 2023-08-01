@@ -89,6 +89,13 @@ $(document).ready(function () {
   document.querySelector(".nav-menu-btn").addEventListener("click", () => {
     document.querySelector(".nav").classList.toggle("show");
   });
+
+  // Clear the cart when user clicks on Clear Cart button
+  document.querySelector(".clear-cart-btn").addEventListener("click", () => {
+    localStorage.removeItem("cart");
+    localStorage.setItem("products", JSON.stringify(products));
+    location.reload();
+  });
 });
 
 // function validateForm() {
