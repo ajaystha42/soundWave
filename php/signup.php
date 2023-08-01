@@ -35,9 +35,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $result = mysqli_query($con, $emailQuery);
 
     if (mysqli_num_rows($result) > 0) {
-        echo"User already exist";
+        // Validation - Email Already Exists
         echo "<script>localStorage.setItem('userError', '" . 'User already exist' . "');</script>";
         echo "<script>window.location ='../html/signup.html'</script>";
+        return;
     }
 
     // SQL Query
@@ -46,8 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
       // Executing SQL Query
       if(mysqli_query($con, $query)){
-        echo "Data inserted successfully!!";
-
+        
         header("location: ../html/login.html");
 
       }

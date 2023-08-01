@@ -29,7 +29,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (mysqli_num_rows($result) > 0) {
         $user = mysqli_fetch_assoc($result);
-        // return;
         // Verifying Password
         if (password_verify($password, $user["password"])) {
             //setting user info to local storage
@@ -37,18 +36,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Redirecting to home page
             echo "<script>window.location ='./../index.html'</script>";
-            
-            exit; // Add exit to ensure no further code execution after redirect
+            // Adding exit stop further code execution after redirect
+            exit; 
         } else {
+             //For Validation in Login - Incorrect Password
             echo "<script>localStorage.setItem('email', '" . $email . "');</script>";
             echo "<script>localStorage.setItem('passworderror', '" . 'Password is incorrect' . "');</script>";
             echo "<script>window.location ='../html/login.html'</script>";
         }
     } else {
-        // echo "User doesn't exist!";
+         //For Validation in Login - User Donot Exist
         echo "<script>localStorage.setItem('error', '" . 'User doesnot exist' . "');</script>";
         echo "<script>window.location ='../html/login.html'</script>";
-        // header("location: ../html/login.html");
     }
 
     

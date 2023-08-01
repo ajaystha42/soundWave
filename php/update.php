@@ -15,7 +15,7 @@ if (!$con) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-// Signup Submission
+// Update Submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Getting Value from Form
       $firstName = mysqli_real_escape_string($con, $_POST["firstname"]);
