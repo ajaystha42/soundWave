@@ -1,12 +1,6 @@
 $(document).ready(function () {
   $("#userRegistrationForm").validate({
     rules: {
-      // firstname: {
-      //   required: true,
-      // },
-      // lastname: {
-      //   required: true,
-      // },
       password: {
         required: true,
         minlength: 8,
@@ -36,14 +30,6 @@ $(document).ready(function () {
       },
     },
     messages: {
-      // firstname: {
-      //   required: "Please enter your first name",
-      //   minlength: "Your first name must be at least 5 characters long",
-      // },
-      // lastname: {
-      //   required: "Please enter your last name",
-      //   minlength: "Your last name must be at least 5 characters long",
-      // },
       address: {
         required: "Please enter a address",
       },

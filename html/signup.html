@@ -369,7 +369,8 @@
       document.getElementById("email-error").innerHTML = userError;
     }
     function validateForm() {
-      const contactPattern = "^[0-9]*$";
+      const contactPattern =
+        /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
 
       let result = true;
       const firstname = document.getElementById("firstname").value;
@@ -381,7 +382,7 @@
         if (!contact.match(contactPattern)) {
           $("#contact-error").show();
 
-          contactError.textContent = "Only Number Allowed";
+          contactError.textContent = "Please enter Valid Number";
           result = false;
         } else if (contact == "") {
           contactError.textContent = "Please enter your Details";
