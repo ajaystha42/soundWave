@@ -5,12 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SoundWave - Your Melody, Your Marketplace</title>
 
-    <script src="../themes/tab/js/jquery.js"></script>
-    <link rel="stylesheet" href="../themes/tab/css/jquery-ui.css" />
+    <!-- script for jquery tab -->
+    <script src="../themes/tab/js/jquery.js"></script>     
+    <script src="../themes/tab/js/jquery-ui.js"></script>
+    <!-- script for jquery tab ends -->
+
     <link rel="stylesheet" href="../css/general.css  " />
     <link rel="stylesheet" href="../css/login.css" />
     <link rel="stylesheet" href="../css/products.css" />
-    <script src="../themes/tab/js/jquery-ui.js"></script>
+
+    <!-- Css for tab jquery -->
+    <link rel="stylesheet" href="../themes/tab/css/jquery-ui.css" />
+
+   
+   <!-- removing the user from localstorage after log-out  -->
     <script>
       function logout() {
         localStorage.removeItem("user");
@@ -19,6 +27,13 @@
     </script>
   </head>
   <body>
+
+ <!-- <p>Group Members:</p>
+    <p>Ajay Shrestha</p>
+    <p>Gaurab Pokhrel</p>
+    <p>Nirajan Karki</p>
+    <p>Sakar Thapa</p> -->
+
     <header>
       <h4>
         <a href="index.html"
@@ -106,7 +121,12 @@
         <ion-icon name="menu-outline"></ion-icon>
       </div>
     </header>
+
+    <!--------------------------------Main body starts -------------------------------------->
+
+
     <div class="container">
+      <!-- image wrapper -->
       <div class="banner-image">
         <h1>
           Upto 50% off this summer
@@ -114,6 +134,8 @@
           On your favourite headphone
         </h1>
       </div>
+
+      <!-- form-content wrapper -->
       <div class="content-wrapper">
         <div class="category-content">
           <div class="category-header">
@@ -136,7 +158,8 @@
               </div>
             </div>
           </div>
-
+          
+          <!-------------------------------------- jquery widget tabs starts ------------------------>
           <div id="tabs">
             <ul>
               <li><a href="#tabs-1">Heaphone</a></li>
@@ -158,6 +181,10 @@
         </div>
       </div>
     </div>
+    <!-------------------------------------- jquery widget tabs ends ------------------------>
+
+
+    <!-------------------------------------- Footer starts ------------------------>
     <footer>
       <div class="footer-container">
         <div class="footer-div logo-center">
@@ -234,6 +261,12 @@
         </div>
       </div>
     </footer>
+    <!-------------------------------------- Footer end ------------------------>
+
+
+
+
+
     <script>
       localStorage.removeItem("error");
       localStorage.removeItem("passworderror");
@@ -256,6 +289,8 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 
+
+    <!-----------------------------Icon for cdn  ----------------------------->
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -264,7 +299,7 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
-
+ <!----------------------------- Icon cdn end  ----------------------------->
     <script>
       $("#userDetails").hide();
       $("#logout").hide();
