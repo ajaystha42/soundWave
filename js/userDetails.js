@@ -44,6 +44,7 @@ $(document).ready(function () {
     });
   }, 500);
 
+  // display user details on first reload
   $("#firstname").val(user.first_name);
   $("#lastname").val(user.last_name);
   $("#address").val(user.address);
@@ -54,6 +55,7 @@ $(document).ready(function () {
   $("#gender").val(user.gender);
   $("#country_selector").val(user.country);
 
+  // Waitme plugin
   let current_effect = "bounce";
   $("#loader-waitme").click(function () {
     run_waitMe(current_effect);
@@ -80,22 +82,3 @@ $(document).ready(function () {
     location.reload();
   });
 });
-
-// function $(id) {
-//   return document.getElementById(id);
-// }
-
-// window.onload = () => {
-//   const user = JSON.parse(localStorage.getItem("user"));
-//   console.log(user);
-
-//   $("firstname").value = user.first_name;
-//   $("lastname").value = user.last_name;
-//   $("address").value = user.address;
-//   $("email").value = user.email;
-//   // $("password").value = user.password;
-//   $("datepicker").value = user.dob;
-//   $("contact").value = user.contact;
-//   $("gender").value = user.gender;
-//   $("country_selector").value = user.country;
-// };
