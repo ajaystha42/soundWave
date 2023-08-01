@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- <p>Group Members:</p>
+    <p>Ajay Shrestha</p>
+    <p>Gaurab Pokhrel</p>
+    <p>Nirajan Karki</p>
+    <p>Sakar Karki</p> -->
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -62,6 +68,7 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   </head>
   <body>
+    <!--Header for nav bar-->
     <header>
       <h4>
         <a href="index.html"
@@ -151,6 +158,7 @@
     </header>
 
     <main>
+      <!--Contact Us Form-->
       <div class="contact-us-container" style="margin-top: 5%">
         <div class="wrapper-content-form">
           <form id="userRegistrationForm" method="POST">
@@ -195,9 +203,11 @@
             </div>
           </form>
         </div>
+        <!--map div-->
         <div id="map"></div>
       </div>
 
+      <!--icon-->
       <div class="contact-us-content">
         <div class="contact-wrapper">
           <div class="icon-section">
@@ -250,6 +260,7 @@
       </div>
     </main>
 
+    <!-- footer-->
     <footer>
       <div class="footer-container">
         <div class="footer-div logo-center">
@@ -326,10 +337,12 @@
     </footer>
   </body>
   <script>
+    //Removing local storage
     localStorage.removeItem("error");
     localStorage.removeItem("passworderror");
     localStorage.removeItem("email");
     localStorage.removeItem("userError");
+    //jwuery widget to popup message
     $.widget("custom.successDialog", {
       // options: {
       //   title: "Thankyou for reaching us",
@@ -381,34 +394,6 @@
       $("#userDetails").show();
       $("#logout").show();
     }
-    // // Function to show the success modal
-    // function showSuccessModal() {
-    //   $("#successModal").css("display", "block");
-    // }
-
-    // // Function to close the success modal
-    // function closeSuccessModal() {
-    //   $("#successModal").css("display", "none");
-    //   location.reload();
-    // }
-
-    // // Function to handle the form submission
-    // function contactus(event) {
-    //   event.preventDefault();
-    //   showSuccessModal();
-    // }
-
-    // // Close the modal when the close button is clicked
-    // $(".close").click(function () {
-    //   closeSuccessModal();
-    // });
-
-    // // Close the modal when the user clicks outside of the modal
-    // $(window).click(function (event) {
-    //   if (event.target == $("#successModal")[0]) {
-    //     closeSuccessModal();
-    //   }
-    // });
   </script>
   <script>
     $(document).ready(function () {
