@@ -14,7 +14,6 @@ window.onload = (e) => {
       .slice(0, 4) // display first four items from the array
       .forEach((item) => {
         // iterate through the generated array
-        // const randomNo = Math.floor(Math.random() * 2);
         const li = document.createElement("li");
         li.innerHTML = `<a href="./html/productDetails.html?id=${item.id}"}>
           <img src=${item.images[0]} alt=${item.name}>
@@ -52,7 +51,6 @@ window.onload = (e) => {
     let selected = shuffled.slice(0, 4);
 
     selected.forEach((item) => {
-      // const randomNo = Math.floor(Math.random() * 2);
       const li = document.createElement("li");
       li.innerHTML = `<a href="./html/productDetails.html?id=${item.id}"}>
         <img src=${item.images[0]} alt=${item.name}>
@@ -74,16 +72,16 @@ window.onload = (e) => {
     });
   };
 
-  generateTrendingList();
-  createCardList(".headphone-list", "HEADPHONE");
-  createCardList(".earphone-list", "EARPHONE");
-  createCardList(".speaker-list", "SPEAKER");
+  generateTrendingList(); // Generate trending list by calling the function
+  createCardList(".headphone-list", "HEADPHONE"); // Generate headphones
+  createCardList(".earphone-list", "EARPHONE"); // Generate earphones
+  createCardList(".speaker-list", "SPEAKER"); // Generate speakers
 
-  // const productsFromStorage = localStorage.getItem("products");
   if (!productsFromStorage) {
     localStorage.setItem("products", JSON.stringify(products));
   }
 
+  // Toggle the navbar menu button for tablets and smaller devices
   document.querySelector(".nav-menu-btn").addEventListener("click", () => {
     document.querySelector(".nav").classList.toggle("show");
   });

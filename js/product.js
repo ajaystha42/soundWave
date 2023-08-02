@@ -6,6 +6,7 @@ window.onload = (e) => {
   if (productsFromStorage) {
     arr = [...JSON.parse(productsFromStorage)];
   } else arr = [...products];
+
   // create a list of <li> and send to <ul>
   const createCardList = (id, category) => {
     const list = document.getElementById(id);
@@ -14,7 +15,6 @@ window.onload = (e) => {
 
       .forEach((item) => {
         // iterate through the generated array
-        // const randomNo = Math.floor(Math.random() * 2);
         const li = document.createElement("li");
         li.innerHTML = ` <main class="main-container">
         <div class="product-image-container">

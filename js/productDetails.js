@@ -13,6 +13,7 @@ $(document).ready(function () {
   if (productsFromStorage) {
     arr = [...JSON.parse(productsFromStorage)];
   } else arr = [...products];
+
   // get the product based on id using array.find() method
   const product = arr.find((product) => product.id === id);
 
@@ -34,39 +35,8 @@ $(document).ready(function () {
           <img id="img2" class="sec-img" src=".${product.images[0]}" />`
     );
 
-    // $("#img1").click(imgChange1);
-    // $("#img2").click(imgChange2);
-
-    // function imgChange1() {
-    //   // first clear the main image div
-    //   $(".main-img-div").empty();
-    //   // then add the clicked image
-    //   $(".main-img-div").prepend(
-    //     `<img class="main-img" src=".${product.images[1]}" />`
-    //   );
-
-    //   // clear the secondary image div
-    //   $(".secondary-img-div").empty();
-    //   // then add the remaining images
-    //   $(".secondary-img-div").prepend(
-    //     `<img id="img1" class="sec-img" src=".${product.images[0]}" />
-    //     <img id="img2" class="sec-img" src=".${product.images[2]}" />`
-    //   );
-    // }
-
-    // function imgChange2() {
-    //   $(".main-img-div").empty();
-    //   $(".main-img-div").prepend(
-    //     `<img class="main-img" src=".${product.images[2]}" />`
-    //   );
-
-    //   $(".secondary-img-div").empty();
-    //   $(".secondary-img-div").prepend(
-    //     `<img id="img1" class="sec-img" src=".${product.images[0]}" />
-    //         <img id="img2" class="sec-img" src=".${product.images[1]}" />`
-    //   );
-    // }
-
+    // Check if the product is available
+    // Disable the add-to-cart button if the available qualtity is 0
     if (product.availableQuantity <= 0) {
       $("#add-to-cart-btn").prop("disabled", true).addClass("disabled");
       $(".available-qty").text(`No items left in stock`);
@@ -77,6 +47,7 @@ $(document).ready(function () {
     }
   }
 
+  // Navbar menu button on tablet and mobile devices
   document.querySelector(".nav-menu-btn").addEventListener("click", () => {
     document.querySelector(".nav").classList.toggle("show");
   });

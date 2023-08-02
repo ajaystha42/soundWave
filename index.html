@@ -51,7 +51,11 @@
     <p>Ajay Shrestha</p>
     <p>Gaurab Pokhrel</p>
     <p>Nirajan Karki</p>
+<<<<<<< HEAD
     <p>Sakar Thapa</p> -->
+=======
+    <p>Sakar thapa</p> -->
+>>>>>>> c1c6725ce1abad905cba02aa29a25ef5a467ec89
 
     <header>
       <a class="logo-link" href="index.html">
@@ -184,6 +188,8 @@
         <!-- <img src="banner.jpg" alt="Orange" /> -->
       </a>
     </div>
+
+    <!-- Display the list of products according to the caregory from index.js file -->
     <main class="main-container">
       <h2 class="homepage-heading">TRENDING PRODUCTS</h2>
       <ul class="list trending-list"></ul>
@@ -310,7 +316,7 @@
     let cart = JSON.parse(localStorage.getItem("cart"));
     if (cart) {
       cart.items.length != 0 &&
-        (document.getElementById("cart-number").innerHTML = cart.items.length);
+        (document.getElementById("cart-number").innerHTML = cart.quantity);
     } else {
       document.getElementById("cart-number").remove();
     }

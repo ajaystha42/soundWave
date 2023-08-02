@@ -1,18 +1,18 @@
 import products from "./data.js";
 
+// initialize a class object
 export let cart = {
   items: [],
   quantity: 0,
   price: 0,
 };
 
-// source: https://codepen.io/chrisachinga/pen/MWwrZLJ
-//
+// function to save cart in localstorage
 function saveCart() {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-// Load cart
+// Load cart from local storage
 function loadCart() {
   cart = JSON.parse(localStorage.getItem("cart"));
 }
@@ -22,16 +22,17 @@ if (localStorage.getItem("cart") != null) {
 
 export const cartFunction = (action, payload) => {
   if (action === "ADD") {
+    // get products
     const productsFromStorage = localStorage.getItem("products");
     let arr = [];
     if (productsFromStorage) {
       arr = [...JSON.parse(productsFromStorage)];
     } else arr = [...products];
-    const item = arr.find((product) => product.id === payload);
-    const itemIndex = arr.findIndex((product) => product.id === payload);
-    cart.items = [...cart.items, item];
+    const item = arr.find((product) => product.id === payload); // get item that has id
+    const itemIndex = arr.findIndex((product) => product.id === payload); // get index of the item
+    cart.items = [...cart.items, item]; // add the item on the cart items object
 
-    cart.quantity = cart.items.length;
+    cart.quantity = cart.items.length; // Get the number of the cart items
 
     let new_price = 0;
     cart.items.forEach((item) => {
@@ -46,9 +47,4 @@ export const cartFunction = (action, payload) => {
     saveCart(cart);
     location.reload();
   }
-
-  if (action === "REMOVE") {
-    cart.items.filter((item) => item.id !== payload);
-  }
-  return cart;
 };
