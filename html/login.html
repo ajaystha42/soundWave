@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- <p>Group Members:</p>
-    <p>Ajay Shrestha</p>
-    <p>Gaurab Pokhrel</p>
-    <p>Nirajan Karki</p>
-    <p>Sakar thapa</p> -->
-
+  <!-- Group Members:
+        Ajay Shrestha
+        Gaurab Pokhrel
+        Nirajan Karki
+        Sakar Thapa-->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -38,30 +37,10 @@
         location.reload();
       }
 
-      // function validateForm() {
-      //   let result = true;
-      //   let email = document.getElementById("email").value;
-      //   let password = document.getElementById("password").value;
-      //   const emailError = document.getElementById("email-error");
-      //   const passwordError = document.getElementById("password-error");
-      //   if (email === "" || password === "") {
-      //     if (emailError) emailError?.classList.remove("error-hidden");
-      //     if (passwordError) passwordError?.classList.remove("error-hidden");
-      //     result = false;
-      //   }
-      //   return result;
       // }
     </script>
   </head>
   <body>
-
- <!-- <p>Group Members:</p>
-    <p>Ajay Shrestha</p>
-    <p>Gaurab Pokhrel</p>
-    <p>Nirajan Karki</p>
-    <p>Sakar Thapa</p> -->
-
-
     <header>
       <h4>
         <a href="index.html"
@@ -153,7 +132,6 @@
     <!-- ---------------------------main container starts --------------------------------->
     <div class="container">
       <div class="container-wrapper">
-
         <!-- Image conatainer -->
         <div class="image-container">
           <img
@@ -204,11 +182,8 @@
                       <label>PASSWORD</label>
                       <span id="passwordError" class="error"></span><br />
                       <span id="login-password-error"></span>
-
-                      <!-- <span id="password-error">Password is required</span> -->
                     </div>
                     <div class="login-button">
-                      <!-- <input type="submit" value="Login" /> -->
                       <input
                         type="submit"
                         name="submit"
@@ -228,9 +203,9 @@
         </div>
       </div>
     </div>
-  <!-- ---------------------------main container ends --------------------------------->
+    <!-- ---------------------------main container ends --------------------------------->
 
- <!-- ---------------------------Footer section --------------------------------->
+    <!-- ---------------------------Footer section --------------------------------->
     <footer>
       <div class="footer-container">
         <div class="footer-div logo-center">
@@ -258,8 +233,7 @@
           </ul>
           <p>Copyright © 2023 by SoundWave, Inc. All rights reserved.</p>
         </div>
-        
-       
+
         <div class="footer-div">
           <h2>CONTACT US</h2>
           <ul>
@@ -274,8 +248,6 @@
         <div class="footer-div">
           <h2>APPS</h2>
           <ul>
-            <!-- <li><a hrf="#"> Create Account</a></li>
-            <li><a hrefe="#"> Sign In</a></li> -->
             <li>
               <a href="https://www.apple.com/ca/app-store/" target="_blank">
                 IOS App</a
@@ -309,7 +281,7 @@
       </div>
     </footer>
 
-     <!-- ---------------------------Footer section ends--------------------------------->
+    <!-- ---------------------------Footer section ends--------------------------------->
   </body>
   <script>
     $(document).ready(function () {
@@ -348,7 +320,6 @@
           error.appendTo("#" + element.attr("id") + "Error");
         },
       });
-      // "^(?=.*[a-z])(?=.*[A-Z])(?=.*d)(?=.*[@$!%*?&])[A-Za-zd@$!%*?&]{8,}$";
       $.validator.addMethod(
         "strongPassword",
         function (value, element) {

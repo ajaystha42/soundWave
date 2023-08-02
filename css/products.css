@@ -97,18 +97,12 @@
 
 .product-body p {
   font-size: 1.6rem;
-  /* width: 100%; */
-  /* text-overflow: ellipsis;
-  white-space: nowrap; 
-  overflow: hidden;
-  max-width: 20rem; */
 }
 
 .product-price {
   padding-right: 3rem;
   display: grid;
   align-content: center;
-  /* width: 100%; */
 }
 
 .product-price h1 {
@@ -122,22 +116,11 @@
   margin-bottom: 3rem;
 }
 
-/* .ui-tabs {
-  max-width: 70%;
-} */
 
 .price-offer del {
   margin-bottom: -2rem;
 }
 
-/* .cart-btn {
-  width: 23rem;
-  height: 5rem;
-  border-radius: 0.5rem;
-  border-color: wheat;
-  cursor: pointer;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-} */
 .cart-btn p {
   font-size: 12pt;
 }
@@ -215,6 +198,7 @@
   .banner-image h1 {
     left: 40rem;
   }
+
   .main-container {
     grid-template-columns: 1fr;
     padding-bottom: 1rem;
@@ -225,6 +209,7 @@
   html {
     font-size: 40% !important;
   }
+
   .banner-image h1 {
     left: 30rem;
   }

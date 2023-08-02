@@ -1,36 +1,3 @@
-// $(document).ready(function () {
-//   $("#loginForm").validate({
-//     rules: {
-//       password: {
-//         required: true,
-//         minlength: 8,
-//         strongPassword: true,
-//       },
-//     },
-//     messages: {
-//       password: {
-//         required: "Please enter a password",
-//         strongPassword:
-//           "The password must contain at least one digit, one lowercase letter, one uppercase letter, and be at least 8 characters long",
-//       },
-//     },
-//     errorPlacement: function (error, element) {
-//       error.appendTo("#" + element.attr("id") + "Error");
-//     },
-//   });
-//   // "^(?=.*[a-z])(?=.*[A-Z])(?=.*d)(?=.*[@$!%*?&])[A-Za-zd@$!%*?&]{8,}$";
-//   $.validator.addMethod(
-//     "strongPassword",
-//     function (value, element) {
-//       return (
-//         this.optional(element) ||
-//         /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/.test(value)
-//       );
-//     },
-//     "The password must contain at least one digit, one lowercase letter, one uppercase letter, and be at least 8 characters long"
-//   );
-// });
-
 function validateForm() {
   const emailPattern =
     /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

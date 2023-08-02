@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- <p>Group Members:</p>
-    <p>Ajay Shrestha</p>
-    <p>Gaurab Pokhrel</p>
-    <p>Nirajan Karki</p>
-    <p>Sakar Thapa</p> -->
+  <!-- Group Members:
+        Ajay Shrestha
+        Gaurab Pokhrel
+        Nirajan Karki
+        Sakar Thapa -->
 
   <head>
     <meta charset="UTF-8" />
@@ -54,8 +54,6 @@
       function logout() {
         localStorage.removeItem("user");
         window.location.href = "./../index.html";
-
-        // location.reload();
       }
     </script>
   </head>
@@ -192,10 +190,6 @@
             <label>EMAIL</label>
           </div>
           <div class="user-detail">
-            <!-- <div class="user-box">
-              <input type="password" name="password" id="password" disabled />
-              <label>Password</label>
-            </div> -->
             <div class="user-box">
               <input
                 type="text"
@@ -248,7 +242,6 @@
             >
               Update
             </button>
-            <!-- <button type="button" onclick="onSubmit()">Submit</button> -->
           </div>
         </form>
       </div>
@@ -296,8 +289,6 @@
         <div class="footer-div">
           <h2>APPS</h2>
           <ul>
-            <!-- <li><a hrf="#"> Create Account</a></li>
-            <li><a hrefe="#"> Sign In</a></li> -->
             <li>
               <a href="https://www.apple.com/ca/app-store/" target="_blank">
                 IOS App</a
@@ -353,7 +344,6 @@
   </script>
   <script type="module" src="../js/userDetails.js"></script>
 
-  <!-- <script type="module" src="../js/common.js"></script> -->
   <script>
     // Cart in Home Page
     let cart = JSON.parse(localStorage.getItem("cart"));
@@ -368,7 +358,6 @@
   <!-- Validate form using javascript -->
   <script>
     function validateform() {
-      // document.getElementById("contact-error").classList.add("error-hidden");
       const contactRegex =
         /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
 

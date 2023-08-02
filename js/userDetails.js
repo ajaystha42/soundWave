@@ -49,7 +49,6 @@ $(document).ready(function () {
   $("#lastname").val(user.last_name);
   $("#address").val(user.address);
   $("#email").val(user.email);
-  // $("password").value = user.password;
   $("#datepicker").val(user.dob);
   $("#contact").val(user.contact);
   $("#gender").val(user.gender);

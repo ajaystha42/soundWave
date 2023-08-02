@@ -13,9 +13,6 @@ $(document).ready(function () {
       email: {
         required: true,
       },
-      // contact: {
-      //   required: true,
-      // },
       country: {
         required: true,
       },
@@ -42,10 +39,6 @@ $(document).ready(function () {
         strongPassword:
           "The password must contain at least one digit, one lowercase letter, one uppercase letter, and be at least 8 characters long",
       },
-      // contact: {
-      //   required: "Please enter your phone number",
-      //   minlength: "Your phone number must be 10 digit",
-      // },
       gender: {
         required: "Please select your gender",
       },
@@ -83,15 +76,3 @@ $(document).ready(function () {
     location.reload();
   });
 });
-
-// function validateForm() {
-//   const contactPattern = "^[0-9]*$";
-
-//   let result = true;
-//   let contact = document.getElementById("contact").value;
-
-//   if (!contact.match(contactPattern)) {
-//     result = false;
-//   }
-//   return result;
-// }

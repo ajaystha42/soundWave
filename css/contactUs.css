@@ -1,11 +1,3 @@
-/* .navigation {
-  position: fixed;
-  background-color: #fcf3e7;
-  border-bottom: 0.5px solid #ddd;
-} */
-/* .logoContainer {
-  
-     width: 13rem; }*/
 .contact-us-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -24,13 +16,6 @@
   flex-flow: column;
   margin-top: 4rem;
 }
-
-/* .text-box-design {
-    text-align: center;
-    font-size: 18px;
-    padding-top: 2px;
-    padding-bottom: 7px;
-  } */
 
 .hero-text-modify {
   text-align: center;
@@ -113,6 +98,7 @@ input[type="submit"]:hover {
   width: 100%;
   font-weight: normal;
 }
+
 .user-box textarea {
   width: 100%;
   padding: 10px 0;
@@ -185,60 +171,32 @@ input[type="submit"]:hover {
   margin-top: 2rem;
 }
 
-/* CSS for Modal */
-/* .modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-  background-color: white;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-} */
 #successDialog p {
-  font-size: 16px; /* Adjust the font size as needed */
+  font-size: 16px;
 }
+
 .contact-wrapper {
   gap: 2rem;
   display: flex;
   justify-content: center;
   background-color: white;
 }
+
 #userRegistrationForm {
   padding: 2rem 4rem 2rem 4rem;
 }
+
 #userRegistrationForm h2 {
   margin-top: 1rem;
   margin-bottom: 5rem;
   font-size: 3rem !important;
 }
+
 .h_line {
   width: 2rem;
   color: #04aa6d;
 }
+
 .wrapper-content-form {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   height: auto;
@@ -249,12 +207,15 @@ input[type="submit"]:hover {
   -ms-border-radius: 1rem;
   -o-border-radius: 1rem;
 }
+
 .sign-up {
   width: 20rem !important;
 }
+
 .contact_details_container {
   margin-top: 4rem;
 }
+
 #map {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   height: 50rem;
@@ -265,6 +226,7 @@ input[type="submit"]:hover {
   -ms-border-radius: 1rem;
   -o-border-radius: 1rem;
 }
+
 .contact-us-content {
   column-count: 3;
   margin-top: 10rem;
@@ -275,23 +237,27 @@ input[type="submit"]:hover {
   justify-content: center;
   gap: 25rem;
 }
+
 .content-wrapper {
   display: flex;
-  /* justify-content: center; */
   background-color: white;
 }
+
 .icon-section {
   font-size: 68px;
   top: 31rem;
   width: 8rem;
   color: #219ebc;
 }
+
 .resource-section {
   margin-top: 1rem;
 }
+
 .contact-header h3 {
   margin: 0rem;
 }
+
 .content a {
   text-decoration: none;
   color: #333;
@@ -301,9 +267,11 @@ input[type="submit"]:hover {
   width: 485px !important;
   height: 20rem !important;
 }
+
 .ui-dialog-titlebar {
   height: 5rem;
 }
+
 .ui-dialog-title {
   float: left;
   margin: 0.1em 0;
@@ -319,23 +287,28 @@ input[type="submit"]:hover {
   font-weight: 400;
   font-family: poppins;
 }
+
 .ui-dialog-buttonpane {
   bottom: -22px;
 
   position: relative;
 }
+
 .ui-dialog-content {
   padding: 1rem;
   font-family: poppins;
 }
+
 .ui-dialog-content p {
   font-size: 1.5rem !important;
   font-weight: normal;
 }
+
 .ui-button {
   width: 6rem;
   height: 3rem;
 }
+
 .ui-widget {
   font-size: 1.2rem;
 }
@@ -353,6 +326,7 @@ input[type="submit"]:hover {
 }
 
 @media screen and (max-width: 768px) {
+
   .col-25,
   .col-75 {
     width: 100%;

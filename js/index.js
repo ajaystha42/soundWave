@@ -36,7 +36,6 @@ window.onload = (e) => {
   };
 
   //tooltip
-
   $(function () {
     $(document).tooltip();
   });
