@@ -1,3 +1,10 @@
+/* Group Members:
+Ajay Shrestha
+Gaurab Pokhrel
+Nirajan Karki
+Sakar Thapa */
+
+/* Giving main container width of 70% and centering it using margin */
 .main-container {
   max-width: 70%;
   margin: 10rem auto;
@@ -12,6 +19,7 @@
 
 /* ****************LIST***************** */
 /* ************************************* */
+/* Display products in four columns by using GRID */
 .list {
   list-style: none;
   display: grid;
@@ -19,6 +27,7 @@
   grid-template-columns: repeat(4, minmax(24rem, 1fr));
 }
 
+/* Give each product card a box-shadow */
 .list li {
   display: inline-block;
   padding: 1.5rem;
@@ -38,11 +47,13 @@
   color: #333;
 }
 
+/* Image zoom on hover by using transform property */
 .list img:hover,
 .list img:active {
   transform: scale(1.2);
 }
 
+/* Card styling */
 #name {
   font-size: 1.6rem;
   line-height: 2;
@@ -77,6 +88,7 @@
 /* SMALLER DESKTOPS OR TABLET IN LANDSCAPE */
 
 @media only screen and (max-width: 1280px) {
+  /* Display TWO columns on this size */
   .list {
     grid-template-columns: repeat(2, minmax(24rem, 1fr));
   }
@@ -94,6 +106,7 @@
 
 /* MOBILE PHONES */
 @media only screen and (max-width: 600px) {
+  /* Display products on one column on mobile devices */
   .list {
     display: block;
   }

@@ -1,3 +1,11 @@
+/* Group Members:
+Ajay Shrestha
+Gaurab Pokhrel
+Nirajan Karki
+Sakar Thapa */
+
+/* Give main container a width of 70% and center it */
+/* Divide main container into two column using GRID */
 .main-container {
   width: 70%;
   margin: 10rem auto;
@@ -7,18 +15,19 @@
   column-gap: 10rem;
 }
 
+/* For the main image */
 .main-img {
   width: 100%;
   padding: 1rem 6rem;
   border: 1px solid #eee;
 }
 
+/* For the thumbnail images */
 .secondary-img-div {
   display: flex;
   justify-content: start;
   align-items: center;
   gap: 2rem;
-  /* margin-right: 20rem; */
 }
 
 .sec-img {
@@ -67,7 +76,6 @@
 
 .details-box {
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   gap: 2rem;
 
@@ -89,13 +97,16 @@
   opacity: 1;
 } */
 
+/* SMALLER DESKTOPS OR TABLET IN LANDSCAPE */
 @media only screen and (max-width: 1000px) {
   .main-container {
     grid-template-columns: 1fr;
   }
 }
 
+/* MOBILE PHONES */
 @media only screen and (max-width: 480px) {
+  /* Display all the contents on a simgle column */
   .btn-container {
     flex-direction: column;
     max-width: 20rem;
