@@ -5,5 +5,3 @@
 
 [Dev](https://dev-soundwave.vercel.app/) 
 
-[Prod](https://prod-soundwave.vercel.app/) 
-
