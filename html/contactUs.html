@@ -51,7 +51,7 @@
     <link rel="stylesheet" href="../css/contactUs.css" />
 
     <script src="https://unpkg.com/phosphor-icons"></script>
-
+    <!--logout function-->
     <script>
       function logout() {
         localStorage.removeItem("user");
@@ -74,13 +74,14 @@
           ><img class="logo" src="../media/logo.png" alt="SoundWave"
         /></a>
       </h4>
+      <!--navigation bar-->
       <nav class="nav">
         <ul class="nav-links">
           <li><a href="./../index.html">Home</a></li>
           <li><a href="products.html">Products</a></li>
           <li><a href="contactUs.html">Contact Us</a></li>
         </ul>
-
+        <!--search button-->
         <div class="actions">
           <div class="search-bar">
             <input
@@ -97,7 +98,7 @@
                 <p id="cart-number"></p> </span
               >Cart
             </a>
-
+            <!--clear cart button-->
             <button class="clear-cart-btn">
               <ion-icon name="trash-outline"></ion-icon>&nbsp; Clear Cart
             </button>
@@ -107,6 +108,7 @@
               <span> <ion-icon name="person-outline"></ion-icon> </span>
               <p id="account">Account</p></a
             >
+            <!--sign up button-->
             <div class="dropdown-content">
               <div id="signup" class="content-wrapper">
                 <a href="signup.html" class="individual-links">
@@ -117,6 +119,7 @@
                   Sign up</a
                 >
               </div>
+              <!--login button-->
               <div id="login" class="content-wrapper">
                 <a href="login.html" class="individual-links">
                   <ion-icon id="login-outline" name="log-in-outline"></ion-icon
@@ -136,6 +139,7 @@
                   My Details</a
                 >
               </div>
+              <!--logout button-->
               <div id="logout" class="content-wrapper" onclick="logout()">
                 <a class="individual-links" href="#">
                   <span
@@ -165,6 +169,7 @@
 
             <div class="user-detail">
               <div class="user-box">
+                <!--html validation for first name-->
                 <input
                   pattern="[a-zA-Z]+"
                   oninvalid="setCustomValidity('Please enter alphabet only.')"
@@ -177,6 +182,7 @@
                 <label>Firstname</label>
               </div>
               <div class="user-box">
+                <!--html validation for last name-->
                 <input
                   pattern="[a-zA-Z]+"
                   oninvalid="setCustomValidity('Please enter alphabet.')"
@@ -190,6 +196,7 @@
               </div>
             </div>
             <div class="user-box">
+              <!--html validation for email-->
               <input type="email" name="email" id="email" required />
               <label>Email</label>
             </div>
@@ -197,6 +204,7 @@
               <textarea name="subject" id="subject"></textarea>
               <label>Message</label>
             </div>
+            <!--submit button-->
             <div class="sign-up-button">
               <button class="sign-up" type="submit">Submit</button>
             </div>
@@ -250,7 +258,7 @@
           </div>
         </div>
       </div>
-
+      <!--popup model after successfully submit button-->
       <div id="successDialog" title="Thankyou for reaching us">
         <p>
           The form has been submitted succesfully and we will be in touch with
