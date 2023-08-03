@@ -79,6 +79,11 @@ Sakar Thapa */
   font-size: 1.3rem;
 }
 
+#out-of-stock {
+  font-size: 1.3rem;
+  color: red !important;
+}
+
 /* adjust carousel height */
 .carousel {
   height: 80rem;

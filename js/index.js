@@ -33,7 +33,7 @@ window.onload = (e) => {
         <p id="name">${item.name}</p>
           ${
             item.availableQuantity === 0
-              ? "<p id='available'>Out of Stock</p"
+              ? "<p id='out-of-stock'>Out of Stock</p"
               : `<p id='available'>Available: ${item.availableQuantity}</p`
           }>
         </a>`;
@@ -69,7 +69,7 @@ window.onload = (e) => {
       <p id="name">${item.name}</p>
         ${
           item.availableQuantity === 0
-            ? "<p id='available'>Out of Stock</p"
+            ? "<p id='out-of-stock'>Out of Stock</p"
             : `<p id='available'>Available: ${item.availableQuantity}</p`
         }>
     </a>`;
