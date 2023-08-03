@@ -8,6 +8,7 @@ $(document).ready(function () {
 
   const id = parseInt(urlParams.get("id"));
 
+  // Check if product exists in local storage
   const productsFromStorage = localStorage.getItem("products");
   let arr = [];
   if (productsFromStorage) {

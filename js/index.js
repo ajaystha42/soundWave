@@ -1,12 +1,19 @@
-import products from "./data.js";
+import products from "./data.js"; // Get products from data.js file
 
+// run following code on initial load
 window.onload = (e) => {
-  // create a list of <li> and send to <ul>
+  // create a list of <li> and send to <ul> in HTML
+  // get products from local storage
   var productsFromStorage = localStorage.getItem("products");
   let arr = [];
+
+  // Check if product exists in local stoarge
+  // If product does not exist, get products from data.js
   if (productsFromStorage) {
     arr = [...JSON.parse(productsFromStorage)];
   } else arr = [...products];
+
+  // Create a list of html products to display in home page
   const createCardList = (className, category) => {
     const list = document.querySelector(className);
     arr

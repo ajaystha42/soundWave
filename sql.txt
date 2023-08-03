@@ -1,0 +1,18 @@
+DATABASE_NAME = soundwave_db
+USER = soundwave
+PASSWORD = 123
+
+**** SQL QUERY ****
+CREATE TABLE USERS (
+    id INT NOT NULL AUTO_INCREMENT,
+    first_name VARCHAR(200) NOT NULL,
+    last_name VARCHAR(200) NOT NULL,
+   	email VARCHAR(200) NOT NULL UNIQUE,
+    password VARCHAR(200) NOT NULL,
+    gender VARCHAR(200) NOT NULL,
+    contact VARCHAR(200) NOT NULL,
+    country VARCHAR(200) NOT NULL,
+    address VARCHAR(200) NOT NULL,
+    dob VARCHAR(200) NOT NULL,	
+    PRIMARY KEY (id)
+);
