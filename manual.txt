@@ -1,0 +1,16 @@
+**** Steps to use the website: ****
+1. Put the project in htdocs inside XAMPP folder
+2. Run Mysql Server, ProFTPD, Apache Web Server in XAMPP
+3. Go to - http://localhost/phpmyadmin/ 
+4. Create a database in phpmyadmin mentioned in sql.txt
+5. Create a table using query mentioned in sql.txt
+6. Create a User mentioned in sql.txt and grant all privileges 
+7. Restart XAMPP Server if needed
+8. Open in browser - http://localhost/soundwave/
+9. Go to Account/Signup to create a new user. Validation is there to get the correct data
+10. Login with the created user and play around different pages. Validation is there to get the correct data
+11. You don't need to login to add products to cart 
+12. The products quantity are reflected accordingly once you add to the cart
+13. You can add/remove the products from the cart as well
+14. You can go to User Details page to edit the user's details
+15. You can logout from our application
