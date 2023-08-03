@@ -1,5 +1,13 @@
+/*
+Group Members:
+        Ajay Shrestha
+        Gaurab Pokhrel
+        Nirajan Karki
+        Sakar Thapa
+*/
 import products from "./data.js";
 
+//clear cart count
 window.onload = (e) => {
   document.querySelector(".clear-cart-btn").addEventListener("click", () => {
     localStorage.removeItem("cart");
@@ -7,6 +15,7 @@ window.onload = (e) => {
     location.reload();
   });
 
+  //get products list from the local storage.
   const productsFromStorage = localStorage.getItem("products");
   if (!productsFromStorage) {
     localStorage.setItem("products", JSON.stringify(products));
