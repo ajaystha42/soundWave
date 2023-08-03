@@ -1,3 +1,9 @@
+/*Group Members:
+ Ajay Shrestha
+ Gaurab Pokhrel
+ Nirajan Karki
+Sakar Thapa*/
+
 .container {
   height: 100%;
   margin: 0;
@@ -116,7 +122,6 @@
   margin-bottom: 3rem;
 }
 
-
 .price-offer del {
   margin-bottom: -2rem;
 }
@@ -193,6 +198,8 @@
 .out-of-stock {
   color: red;
 }
+
+/**********************************************media query starts for responsive web application*********************************************/
 
 @media only screen and (max-width: 1000px) {
   .banner-image h1 {
