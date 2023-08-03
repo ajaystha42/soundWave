@@ -40,17 +40,7 @@ const products = [
     images: ["./media/headphone/beats-black.jpg"],
     category: "HEADPHONE",
   },
-  {
-    id: 4,
-    name: "Bose Noise Cancelling Wireless Bluetooth Headphones",
-    oldPrice: 490,
-    price: 479,
-    availableQuantity: 13,
-    description:
-      "Powerful noise cancelling headphones - 11 levels of active noise cancelling let you enjoy music, podcasts, videos & calls without distractions",
-    images: ["./media/headphone/bose-black.jpg"],
-    category: "HEADPHONE",
-  },
+
   {
     id: 5,
     name: "JBL Tune 510BT Wireless On-Ear Bluetooth Headphones",
@@ -62,17 +52,7 @@ const products = [
     images: ["./media/headphone/jbl-black.jpg"],
     category: "HEADPHONE",
   },
-  {
-    id: 6,
-    name: "Logitech Zone Vibe 100 Lightweight Wireless Over Ear Headphones",
-    oldPrice: 200,
-    price: 129,
-    availableQuantity: 15,
-    description:
-      "Work. Play. Vibe: Made for the way you work and play, Zone Vibe 100 over ear wireless headphones are professional enough for the office, casual enough for home, and available in three modern colors",
-    images: ["./media/headphone/logitech-black.jpg"],
-    category: "HEADPHONE",
-  },
+
   {
     id: 7,
     name: "Razer Opus X Wireless Low Latency Headset",
@@ -84,17 +64,7 @@ const products = [
     images: ["./media/headphone/razer-green.jpg"],
     category: "HEADPHONE",
   },
-  {
-    id: 8,
-    name: "Sony WH-CH720N Noise Cancelling Wireless Headphones",
-    oldPrice: 260,
-    price: 248.1,
-    availableQuantity: 8,
-    description:
-      "Take noise cancelling to the next level with Sony’s Integrated Processor V1, so you can fully immerse yourself in the music.",
-    images: ["./media/headphone/sony-black.jpg"],
-    category: "HEADPHONE",
-  },
+
   {
     id: 9,
     name: "Beats Studio Earbuds",
@@ -129,17 +99,6 @@ const products = [
   },
   {
     id: 12,
-    name: "Samsung Galaxy Buds",
-    oldPrice: 100,
-    price: 97.72,
-    availableQuantity: 8,
-    description:
-      "Galaxy Buds Live comes with an iconic shape and ergonomic design, a fit that lets in your natural surroundings, and a speaker optimized for a better experience.",
-    images: ["./media/earbud/samsung-black-earbud.jpg"],
-    category: "EARPHONE",
-  },
-  {
-    id: 13,
     name: "JBL Tune 130NC",
     oldPrice: 72,
     price: 69.98,
@@ -149,17 +108,7 @@ const products = [
     images: ["./media/earbud/jbl-blue-earbud.jpg"],
     category: "EARPHONE",
   },
-  {
-    id: 14,
-    name: "Soundcore A40 Auto-Adjustable Active Noise Cancelling Wireless Earbuds",
-    oldPrice: 90,
-    price: 79.99,
-    availableQuantity: 9,
-    description:
-      "Reduce Noise By Up to 98%: Space A40 has an upgraded noise cancelling system to block out a wider range of distracting noises. So wherever you go, you'll always have the space you need to focus",
-    images: ["./media/earbud/soundcore-black-earbud.jpg"],
-    category: "EARPHONE",
-  },
+
   {
     id: 15,
     name: "Apple AirPods (3rd Generation)",
@@ -226,39 +175,6 @@ const products = [
     description:
       "80W BASS WITH DUAL PAIRING,GREAT POWER BLUETOOTH SPEAKER. To achieve the incredible 80W, Zealot S57 speaker comes with an exclusive customised 2 woofers and two 25W full-range drivers and two 15W tweeters. Combine with DSP chip for top of the line bass stereo effect. Crazy and shocking. ",
     images: ["./media/speaker/zealot-black-speaker.jpg"],
-    category: "SPEAKER",
-  },
-  {
-    id: 21,
-    name: "SOULION R40 Computer Speakers",
-    oldPrice: 50,
-    price: 36,
-    availableQuantity: 5,
-    description:
-      "R40 Computer speaker is combined with full range 2.0 channel enhanced stereo core, produces rich and crystal audio for music, movie and gaming.",
-    images: ["./media/speaker/soulion-speaker.jpg"],
-    category: "SPEAKER",
-  },
-  {
-    id: 22,
-    name: "BUGANI Bluetooth Speakers",
-    oldPrice: 100,
-    price: 85,
-    availableQuantity: 5,
-    description:
-      "BUGANI 80W stereo loud speaker with two 40 watt full-range drivers, which pump out more powerful clear sound and plays the music with less than 1% total harmonic distortion, which makes the M118 loud Bluetooth speaker perfect for any gatherings and the ideal indoor and outdoor speaker",
-    images: ["./media/speaker/bugani-orange-speaker.jpg"],
-    category: "SPEAKER",
-  },
-  {
-    id: 23,
-    name: "EWA A106 Mini Bluetooth Speaker",
-    oldPrice: 60,
-    price: 30,
-    availableQuantity: 5,
-    description:
-      "IMPRESSIVE VOLUME AND BASS - A106Pro mini speaker is conveniently small but able to releasing crystal clear sound with impressive bass and room-filling loudness through a high-performance driver and a passive subwoofer",
-    images: ["./media/speaker/ewa-black-speaker.jpg"],
     category: "SPEAKER",
   },
 ];
