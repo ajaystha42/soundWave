@@ -40,6 +40,14 @@ Large: 1.8
 
 */
 
+/*
+Group Members:
+        Ajay Shrestha
+        Gaurab Pokhrel
+        Nirajan Karki
+        Sakar Thapa
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@400;500;600;700&display=swap");
 
 * {
@@ -416,6 +424,9 @@ footer {
 
 .hidden {
   display: none;
+}
+.blueimp-gallery-carousel {
+  margin: 0rem !important;
 }
 
 /* SMALLER DESKTOPS OR TABLET IN LANDSCAPE */

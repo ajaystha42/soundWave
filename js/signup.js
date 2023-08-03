@@ -4,6 +4,7 @@
 // Nirajan Karki
 // Sakar Thapa
 
+//Jquery validation for signup form implemented with different rules
 $(document).ready(function () {
   $("#userRegistrationForm").validate({
     rules: {
@@ -60,6 +61,7 @@ $(document).ready(function () {
       },
     },
   });
+
   $.validator.addMethod(
     "strongPassword",
     function (value, element) {
