@@ -42,6 +42,8 @@
       rel="stylesheet"
       href="./plugins/blueimp-gallery/css/blueimp-gallery.min.css"
     />
+
+    <!-- User logout Functionality -->
     <script>
       function logout() {
         localStorage.removeItem("user");
@@ -193,6 +195,7 @@
       <ul class="list speaker-list"></ul>
     </main>
 
+    <!-- Footer Section -->
     <footer>
       <div class="footer-container">
         <div class="footer-div logo-center">
@@ -268,6 +271,7 @@
       </div>
     </footer>
 
+    <!-- Blueimp Plugin Code -->
     <script src="./plugins/blueimp-gallery/js/blueimp-gallery.min.js"></script>
     <script>
       document.getElementById("links").onclick = function (event) {
@@ -298,7 +302,7 @@
     localStorage.removeItem("email");
     localStorage.removeItem("userError");
 
-    // Cart in Home Page
+    // Display Cart quantity in Home Page
     let cart = JSON.parse(localStorage.getItem("cart"));
     if (cart) {
       cart.items.length != 0 &&
@@ -306,7 +310,7 @@
     } else {
       document.getElementById("cart-number").remove();
     }
-    // User Info in Home Page
+    // Check if user is logged in and display submenu accordingly
     const data = localStorage.getItem("user");
     if (data) {
       const user = JSON.parse(data);

@@ -1,3 +1,9 @@
+/* Group Members:
+Ajay Shrestha
+Gaurab Pokhrel
+Nirajan Karki
+Sakar Thapa */
+
 .form-container {
   margin-top: 3rem;
 }
@@ -6,10 +12,12 @@
   height: 95rem;
 }
 
+/* Loader */
 .loader-div {
   position: relative;
 }
 
+/* Circular Loader design */
 .loader {
   width: 4rem;
   height: 4rem;
@@ -28,6 +36,7 @@
   margin-bottom: 5rem;
 }
 
+/* Css animation for loader to spin */
 @keyframes spin {
   0% {
     transform: rotate(0deg);
