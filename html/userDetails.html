@@ -58,6 +58,7 @@
     </script>
   </head>
   <body>
+    <!--header section-->
     <header>
       <h4>
         <a href="index.html"
@@ -70,7 +71,7 @@
           <li><a href="products.html">Products</a></li>
           <li><a href="contactUs.html">Contact Us</a></li>
         </ul>
-
+        <!--search field-->
         <div class="actions">
           <div class="search-bar">
             <input
@@ -87,7 +88,7 @@
                 <p id="cart-number"></p> </span
               >Cart
             </a>
-
+            <!--clear cart button-->
             <button class="clear-cart-btn">
               <ion-icon name="trash-outline"></ion-icon>&nbsp; Clear Cart
             </button>
@@ -97,6 +98,7 @@
               <span> <ion-icon name="person-outline"></ion-icon> </span>
               <p id="account">Account</p></a
             >
+            <!--sign up button-->
             <div class="dropdown-content">
               <div id="signup" class="content-wrapper">
                 <a href="signup.html" class="individual-links">
@@ -107,6 +109,7 @@
                   Sign up</a
                 >
               </div>
+              <!--login button-->
               <div id="login" class="content-wrapper">
                 <a href="login.html" class="individual-links">
                   <ion-icon id="login-outline" name="log-in-outline"></ion-icon
@@ -126,6 +129,7 @@
                   My Details</a
                 >
               </div>
+              <!--logout button-->
               <div id="logout" class="content-wrapper" onclick="logout()">
                 <a class="individual-links" href="#">
                   <span
@@ -164,20 +168,24 @@
           action="./../php/update.php"
           method="POST"
         >
+          <!--input field for first name-->
           <div class="user-detail">
             <div class="user-box">
               <input type="text" name="firstname" id="firstname" />
               <label>FIRSTNAME</label>
             </div>
+            <!--input field for last name-->
             <div class="user-box">
               <input type="text" name="lastname" id="lastname" />
               <label>LASTNAME</label>
             </div>
           </div>
+          <!--input field for address-->
           <div class="user-box">
             <input type="text" name="address" id="address" />
             <label>ADDRESS</label>
           </div>
+          <!--input field for email-->
           <div class="user-box">
             <input
               type="email"
@@ -189,6 +197,7 @@
             />
             <label>EMAIL</label>
           </div>
+          <!--input field for dob-->
           <div class="user-detail">
             <div class="user-box">
               <input
@@ -201,6 +210,7 @@
               <label>DOB</label>
             </div>
           </div>
+          <!--input field for contact-->
           <div class="user-detail">
             <div class="user-box">
               <input type="tel" name="contact" id="contact" />
@@ -209,6 +219,7 @@
                 Invalid contact number
               </p>
             </div>
+            <!--input field for gender-->
             <div class="user-box">
               <input
                 type="text"
@@ -220,6 +231,7 @@
               <label>GENDER</label>
             </div>
           </div>
+          <!--input field for country-->
           <div class="user-detail">
             <div class="user-box">
               <input
@@ -232,7 +244,7 @@
               <label>COUNTRY</label>
             </div>
           </div>
-
+          <!--update button and retrun to validate form on click-->
           <div class="sign-up-button">
             <button
               id="loader-waitme"
@@ -247,6 +259,7 @@
       </div>
     </div>
     <div class="div-height"></div>
+    <!--footer-->
     <footer>
       <div class="footer-container">
         <div class="footer-div logo-center">
@@ -323,10 +336,12 @@
     </footer>
   </body>
   <script>
+    //removing local storage
     localStorage.removeItem("error");
     localStorage.removeItem("passworderror");
     localStorage.removeItem("email");
     localStorage.removeItem("userError");
+    //hide user details page
     $("#userDetails").hide();
     $("#logout").hide();
 
